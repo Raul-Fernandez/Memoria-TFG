@@ -10,43 +10,63 @@
 
 
 %-------------------------------------------------------------------
-\section{Historia captura de movimiento}
-
-
-
-
-
-%-------------------------------------------------------------------
+\section{Captura de movimiento}
 
 
 
 %-------------------------------------------------------------------
+
+
 \label{cap2:sec:captura}
 La captura de movimiento (abreviada Mocap, en inglés Motion Capture) es el proceso por el cual el movimiento, ya sea de objetos, animales o mayormente personas, se traslada a un modelo digital 3D.
 
-En la actualidad, esta técnica llamada fotogrametría, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un perfecto modelado d
+En la actualidad, esta técnica llamada fotogrametría, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes, de ese modo se obtiene una mayor sensación de realismo.\cite{captura} \citeauthor{wiki1}.
 
-La captura de movimiento (abreviada Mocap, en inglés Motion Capture) es una técnica de grabación de movimiento, en general de actores y de animales vivos, y el traslado de dicho movimiento a un modelo digital, realizado en imágenes de computadora. Se basa en las técnicas de fotogrametría y se utiliza principalmente en la industria del cine de fantasía o de ciencia ficción, en la industria de los videojuegos o también en los deportes, con fines médicos. En el contexto de la producción de una película, se refiere a la técnica de almacenar las acciones de actores humanos, y usar esa información para animar modelos digitales de personajes en animación 3D.
-Actualmente la captura de movimiento es el método más usado ya sea en el cine o en la industria de los videojuegos para llegar lo más posible a la realidad misma.
-
-Principalmente la captura de movimiento se instaló en los videojuegos para mejorar el realismo y la dinamica de los mismos. Para realizar las capturas muchas veces las compañias se asocian con marcas de modelado 3D como Naturalmotion, Autodesk entre otros \citet{wiki1}.
-
-
-
-La captura de movimiento (Motion Capture, en inglés) es el proceso de digitalizar
-movimientos reales de objetos o personas y añadir, dichos movimientos, a modelos 3D.
-Actualmente, en el cine se usa mucho esta técnica, ya que facilita el trabajo de los
-animadores. Otro campo en el que esta técnica es puntera, sin duda, es en el de los
-videojuegos. Para ofrecer una experiencia más realista a los usuarios, se utilizan técnicas
-de captura de movimiento para naturalizar los movimientos de los personajes de los
-juegos.
-La técnica de animación de personajes empleando la captura de movimiento, tal y
-como se conoce ahora, tiene sus inicios en la década de los 70 donde ya se comenzaba a
-utilizar en películas de animación. Pero es en la década de los 30 cuando se empezó a
-indagar sobre la captura de movimiento.
 
 
 %-------------------------------------------------------------------
+\section{Historia captura de movimiento}
+
+%-------------------------------------------------------------------
+
+\subsection{Precursores}
+
+Aristoteles (384-322 AC) podría ser considerado el primer biomecánico, escribió el libro "De Motu Animalium" (Movimiento de los animales). Él no solo veía los cuerpos de los animales como sistemas mecánicos, sino que perseguía la idea de como diferenciar la realización de un movimiento y como poderlo hacer realmente.
+
+Leonardo da Vinci (1452-1519) trató de describir algunos mecanismos que utiliza el cuerpo humano para poder desplazarse, como un humano puede saltar, caminar, mantenerse de pie...
+
+Eadweard Muybridge (seudónimo de Edward James Muggeridge) fué el primer fotógrafo capaz de diseccionar el movimiento humano y animal,  a través de multiples cámaras tomando varias fotografias para captar instantes seguidos en el tiempo. Este experimento llamado " el caballo en movimiento", mostrado en la figura "tal",  utilizó esta técnica de fotografía.
+
+\comImpl{meter figura}
+
+\subsection{Nacimiento de la captura de movimiento}
+
+Con la aparicioón de la te?cnica de la rotoscopia se consegui?a naturalizar los
+movimientos de los personajes animados. Los estudios Walt Disney Pictures utilizaron la
+rotoscopia en 1937 en ?Blancanieves y los siete enanitos? para la animacio?n de los
+personajes del pri?ncipe y de Blancanieves. Esta te?cnica consiste en reemplazar los
+fotogramas de una grabacio?n real por dibujos calcados sobre cada fotograma (Figura 2.2)
+
+
+En paralelo, los laboratorios de biomeca?nica comenzaban a utilizar ordenadores para analizar el movimiento humano. En la de?cada de los 80, Tom Calvert, profesor de kinesiologi?a y ciencias de la computacio?n en la universidad Simon Fraser, Canada?, incorporo? potencio?metros a un cuerpo y la salida la uso? para mover personajes animados por ordenador para estudios coreogra?ficos y asistencia cli?nica para pacientes con problemas de locomocio?n.
+
+%-----------OK---------------
+
+En la década de los 70, cuando empezaba a surgir la posibilidad de realizar animaciones de personajes por ordenador, se empezaba a naturalizar los movimientos mediante la técnica de la rotoscopia. 
+
+%----------OK----------
+
+A finales de los años 70, cuando se empezaba a hacer posible la animación de personajes por ordenador, los diseñadores comenzaron a usar las técnicas clásicas de diseño(como el rotoscopio). El rotoscopio era una técnica en la cual se utilizaban frames reales que se utilizaban como base para diseñar algo por encima, similar a calcar un folio por encima de otro que contiene lo que queremos copiar. Pero mientras, se empezaron a usar los ordenadores para analizar el movimiento humano, en estudios de biomecánica. Las técnicas y dispositivos usados en éstos empezaron a adoptarse en la comunidad de GC. Al principio de los años 80 , Tom Calvert, un profesor de kinesiología y ciencias de la computación en la Simon Fraser University, adhirió potenciómetros a un cuerpo y usó la salida para generar personajes animados por ordenador con objeto de ser usado en estudios de coreografía y asistencia clínica para pacientes con problemas de locomoción. Por ejemplo, para analizar la flexión de rodilla, creó una especie de exoesqueleto para cada pierna, cada uno de los cuales tenia adherido un potenciometro para analizar el grado de flexión. La señal analógica era digitalizada e introducida en un programa que hacía una simulación mediante una animación en el ordenador.
+
+
+
+
+%-------------------------------------------------------------------
+Poco despues, comienzan a salir los primeros sistemas de seguimiento visual como el Op-Eye y el SelSpot. A principios de los 80, tanto el MIT como el CGL del NYTC experimentaron con dispositivos de seguimiento visual aplicados en el cuerpo humano.
+
+Estos sistemas normalmente usan pequeños marcadores adheridos al cuerpo(tanto LEDs parpadeantes como pequeños puntos reflectantes) y una serie de cámaras alrededor del espacio de maniobras. Una combinación de hardware especial y software distinguen los marcadores en el campo visual de cada cámara, y mediante comparación, calculan la posición tridimensional de cada marcador en cada instante. 
+
+La tecnología está limitada por la velocidad a la que los marcadores pueden ser rastreados(esto afecta al número de posiciones por segundo que pueden ser capturadas), por la oclusión de los marcadores por el cuerpo y por la resolución de las cámaras(específicamente por su capacidad para diferenciar distintos marcadores próximos). Los primeros sistemas podían rastrear sólo una docena de marcadores al mismo tiempo. Los sistemas más recientes pueden distinguir varias docenas. Los problemas de oclusión se pueden superar con el uso de más camaras, pero incluso con eso, los sistemas ópticos más modernos suelen requerir un post-procesamiento manual para recuperar trayectorias cuando un marcador se pierde de vista. Esto cambiará según los sistemas se vuelvan más sofisticados. El problema de la resolución está relacionado con varias variables, como el precio de la cámara, el campo de visión, y el espacio de movimientos. A mayor resolución requerida, mayor el precio de la cámara. La misma cámara puede dar una mejor resolución de movimiento si está enfocando un menor campo de visión, pero esto limita la capacidad de los movimientos a realizar. Por ello, casi todos los resultados de los sistemas de captura ópticos necesitan una post-producción para analizar, procesar y limpiar la información antes de ser utilizados. 
 
 
 \section{Tecnología captura de movimiento}
