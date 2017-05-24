@@ -26,23 +26,31 @@ Este paquete tiene todo lo necesario para reconocer que la kinect está conectada
 Los ejemplos que tiene implementado el paquete de Kinect v2 Examples with MS-SDK  son variados:
 \begin{itemize}
 	\item AvatarsDemo, simulador que muestra un avatar en tercera persona que correspondería a la persona captada y se puede controlar sobre el escenario 3D.
-	\item BackgroundRemovalDemo,
-	\item ColliderDemo,
+	\item BackgroundRemovalDemo, son ejemplos que cambian el fondo que se encuentra detrás del usuario captado.
+	\item ColliderDemo, una serie de ejemplos para ver el funcionamiento de colisiones del usuario captado con los objetos que aparecen en la escena.
 	\item FaceTrackingDemo, este ejemplo reconoce la dirección de tu cabeza para girar la cámara de la imagen para simular la vista humana.
 	\item FittingRoomDemo, este ejemplo te da la opción de ponerte ropa encima de tu imagen real captada.
 	\item GesturesDemo, serie de ejemplos de funcionamiento de los gestos de kinect.
-	\item InteractionDemo, 
+	\item InteractionDemo, este ejemplo muestra como el usuario puede girar,rotar y agrandar un objeto con el movimiento de sus manos.
 	\item KinectDataServer, implementa un servidor de datos para guardar información como gestos de kinect.
-	\item MovieSequenceDemo,
-	\item MultiSceneDemo,
-	\item OverlayDemo,
+	\item MovieSequenceDemo, este ejemplo mostrará como reproducir un conjunto de frames de película con el cuerpo del usuario.
+	\item MultiSceneDemo, este ejemplo concatenará diferentes escenas de Unity basadas en las componentes de este paquete.
+	\item OverlayDemo, son tres ejemplos que muestras como interactuar con los objetos de la escena, para ello, se basa en el movimientos de los brazos y manos para hacer que los objetos se mueven, roten y se desplazen.
 	\item PhysicsDemo, muestra un simulación de físicas que capta el movimiento del brazo para lanzar una pelota virtual.
 	\item RecorderDemo, ejemplo que muestra como grabar y reproducir un movimiento captado por kinect.
-	\item VariousDemos,\\\\	
+	\item SpeechRecognitionDemo, ejemplo que sirve para realizar acciones por comandos por voz, aunque se producen errores cuando se probó este ejemplo.
+	\item VariousDemos, implementa dos ejemplos, como pintar en el aire moviendo los brazos y el otro dibuja bolas verdes que se colocan en tu articulaciones simulado un esqueleto.
+	\item VisualizerDemo, Este ejemplo convierte la escena, según lo ve el sensor, a una malla y la superpone sobre la imagen de la cámara.\\\\	
 \end{itemize}
-Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para aprovechar su funcionalidad y tener un apoyo base para el desarrollo del proyecto. Los ejemplos seleccionados serían el AvatarsDemo, GestureDemo y RecorderDemo, más adelante se explicar con mas detalle que se utiliza de estos ejemplos.\\\\
+Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para aprovechar su funcionalidad y tener un apoyo base para el desarrollo del proyecto. Los ejemplos seleccionados serían el \textbf {AvatarsDemo, GestureDemo y RecorderDemo}, más adelante se explicar con mas detalle que se utiliza de estos ejemplos.\\\\
 
-Como el objetivo principal de este proyecto es el entrenamiento de actividades físicas se selecciona como ejemplo de primer estudio el Recordermo. Con este ejemplo fue seleccionado por su potencial para guardar y reproducir un movimiento.
+\subsection{Grabar y reproducir movimientos de Usuario}
+
+\label{cap5:sec:Grabar y reproducir movimientos de Usuario}
+Como el objetivo principal de este proyecto es el entrenamiento de actividades físicas se selecciona como ejemplo de primer estudio el \textbf{Recordermo} por su potencial para guardar y reproducir un movimiento.\\
+
+En una primer vista nos muestra como representa al usuario captado por la kinect, esta representación se hace mediante un esqueleto verde que simula todo el movimiento que realiza el usuario.\\
+\comImpl{Foto incial de esqueleto verde del demorecorder}
 %-------------------------------------------------------------------
 %-------------------------------------------------------------------
 
