@@ -1,1 +1,49 @@
-\chapter{capitulo nuevo}
+
+%---------------------------------------------------------------------
+%
+%                          Cap?tulo 4
+%
+%---------------------------------------------------------------------
+
+\chapter{Desarrollo Del Proyecto}
+
+
+\label{cap4:sec:Desarrollo Del Proyecto}
+Una vez elegida la tecnolog?a y plataformas que se van a utilizar se empieza preparar el desarrollo del proyecto. En primer lugar se investigan que librer?as y paquetes se necesitan para tener una buena conexi?n con kinect y que informaci?n obtenida del sensor de movimiento podemos aprovechar para el proyecto.
+
+%-------------------------------------------------------------------
+\section{Paquetes para Unity}
+
+\label{cap4:sec:Paquetes para Unity}
+El primer paquete que se prueba es el que nos ofrece microsoft(https://developer.microsoft.com/es-es/windows/kinect/tools)que es un paquete destinado principalmente para Unity Pro(?Explicacion de que es?). Al a?adir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts, esto es debido, a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versi?n gratuita de Unity , mientras que el paquete que ofrece microsoft esta especificado para Unity Pro. Aun as?, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete o no.\\\\
+En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de Unity para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la c?mara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
+Debatiendo e intentando comprender si estos errores se produc?an por conexi?n de kinect o por funcionamiento incorrecto de la librer?a que nos ofrec?a microsoft se opto por la opci?n de descartar este paquete para evitar futuras fustraciones.\\
+
+Despu?s de descartar el paquete que nos ofrec?a microsoft decidimos buscar en el Assets Store de Unity(Explicacion o referencia).Encontramos el paquete \textbf {Kinect v2 Examples with MS-SDK}\textcolor{red}{(?Referencia o imagen?)} que lo elegimos por su valoraci?n positiva y tambi?n porque hay poca variedad de paquetes relacionados con kinect v2.\\
+Este paquete tiene todo lo necesario para reconocer que la kinect est? conectada y para poder utilizar los datos que se obtienen del sensor. En una primera toma, el paquete nos ofrece una serie de ejemplos sencillos para poder comprender mejor el funcionamiento de kinect.\\ Para que este paquete funcione es necesario tener instalado Kinect SDK 2.0 que son los drivers de la kinect v2 .\\\\
+Los ejemplos que tiene implementado el paquete de Kinect v2 Examples with MS-SDK  son variados:
+\begin{itemize}
+	\item AvatarsDemo, simulador que muestra un avatar en tercera persona que corresponder?a a la persona captada y se puede controlar sobre el escenario 3D.
+	\item BackgroundRemovalDemo,
+	\item ColliderDemo,
+	\item FaceTrackingDemo, este ejemplo reconoce la direcci?n de tu cabeza para girar la c?mara de la imagen para simular la vista humana.
+	\item FittingRoomDemo, este ejemplo te da la opci?n de ponerte ropa encima de tu imagen real captada.
+	\item GesturesDemo, serie de ejemplos de funcionamiento de los gestos de kinect.
+	\item InteractionDemo, 
+	\item KinectDataServer, implementa un servidor de datos para guardar informaci?n como gestos de kinect.
+	\item MovieSequenceDemo,
+	\item MultiSceneDemo,
+	\item OverlayDemo,
+	\item PhysicsDemo, muestra un simulaci?n de f?sicas que capta el movimiento del brazo para lanzar una pelota virtual.
+	\item RecorderDemo, ejemplo que muestra como grabar y reproducir un movimiento captado por kinect.
+	\item VariousDemos,\\\\	
+\end{itemize}
+Una vez explicado los ejemplos, elegimos cual de ellos podr?amos utilizar para aprovechar su funcionalidad y tener un apoyo base para el desarrollo del proyecto. Los ejemplos seleccionados ser?an el AvatarsDemo, GestureDemo y RecorderDemo, mas adelante se explicar? con mas detalle que se utiliza de estos ejemplos.\\\\
+
+Como el objetivo principal de este proyecto es el entrenamiento de actividades f?sicas se selecciona como ejemplo de primer estudio el Recordermo. Con este ejemplo fue seleccionado por su potencial para guardar y reproducir un movimiento. Como
+ 
+
+Explicar como coger los datos sensor data, kinerop kinectmanger y demas.
+%-------------------------------------------------------------------
+%-------------------------------------------------------------------
+>>>>>>> aedf022842fde8b5aef6ba3b9ffc6fc3107d8f07
