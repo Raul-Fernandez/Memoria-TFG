@@ -17,7 +17,7 @@ Una vez elegida la tecnología y plataformas que se van a utilizar se empieza pre
 \section{Paquetes para Unity}
 
 \label{cap5:sec:Paquetes para Unity}
-El primer paquete que se prueba es el que nos ofrece microsoft(https://developer.microsoft.com/es-es/windows/kinect/tools)que es un paquete destinado principalmente para Unity Pro(?Explicacion de que es?). Al a?adir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts, esto es debido, a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versión gratuita de Unity , mientras que el paquete que ofrece microsoft esta especificado para Unity Pro. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete o no.\\\\
+El primer paquete que se prueba es el que nos ofrece microsoft \footnote{https://developer.microsoft.com/es-es/windows/kinect/tools},que es un paquete destinado principalmente para UnityPro.\footnote{Unity profesional de pago con mas funcionalidad que Unity personal.} Al añadir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts, esto es debido, a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versión gratuita de Unity , mientras que el paquete que ofrece microsoft esta especificado para Unity Pro. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete o no.\\\\
 En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de Unity para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la cámara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
 Debatiendo e intentando comprender si estos errores se producían por conexión de kinect o por funcionamiento incorrecto de la librería que nos ofrecía microsoft se opto por la opción de descartar este paquete para evitar futuras fustraciones.\\
 
@@ -39,8 +39,8 @@ Los ejemplos que tiene implementado el paquete de Kinect v2 Examples with MS-SDK
 	\item PhysicsDemo, muestra un simulación de físicas que capta el movimiento del brazo para lanzar una pelota virtual.
 	\item RecorderDemo, ejemplo que muestra como grabar y reproducir un movimiento captado por kinect.
 	\item SpeechRecognitionDemo, ejemplo que sirve para realizar acciones por comandos por voz, aunque se producen errores cuando se probó este ejemplo.
-	\item VariousDemos, implementa dos ejemplos, como pintar en el aire moviendo los brazos y el otro dibuja bolas verdes que se colocan en tu articulaciones simulado un esqueleto.
-	\item VisualizerDemo, Este ejemplo convierte la escena, según lo ve el sensor, a una malla y la superpone sobre la imagen de la cámara.\\\\	
+	\item VariousDemos, implementa dos ejemplos, como pintar en el aire moviendo los brazos y el otro dibuja bolas verdes que se colocan en tus articulaciones simulado un esqueleto.
+	\item VisualizerDemo, este ejemplo convierte la escena, según lo ve el sensor, en una malla y la superpone sobre la imagen de la cámara.\\\\	
 \end{itemize}
 Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para aprovechar su funcionalidad y tener un apoyo base para el desarrollo del proyecto. Los ejemplos seleccionados serían el \textbf {AvatarsDemo, GestureDemo y RecorderDemo}, más adelante se explicar con mas detalle que se utiliza de estos ejemplos.\\\\
 
@@ -49,8 +49,48 @@ Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para a
 \label{cap5:sec:Grabar y reproducir movimientos de Usuario}
 Como el objetivo principal de este proyecto es el entrenamiento de actividades físicas se selecciona como ejemplo de primer estudio el \textbf{Recordermo} por su potencial para guardar y reproducir un movimiento.\\
 
-En una primer vista nos muestra como representa al usuario captado por la kinect, esta representación se hace mediante un esqueleto verde que simula todo el movimiento que realiza el usuario.\\
-\comImpl{Foto incial de esqueleto verde del demorecorder}
+En una primer vista nos muestra como representa al usuario captado por la kinect, esta representación se hace mediante un esqueleto verde que simula todo el movimiento que realiza el usuario.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.25\linewidth]{Imagenes/Capitulos/capitulo5/Avatar-controller-esqueleto-reducida}
+	\caption{Esqueleto que simula el movimiento del usuario}
+	\label{fig:avatar-controller-esqueleto}
+\end{figure}
+
+
+
+
+Esta representación de esqueleto verde en el escenario de Unity es creada gracias al script de \textbf{Cubeman Controller}. Este script se inicializa con el número del cuerpo que quieres que muestre, kinect v2 puede detectar hasta 6 persona, y también si se quiere que el cuerpo este representado en modo espejo. Los datos del cuerpo del usuario se los a pide al \textbf{Kinect Manager} (este script se explica más adelante). Los datos del cuerpo están definidos con 25 GameObjects llamados \textbf{Joints} que hacen una representacion de la articulaciones del cuerpo humano en unas coordenadas (x,y,z) y su rotación.
+Los 25 \textbf{Joints} serían : cadera central y laterales , pecho, clavícula, cuello, cabeza, hombros, codos, muñecas, pulgares, manos centrales, rodillas, tobillos y pies.\\\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/capitulo5/Avatar-controller-joints}
+	\caption{Cubeman con la lista de todos los Joints}
+	\label{fig:avatar-controller-joints}
+\end{figure}
+
+
+Para hacer una representación correcta del esqueleto y se mueva como una entidad, el script \textbf{Cubeman Controller} pone la posición del Joint de la cadera base como la poscion y rotación del objeto padre y todos los demás joint serán hijos de este GameObject. Para calcular la posión relativa  de todos los Joints se resta la posición del padre con la posición de cada Joint dada por el Kinect Manager.\\\\
+
+El script \textbf{Kinect Manager} es un Singletone\footnote{Es un patrón que consiste en que existe una única instancia y es la propia clase la responsable de crear la única instancia. Permite el acceso global a dicha instancia mediante un método de clase} encargado de la comunicación entre el sensor de kinect y las aplicaciones de Unity.
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagenes/Capitulos/capitulo5/singleton}
+	\caption{Patrón de Singleton}
+	\label{fig:singleton}
+\end{figure}
+
+Este script al ser común a todos los ejemplos nombrados anteriormente implementa toda la funciones y comunicaciones necesarias para su funcionamiento, pero en nuestro caso se investiga como obtiene la información que le envía al \textbf{cubeman Controller}.
+Kinect Manager se encarga de analizar la información del \textbf{SensorData}, este SensorData es una estructura de datos ofrecida por el script \textbf{KinectInterop}\footnote{Script encargado de tener comunicación directa con el sensor de la kinect} donde aparece la información de la imagen, pronfundidad, color y datos de los usuarios captado con el sensor. Los datos de los usuarios captados se encapsulan en el \textbf{BodyDataFrame}, esta estructura contiene la información del número de usuarios captados, su identificador ,la información de los BodyData\footnote{Información de los joint de un cuerpo especifico}, etc.(¿pongo el codigo de la estructura?)\\
+
+Una vez comprendido el SensorDatar se observa como el Kinect Manager ,analizando el BodyDataFrame, va actualizando y asignando a cada usuario el Id correspodiente 
+con un BodyData en todo momento y pasando al Cubeman Controller esta información para que reproduzca el movimiento en el cubeman.
+
+
+
+
+
 %-------------------------------------------------------------------
 %-------------------------------------------------------------------
 
