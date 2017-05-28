@@ -4,11 +4,11 @@
 %
 %---------------------------------------------------------------------
 
-\chapter{Materiales y M?todos}
+\chapter{Materiales y Métodos}
 
 
 \label{cap4:sec:kinect}
-En este cap?tulo se expondr?n los  materiales  y m?todos utilizados para el desarrollo del proyecto. En los siguientes apartados se explicar?n con detalle y de forma t?cnica las tecnolog?as y los dispositivos utilizados para realizar este proyecto.
+En este capítulo se expondrán los  materiales  y métodos utilizados para el desarrollo del proyecto. A continuación se detallarán de forma técnica las tecnologías y los dispositivos utilizados para realizar el proyecto.
 
 
 %-------------------------------------------------------------------
@@ -21,7 +21,7 @@ Para la edici?n , compilaci?n y depuraci?n de la programaci?n de Unity se ha uti
 \comImpl{Aqui raul pones los programas de modelado de avatar. Animaciones de mixamo,.}\\
 \\
 
-El hardware principal usado en este proyecto es el dispositivo de captura de movimiento kinect v2 (referencia) y el cable de conexion(nose como se llama, refrencia).
+El hardware principal usado en este proyecto es el dispositivo de captura de movimiento kinect v2 (referencia) y el cable de conexion(nose como se llama, referencia).
 
 
 
@@ -55,6 +55,44 @@ Y por ultimo la elecci?n de lenguaje de programacion siendo el lenguaje de C\# u
 https://msdn.microsoft.com/library/jj131033.aspx\\
 https://msdn.microsoft.com/library/dn782025.aspx\\
 https://developer.microsoft.com/es-es/windows/kinect/hardware
+
+
+\subsection{MakeHuman}
+
+La aplicación MakeHuman sirve para crear modelos humanos que pueden ser utilizados en diferentes plataformas 3D, como animaciones, videojuegos, etc. Promueve el arte digital y artistas digitales, proporcionando una herramienta de alta calidad liberada al dominio público con la licencia CCO, mientras que la base de datos y el código se publicaron mediante una licencia AGPL3.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth, height=0.3\textheight]{Imagenes/Capitulos/4/MakeHuman}
+	\caption{Logo MakeHuman}
+	\label{fig:makehuman}
+\end{figure}
+
+
+MakeHuman utiliza un humano estándar y mediante varios deslizadores o scrolls se podrán alterar los parámetros de la estatura, anchura, sexo, edad, etc. 
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth, height=0.3\textheight]{Imagenes/Capitulos/4/MakeHuman2}
+	\caption{Aspecto del humano estándar de MakeHuman}
+	\label{fig:makehuman}
+\end{figure}
+
+En un principio se pensó utilizar esta aplicación para el modelado de los personajes debido a su intuitiva interfaz y la facilidad de exportación en formato fbx el cual utiliza Unity. Pero tras investigar posibles alternativas, se encontró la aplicación Fuse Character Creator, la cual posibilitaba el desarrollo de los personajes con mayor calidad. De forma simultanea se podría realizar la configuración de los personajes para su posterior animación.
+
+\subsection{Fuse Character Creator}
+
+Se trata de una aplicación desarrollada por Mixamo, la cual permite crear personajes únicos mediante una intuitiva interfaz que separa el avatar en diferentes partes, como son la cabeza, el torso, las piernas y los brazos. Posteriormente a la selección de las diferentes partes del cuerpo ya predefinidas por el sistema, se puede editar cada una de las partes del personaje, ya sean los rasgos de la cara, el tamaño de los brazos, la longitud de las piernas, etc. Al seleccionar la parte del cuerpo que se quiere modificar, simplemente será necesario pinchar y realizar un scrool o deslizamiento hacia la izquierda o derecha para aumentar su tamaño, y para seleccionar el punto exacto donde se ubicará por ejemplo el ombligo, los ojos, las rodillas, etc, se realizará un scrool o desplazamiento hacía arriba o abajo.
+
+Al terminar de modelar el personaje, se pasará a la sección de vestuario. Donde existen prendas predefinidas, como camisas, pantalones, zapatos, etc. Al terminar de vestir al avatar, esta aplicación posee la peculiaridad de poder subir al servidor de Mixamo el modelado realizado y completar la configuración de los huesos, a demás de incluir una posible animación.
+
+
+\subsection{Mixamo}
+
+\subsection{Marvelous Designer}
+\subsection{Blender}
+
 
 %Y tambi?n ponemos el acr?nimo \ac{CVS} para que no cruja.
 
