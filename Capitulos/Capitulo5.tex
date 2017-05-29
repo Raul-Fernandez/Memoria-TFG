@@ -52,7 +52,9 @@ Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para a
 
 \label{cap5:sec:Grabar y reproducir movimientos de Usuario}
 Como el objetivo principal de este proyecto es el entrenamiento de actividades físicas se selecciona como ejemplo de primer estudio el \texttt{Recordermo} por su potencial para guardar y reproducir un movimiento.
-\section*{Investigación base}
+
+\subsubsection{Investigación base}
+
 En una primer vista nos muestra como representa al usuario captado por la kinect, esta representación se hace mediante un cubeman\footnote{Esqueleto verde que emula el movimiento de la persona captada.} que simula todo el movimiento que realiza el usuario.
 
 
@@ -90,7 +92,7 @@ Otro script que se debe mencionar es el \texttt{KinectRecorderPlayer}, que es el
 
 \comImpl{foto de txt}\\
 
-\section*{Cambios e implementaciones}
+\subsubsection{Cambios e implementaciones}
 
 Después de haber realizado la investigación y compresión del material que se puede aprovechar para grabar y reproducir un movimiento se nos plantean una series de desafios e implementaciones que debemos realizar.
 
@@ -101,13 +103,17 @@ Con todas estas mejoras implementadas, se empieza a modificar el escenario de Un
 
 \comImpl{foto esqueletos verdes con las dos camaras}\\
 \subsection{Comparación de los movimientos de Usuario}
+
 Otra etapa en el desarrollo de este proyecto es el comparar un movimiento grabado con el movimiento que este realizando el usuario.
-\section*{Investigación base} 
+
+\subsubsection{Investigación base} 
+
 La primera forma de comparar un movimiento en la que se debatió fue la de estudiar las trayectorias de cada movimiento, calculando la gráfica que generaban las coordenadas de los joints a lo largo del tiempo y determinar la pendiente. Esta forma de comparación era muy especifica y laboriosa para cada movimiento, por lo que se intento tener otro camino para hacer la comparación de forma más genérica. Con esta idea en mente nos fijamos en el ejemplo de \texttt{GestureDemo} que reconoce gestos del usuario para rotar y hacer zoom sobre un cubo. Para que reconozca estos gestos previamente hay que añadirlos a las lista de gestos del script \texttt{KinectGesture} e implementar su funcionalidad en el método \textit{CheckForGesture}. Posteriormente hay que notificar al \textit{KinectManger} que gesto de los registrados queremos que se detecte.
 En cuanto a la funcionalidad del gesto, se realiza por estados y progresión permaneciendo en el primer estado hasta que identifique una posición especifica. Para completar el gesto se tendrá un tiempo determinado para llegar a la progresión final del movimiento sino el gesto se cancelará.
 
 
-\section*{Cambios e implementaciones}
+\subsubsection{Cambios e implementaciones}
+
 Una vez analizado la funcionalidad de los gestos de kinect nos apoyaremos en esa idea para implemenentar la comparación del movimiento como un gesto de kinect. Para empezar añadimos el gesto al \texttt{KinectGesture} con el nombre \textit{Move} e implementamos la funcionalidad en \textit{CheckForGesture} haciendo que tenga dos estados. El estado cero se encarga de calibrar la posición inicial dando al usuario la oportunidad de colocarse en esa posición y ofreciéndole un margen de tres segundos para que se prepare. 
 
 Para el siguiente estado hay que explicar antes que la información del movimiento esta guardada previamente en una lista de \textit{strings} y cada elemento corresponde a un \textit{frame} , esta información será accedida en el estado.  
@@ -122,74 +128,64 @@ Por problemas de profundidad de \textit{kinect} se ha obviado la comparación de 
 
 En esta etapa del proyecto, se desarrollarán los  diferentes avatares con una fisionomía humana para dar una sensación mas realista a los \textit{cubeman} y de este modo se proporcionará una perspectiva mas amena al usuario.
 
+\subsubsection{Investigación base} 
+
 \comImpl{Foto de la configuración de rig en unity}
 
-La primera aplicación que se utilizó para crear los personajes que darían vida al TFG fue MakeHuman, ya que mostraba una interfaz amigable e intuitiva. El primer avatar utilizado fue simple, ya que al principio interesaba ver el resultado que proporcionaba el personaje junto con el \textit{cubeman} y de esta forma determinar el numero de huesos utilizados que mas se ajustaba a las necesidades dadas. Para comprobar que esqueleto se debía utilizar,se tuvieron que crear cuatro avatares diferentes, con 31, 163, 137 y 53 huesos respectivamente. 
+La primera aplicación que se utilizó para crear los personajes que darían vida al proyecto fue MakeHuman, ya que mostraba una interfaz amigable e intuitiva (ver Figura \ref{fig:makehuman_avatar} ). El primer avatar utilizado fue simple, ya que al principio interesaba ver el resultado que proporcionaba el personaje junto con el \textit{cubeman} y de esta forma determinar el numero de huesos utilizados que mas se ajustaba a las necesidades dadas. Para comprobar que esqueleto se debía utilizar,se tuvieron que crear cuatro avatares diferentes, con 31, 163, 137 (ver Figura \ref{fig:makehuman_avatar_huesos3} ) y 53 huesos respectivamente. 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth,, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar}
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar}
 	\caption{Avatar inicial}
 	\label{fig:makehuman_avatar}
 \end{figure}
 
+\vspace{1cm}
 
-\begin{figure}[h!]
+Después de realizar varias pruebas, se determinó que el avatar que mejor se adaptaba a los movimientos capturados por \textit{kinect} era \textit{Default no toes} (ver Figura \ref{fig:makehuman_avatar_huesos3} ). Este personaje poseía 137 huesos, de los cuales 25 serían utilizados por el \textit{cubeman}. 
+
+\begin{figure}[p!]
 	\centering
-	\includegraphics[width=1\linewidth,, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar_huesos1}
-	\caption{Avatar con 31 huesos}
-	\label{fig:makehuman_avatar_huesos1}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\linewidth,, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar_huesos2}
-	\caption{Avatar con 163 huesos}
-	\label{fig:makehuman_avatar_huesos2}
-\end{figure}
-
-Después de realizar varias pruebas, se determinó que el avatar que mejor se adaptaba a los movimientos capturados por \textit{kinect} era \textit{Default no toes}. Este personaje poseía 137 huesos, de los cuales 25 serían utilizados por el \textit{cubeman}. 
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\linewidth,, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar_huesos3}
+	\includegraphics[width=1\linewidth, height=0.37\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar_huesos3}
 	\caption{Avatar con 137 huesos}
 	\label{fig:makehuman_avatar_huesos3}
 \end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\linewidth,, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar_huesos4}
-	\caption{Avatar con 53 huesos}
-	\label{fig:makehuman_avatar_huesos4}
-\end{figure}
 
-Para comprobar como se visualizaban los movimientos de un avatar con ropa, se utilizó el personaje inicial vestido con un peto y una camiseta. Al observar de los movimientos capturados con \textit{kinect} que las texturas de la piel y la ropa no plasmaban un realismo razonable, se optó por buscar otro software que ayudase a realizar esa tarea.
+Para comprobar como se visualizaban los movimientos de un avatar con ropa, se utilizó el personaje inicial vestido con un peto y una camiseta (ver Figura \ref{fig:makehuman_avatar2} ). Al observar de los movimientos capturados con \textit{kinect} que las texturas de la piel y la ropa no plasmaban un realismo razonable, se optó por buscar otro software que ayudase a realizar esa tarea.
 
-\begin{figure}[h!]
+
+\begin{figure}[p!]
 	\centering
-	\includegraphics[width=1\linewidth,, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar2}
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar2}
 	\caption{Avatar inicial con ropa}
 	\label{fig:makehuman_avatar2}
 \end{figure}
 
-Tras la decisión tomada de cambiar a Fuse Character Creator como aplicación para el desarrollo de los personajes
+En la busqueda se encontraron aplicaciones dedicadas al modelado de personajes 3D como Blender, pero con una curva de aprendizaje demasiado larga para las necesidades dadas. También se examino una aplicación llamada marvelousDesigner la cual se emplea para desarrollar prendas de vestir. El problema surgío cuando se intentaba importar el avatar creado con MakeHuman, ya que no eran compatibles los formatos de las dos aplicaciones, por lo tanto, se descartó seguir por esa vía. En el camino se observó que existía una compañia llamada Mixamo que ofrecia una aplicación para el desarrollo de avatares y a su vez, un entorno dedicado a la animación de los personajes creados. Por este motivo, se tomó la decisión de cambiar a Fuse Character Creator de Mixamo como aplicación para el desarrollo de los personajes, ya que se amoldaba perfectamente a las necesidades de este proyecto.
 
-\section*{Investigación base} 
+\subsection{Cambios e implementaciones}
 
-Para saber como animar un avatar nos fijamos en el ejemplo \texttt{AvatarsDemo}, para ello utiliza un script \texttt{AvatarController} que realiza una conexión entre los joints y los huesos incorporados en el avatar. RAUL TU SIGUES CON LOS PROGRAMAS Y ANIMACIONES.
+Con el fin de realizar un entorno mas inmersivo se crearon cuatro avatares diferentes, cada uno con una fisionomía propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizaban los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trataba de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
 
-\section*{Cambios e implementaciones}
-Una vez comprendido la generación de avatares, se realizan una prueba con cuatro avatares que se diferencian en la cantidad de huesos que llevan incorporados. El avatar elegido es el que contiene 52 huesos porque demuestra una movilidad mas semejante al \textit{cubeman} inicial.\\
+Con el propósito de realizar una ropa muy similar a la utilizada por la escuela  \texttt{Abadá-Capoeira}, se utilizarón prendas prediseñadas en la aplicación \texttt{Fuse Character Creator} como los pantalones, camisetas y el top que utilizarían los avatares del sistema. con los retoques apropiados de color blanco.
+
+Los dos avatares principales, como son el alumno y el profesor se desarrollaron con la misma vestimenta que utilizaba la escuela \texttt{Abadá-Capoeira}, en cambio los dos avatares que se emplean para dar un mayor dinamismo a la aplicación utilizan el mismo pantalón largo, mientras que el avatar masculino no utilizará prenda superior y el avatar femenino vestirá un top en color blanco.
+
+Para saber como animar un avatar se observó el ejemplo \texttt{AvatarsDemo}, utiliza un script \texttt{AvatarController} que realiza una conexión entre los joints y los huesos incorporados en el avatar. 
+
+Una vez comprendida la generación de avatares. El avatar elegido es el que contiene 41 huesos porque demuestra una movilidad mas semejante al \textit{cubeman} inicial.\\
 \comImpl{captura con los avatar integrando de makehuman con huesos en unity}
 
-Posteriormente para que los avatares no se queden en una posición estática se incorporan la animaciones como el movimiento de la ginga y las animaciones de victoria y derrota para el feedback de la comparación de movimiento.\\
+Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota para obtener un feedback mas ilustrado de la comparación de movimiento.\\
 \comImpl{tres fotos ginga victoria y derrota}
 
-Para incorporar estas animaciones se crea un \texttt{Animator Controller} que es un componente de Unity encargado de añadir y gestionar animaciones a un avatar. Este componente tiene una máquina de estados para gestionar que animación se ejecuta en cada momento. En nuestro caso el estado inicial será la animación de la ginga y realizara una transición a la animación de victoria o derrota si recibe un disparador de la comparación de movimiento y una vez terminada volverá a la animación de ginga.\\
+Para incorporar estas animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity} encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar que animación se ejecuta en cada momento. El estado inicial será la ginga y realizará una transición a la animación de victoria o derrota que dependerá de la comparación del movimiento.  Una vez determinado el anterior estado, este volverá a la animación de ginga.\\
 
 \comImpl{imagen Grafo animator}\\
-Hay que constatar que hay un conflicto entre el \texttt{Animator Controller} y el sensor de movimiento por quien tiene el control del avatar,por ello, se ha implementado un script que cuando el sensor de kinect detecta al usuario automáticamente se desactivar el componente \texttt{Animator Controller} y cuando el usuario se sale de escena el componente vuelve a activarse. 
+Se constató que existía un conflicto entre el \texttt{Animator Controller} y el sensor de movimiento por quien tiene el control del avatar, por ello, se implementó un script que desactiva el componente \texttt{Animator Controller} cuando el sensor de \textit{kinect} detecta al usuario y se vuelve a activar cuando el usuario se sale de la escena.
+
 \subsection{Analisis de los movimientos de Usuario}
 \subsection{Creación de los escenarios 3D}
 
