@@ -10,14 +10,14 @@
 
 
 \label{cap5:sec:Desarrollo Del Proyecto}
-Una vez elegida la tecnología y las plataformas que se van a utilizar se empieza preparar el desarrollo del proyecto. En primer lugar se investigan que librerías y paquetes se necesitan para tener una buena conexión con kinect y, además, que información obtenida del sensor de movimiento podemos aprovechar para el proyecto.
+Una vez elegida la tecnología y las plataformas que se van a utilizar, se empieza a preparar el desarrollo del proyecto. En primer lugar se investiga que librerías y paquetes se necesitan para tener una buena conexión con \texttt{Kinect} y, además, que información obtenida del sensor de movimiento podemos aprovechar para el proyecto.
 
 
 %-------------------------------------------------------------------
 \section{Paquetes para Unity}
 
 \label{cap5:sec:Paquetes para Unity}
-El primer paquete que se prueba es el que nos ofrece microsoft \footnote{https://developer.microsoft.com/es-es/windows/kinect/tools},que es un paquete destinado principalmente para UnityPro.\footnote{Unity profesional de pago con mas funcionalidad que Unity personal.} Al añadir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts, esto es debido, a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versión gratuita de Unity , mientras que el paquete que ofrece Microsoft esta especificado para Unity Pro. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete.
+El primer paquete que se prueba es el que nos ofrece \texttt{Microsoft} \footnote{https://developer.microsoft.com/es-es/windows/kinect/tools},que es un paquete destinado principalmente para \texttt{UnityPro}.\footnote{Unity profesional de pago con mas funcionalidad que Unity personal.} Al añadir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts, esto es debido, a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versión gratuita de Unity , mientras que el paquete que ofrece Microsoft esta especificado para Unity Pro. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete.
 
 En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de Unity para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la cámara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
 Debatiendo e intentando comprender si estos errores se producían por conexión de kinect o por funcionamiento incorrecto de la librería que nos ofrecía microsoft se opto por la opción de descartar este paquete para evitar futuras fustraciones.
@@ -129,7 +129,7 @@ En esta etapa del proyecto, se desarrollarán los  diferentes avatares con una fi
 
 \comImpl{Foto de la configuración de rig en unity}
 
-La primera aplicación que se utilizó para crear los personajes que darían vida al proyecto fue MakeHuman, ya que mostraba una interfaz amigable e intuitiva (ver Figura \ref{fig:makehuman_avatar} ). El primer avatar utilizado fue simple, ya que al principio interesaba ver el resultado que proporcionaba el personaje junto con el \textit{cubeman} y de esta forma determinar el numero de huesos utilizados que mas se ajustaba a las necesidades dadas. Para comprobar que esqueleto se debía utilizar,se tuvieron que crear cuatro avatares diferentes, con 31, 163, 137 (ver Figura \ref{fig:makehuman_avatar_huesos3} ) y 53 huesos respectivamente. 
+La primera aplicación que se utilizó para crear los personajes que darían vida al proyecto fue \texttt{MakeHuman}, ya que mostraba una interfaz amigable e intuitiva (ver Figura \ref{fig:makehuman_avatar} ). El primer avatar utilizado fue simple, ya que al principio interesaba ver el resultado que proporcionaba el personaje junto con el \textit{cubeman} y de esta forma determinar la configuración de los huesos que mas se ajustaba a las necesidades dadas. Para comprobar que esqueleto se debía emplear,se tuvieron que crear cuatro avatares diferentes, con 31, 163, 137 (ver Figura \ref{fig:makehuman_avatar_huesos3} )  y 53 huesos respectivamente.
 
 \begin{figure}[h!]
 	\centering
@@ -140,7 +140,7 @@ La primera aplicación que se utilizó para crear los personajes que darían vida a
 
 \vspace{1cm}
 
-Después de realizar varias pruebas, se determinó que el avatar que mejor se adaptaba a los movimientos capturados por \textit{kinect} era \textit{Default no toes} (ver Figura \ref{fig:makehuman_avatar_huesos3} ). Este personaje poseía 137 huesos, de los cuales 25 serían utilizados por el \textit{cubeman}. 
+Después de realizar varias pruebas, se determinó que el avatar que mejor se adaptaba a los movimientos capturados por \textit{Kinect} era \textit{Default no toes} ver Figura \ref{fig:makehuman_avatar_huesos3} ). Este personaje poseía 137 huesos, de los cuales 25 serían utilizados por el \textit{cubeman}.
 
 \begin{figure}[p!]
 	\centering
@@ -150,7 +150,7 @@ Después de realizar varias pruebas, se determinó que el avatar que mejor se adap
 \end{figure}
 
 
-Para comprobar como se visualizaban los movimientos de un avatar con ropa, se utilizó el personaje inicial vestido con un peto y una camiseta (ver Figura \ref{fig:makehuman_avatar2} ). Al observar de los movimientos capturados con \textit{kinect} que las texturas de la piel y la ropa no plasmaban un realismo razonable, se optó por buscar otro software que ayudase a realizar esa tarea.
+Para comprobar como se visualizaban los movimientos de un avatar con ropa, se utilizó el personaje inicial vestido con un peto y una camiseta (ver Figura \ref{fig:makehuman_avatar2} ). Al observar de los movimientos capturados con \texttt{Kinect} que las texturas de la piel y la ropa no plasmaban un realismo razonable, se optó por buscar otro software que ayudase a realizar esa tarea.
 
 
 \begin{figure}[p!]
@@ -160,7 +160,7 @@ Para comprobar como se visualizaban los movimientos de un avatar con ropa, se ut
 	\label{fig:makehuman_avatar2}
 \end{figure}
 
-En la busqueda se encontraron aplicaciones dedicadas al modelado de personajes 3D como Blender, pero con una curva de aprendizaje demasiado larga para las necesidades dadas. También se examino una aplicación llamada marvelousDesigner la cual se emplea para desarrollar prendas de vestir. El problema surgío cuando se intentaba importar el avatar creado con MakeHuman, ya que no eran compatibles los formatos de las dos aplicaciones, por lo tanto, se descartó seguir por esa vía. En el camino se observó que existía una compañia llamada Mixamo que ofrecia una aplicación para el desarrollo de avatares y a su vez, un entorno dedicado a la animación de los personajes creados. Por este motivo, se tomó la decisión de cambiar a Fuse Character Creator de Mixamo como aplicación para el desarrollo de los personajes, ya que se amoldaba perfectamente a las necesidades de este proyecto.
+En la búsqueda se encontraron aplicaciones dedicadas al modelado de personajes 3D como \texttt{Blender}, pero con una curva de aprendizaje demasiado larga para las necesidades dadas. También se examino una aplicación llamada \texttt{MarvelousDesigner} la cual se emplea para desarrollar prendas de vestir. El problema surgía cuando se intentaba importar el avatar creado con \texttt{MakeHuman}, ya que no eran compatibles los formatos de las dos aplicaciones y por lo tanto se descartó seguir por esa vía. En el camino se observó que existía una compañía llamada \texttt{Mixamo} que ofrecía una aplicación para el desarrollo de avatares y a su vez, un entorno dedicado a la animación de los personajes creados. Por este motivo, se tomó la decisión de cambiar a \texttt{Fuse Character Creator de Mixamo} como aplicación para el desarrollo de los personajes, ya que se amoldaba perfectamente a las necesidades de este proyecto.
 
 \subsection{Cambios e implementaciones}
 
@@ -185,15 +185,15 @@ Para incorporar estas animaciones al avatar, se crea el componente \texttt{Anima
 Se constató que existía un conflicto entre el \texttt{Animator Controller} y el sensor de movimiento por quien tiene el control del avatar, por ello, se implementó un script que desactiva el componente \texttt{Animator Controller} cuando el sensor de \textit{kinect} detecta al usuario y se vuelve a activar cuando el usuario se sale de la escena.
 
 
-\subsection{Analisis de los movimientos de Usuario}
+\subsection{Análisis de los movimientos de Usuario}
 
-Una parte importante de este proyecto es de dar una corrección del movimiento que esta imitando el usuario en tiempo real. En esta sección se explicará como se implementó este análisis.
+Una parte importante de este proyecto consiste en dar una corrección del movimiento que esta imitando el usuario en tiempo real. En esta sección se explicará como se implementó este análisis.
 
 \subsubsection{Investigación base}
 
 Para este apartado se observó el desarrollo de la comparación de movimiento implementada anteriormente. Esa sección respondía al usuario dándole un \textit{feedback} inmediato si había realizado el movimiento correctamente o incorrecta, sin embargo , no le detallaba que partes del cuerpo había colocado de manera errónea. 
 
-El planteamiento para el análisis comienza reproduciendo el movimiento del avatar del usuario junto al avatar de la grabación, deteniéndose en el \textit{frame} donde el usuario cometió el error. En ese instante cambiará los huesos del avatar controlado por el usuario a un color rojo, en consecuencia de una colocación incorrecta del hueso. Adicionalmente mostrará un panel con un texto describiendo las correcciones que se deben aplicar. Esta información se compondrá de parte de cuerpo  ,dirección y altura que servirá de pautas para que el usuario corrija su posición.
+El planteamiento para el análisis comienza reproduciendo el movimiento del avatar del usuario junto al avatar de la grabación, deteniéndose en el \textit{frame} donde el usuario cometió el error. En ese instante cambiará los huesos del avatar controlado por el usuario a un color rojo, en consecuencia de una colocación incorrecta del hueso. Adicionalmente mostrará un panel con un texto describiendo las correcciones que se deben aplicar. Esta información se compondrá de parte de cuerpo, dirección y altura que servirá de pautas para que el usuario corrija su posición.
 
 \subsubsection{Cambios e implementaciones}
 Una vez planteada las especificaciones del análisis se empieza con  su implementación. En primer lugar se creó un script llamado \texttt{Registrar\_movimientos}, el cual, guarda toda la información del movimientos hasta donde el usuario comete el error. Esta información contiene el estado\footnote{Corresponde al frame que se esta comparando.} donde se produce el error y los datos de los \textit{joints} de los avatares.
