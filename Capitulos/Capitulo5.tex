@@ -17,12 +17,12 @@ Una vez elegida la tecnología y las plataformas que se van a utilizar se empieza
 \section{Paquetes para Unity}
 
 \label{cap5:sec:Paquetes para Unity}
-El primer paquete que se prueba es el que nos ofrece microsoft \footnote{https://developer.microsoft.com/es-es/windows/kinect/tools},que es un paquete destinado principalmente para UnityPro.\footnote{Unity profesional de pago con mas funcionalidad que Unity personal.} Al añadir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts, esto es debido, a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versión gratuita de Unity , mientras que el paquete que ofrece microsoft esta especificado para Unity Pro. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete o no.
+El primer paquete que se prueba es el que nos ofrece microsoft \footnote{https://developer.microsoft.com/es-es/windows/kinect/tools},que es un paquete destinado principalmente para UnityPro.\footnote{Unity profesional de pago con mas funcionalidad que Unity personal.} Al añadir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts, esto es debido, a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versión gratuita de Unity , mientras que el paquete que ofrece Microsoft esta especificado para Unity Pro. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete.
 
 En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de Unity para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la cámara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
 Debatiendo e intentando comprender si estos errores se producían por conexión de kinect o por funcionamiento incorrecto de la librería que nos ofrecía microsoft se opto por la opción de descartar este paquete para evitar futuras fustraciones.
 
-Después de descartar el paquete que nos ofrecía microsoft decidimos buscar en el Assets Store de Unity(Explicacion o referencia).Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\textcolor{red}{(?Referencia o imagen?)} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con kinect v2.
+Después de descartar el paquete que nos ofrecía Microsoft decidimos buscar en el Assets Store de Unity(Explicacion o referencia).Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\textcolor{red}{(?Referencia o imagen?)} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con kinect v2.
 
 Este paquete tiene todo lo necesario para reconocer que la kinect está conectada y para poder utilizar los datos que se obtienen del sensor. En una primera toma, el paquete nos ofrece una serie de ejemplos sencillos para poder comprender mejor el funcionamiento de kinect. Para que este paquete funcione es necesario tener instalado Kinect SDK 2.0 que son los drivers de la kinect v2 .
 
@@ -57,10 +57,7 @@ Como el objetivo principal de este proyecto es el entrenamiento de actividades f
 
 En una primer vista nos muestra como representa al usuario captado por la kinect, esta representación se hace mediante un cubeman\footnote{Esqueleto verde que emula el movimiento de la persona captada.} que simula todo el movimiento que realiza el usuario.
 
-
-
-
-Esta representación de cubeman en el escenario de Unity es creada gracias al script de \texttt{Cubeman Controller}. Este script se inicializa con el número del cuerpo que quieres que muestre, kinect v2 puede detectar hasta 6 persona, y también si se quiere que el cuerpo este representado en modo espejo. Los datos del cuerpo del usuario se los a pide al \texttt{Kinect Manager} (este script se explica más adelante). Los datos del cuerpo están definidos con 25 GameObjects llamados \texttt{Joints} que hacen una representacion de la articulaciones del cuerpo humano en unas coordenadas (x,y,z) y su rotación.
+Esta representación de \textit{cubeman} en el escenario de Unity es creada gracias al script de \texttt{Cubeman Controller}. Este script se inicializa con el número del cuerpo que quieres que muestre, kinect v2 puede detectar hasta 6 persona, y también si se quiere que el cuerpo este representado en modo espejo. Los datos del cuerpo del usuario se los a pide al \texttt{Kinect Manager} (este script se explica más adelante). Los datos del cuerpo están definidos con 25 GameObjects llamados \texttt{Joints} que hacen una representacion de la articulaciones del cuerpo humano en unas coordenadas (x,y,z) y su rotación.
 Los 25 \texttt{Joints} serían : cadera central y laterales , pecho, clavícula, cuello, cabeza, hombros, codos, muñecas, pulgares, manos centrales, rodillas, tobillos y pies.
 
 \begin{figure}[h!]
