@@ -51,7 +51,7 @@ Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para a
 \subsection{Grabar y reproducir movimientos de Usuario}
 
 \label{cap5:sec:Grabar y reproducir movimientos de Usuario}
-Como el objetivo principal de este proyecto es el entrenamiento de actividades físicas se selecciona como ejemplo de primer estudio el \texttt{Recordermo} por su potencial para guardar y reproducir un movimiento.
+Como el objetivo principal de este proyecto es el entrenamiento de actividades físicas se selecciona como ejemplo de primer estudio el \texttt{RecorderDemo} por su potencial para guardar y reproducir un movimiento.
 
 \subsubsection{Investigación base}
 
@@ -164,18 +164,26 @@ En la búsqueda se encontraron aplicaciones dedicadas al modelado de personajes 3
 
 \subsection{Cambios e implementaciones}
 
-Con el fin de realizar un entorno mas inmersivo se crearon cuatro avatares diferentes, cada uno con una fisionomía propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizaban los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trataba de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
+A fin de realizar un entorno mas inmersivo se crearon cuatro avatares diferentes, cada uno con una fisionomía propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizaban los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trataba de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
 
-Con el propósito de realizar una ropa muy similar a la utilizada por la escuela  \texttt{Abadá-Capoeira}, se utilizarón prendas prediseñadas en la aplicación \texttt{Fuse Character Creator} como los pantalones, camisetas y el top que utilizarían los avatares del sistema. con los retoques apropiados de color blanco.
+Con el propósito de crear una ropa muy similar a la utilizada por la escuela  \texttt{Abadá-Capoeira}, se usaron prendas prediseñadas en la aplicación \texttt{Fuse Character Creator} como los pantalones, camisetas y el top que utilizarían los avatares del sistema con los retoques apropiados para darle ese color blanco característico.
 
 Los dos avatares principales, como son el alumno y el profesor se desarrollaron con la misma vestimenta que utilizaba la escuela \texttt{Abadá-Capoeira}, en cambio los dos avatares que se emplean para dar un mayor dinamismo a la aplicación utilizan el mismo pantalón largo, mientras que el avatar masculino no utilizará prenda superior y el avatar femenino vestirá un top en color blanco.
 
-Para saber como animar un avatar se observó el ejemplo \texttt{AvatarsDemo}, utiliza un script \texttt{AvatarController} que realiza una conexión entre los joints y los huesos incorporados en el avatar. 
+Tras completar la estética de los personajes, \texttt{Fuse Character Creator de Mixamo} ofrece la posibilidad de configurar los huesos de los avatares, para ello es necesario subir a los servidores de \texttt{Mixamo} dichos personajes. Al finalizar la subida la aplicación redirigirá su actividad al navegador web, como ocurría con \texttt{MakeHuman}, \texttt{Mixamo} ofrece la posibilidad de crear varios esqueletos para un mismo esqueleto, en este caso se presentan cuatro casos con 25, 41 (ver Figura \ref{fig:mixamo-rig} ) , 49 y 65 huesos respectivamente.
 
-Una vez comprendida la generación de avatares. El avatar elegido es el que contiene 41 huesos porque demuestra una movilidad mas semejante al \textit{cubeman} inicial.\\
-\comImpl{captura con los avatar integrando de makehuman con huesos en unity}
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/mixamo-rig}
+	\caption{Auto-Rig de Mixamo}
+	\label{fig:mixamo-rig}
+\end{figure}
 
-Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota para obtener un feedback mas ilustrado de la comparación de movimiento.\\
+Una vez comprendida la generación de avatares. El avatar elegido es el que contiene 41 huesos porque demuestra una movilidad mas semejante al \textit{cubeman} inicial.
+
+Con el propósito de utilizar las animaciones que suministra \texttt{Mixamo} se observó el ejemplo \texttt{AvatarsDemo}, el cual utiliza un script \texttt{AvatarController} que realiza una conexión entre los \textit{joints} y los huesos incorporados en el avatar. 
+
+Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota para obtener un feedback mas ilustrado de la comparación de movimiento.
 \comImpl{tres fotos ginga victoria y derrota}
 
 Para incorporar estas animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity} encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar que animación se ejecuta en cada momento. El estado inicial será la ginga y realizará una transición a la animación de victoria o derrota que dependerá de la comparación del movimiento.  Una vez determinado el anterior estado, este volverá a la animación de ginga.\\
