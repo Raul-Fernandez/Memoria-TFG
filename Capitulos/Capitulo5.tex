@@ -59,7 +59,7 @@ Como el objetivo principal de este proyecto es el entrenamiento de actividades f
 
 En una primera vista se muestra como \texttt{Kinect} capta al usuario, esta representación se hace mediante un cubeman\footnote{Esqueleto verde que emula el movimiento de la persona captada.} que simula todo el movimiento que realiza el usuario.
 
-Esta representación de \textit{cubeman} en el escenario de \texttt{Unity}, es creada gracias al \textit{script} de \texttt{Cubeman Controller}. Este \textit{script} se inicializa con el número del cuerpo que se quiere mostrar, siendo 6 las personas que pueden ser detectadas por \texttt{\texttt{Kinect} v2}, y también pudiendo escoger si el \textit{cubeman} es representado en modo espejo. Los datos del cuerpo están definidos con 25 \texttt{GameObjects} llamados \texttt{Joints}, que hacen una representación de las articulaciones del cuerpo humano. Estos \texttt{Joints} se representan en \texttt{Unity} con unas coordenadas (X,Y,Z) y una rotación.
+La representación del movimiento del usuario se muestra mediante un \textit{cubeman}, que simula todo el movimiento que realiza el usuario. Esta figura se crea gracias al \textit{script} de \texttt{Cubeman Controller}, el cual se inicializa con el número del cuerpo que se quiere mostrar, siendo seis las personas que pueden ser detectadas por \texttt{Kinect v2}, y también pudiendo escoger una representación del \textit{cubeman} en modo espejo. Los datos del \textit{cubeman} (ver Figura \ref{Fig:doscamarasbase}) están definidos con 25 \texttt{GameObjects} llamados \texttt{Joints}, que hacen una representación de las articulaciones del cuerpo humano. Estos \texttt{Joints} se representan en \texttt{Unity} con unas coordenadas (X,Y,Z) y una rotación. Toda la información del movimiento se obtiene a partir del sensor de \texttt{Kinect}.
 Los 25 \texttt{Joints} serían : cadera central y laterales , pecho, clavícula, cuello, cabeza, hombros, codos, muñecas, pulgares, manos centrales, rodillas, tobillos y pies.
 
 \begin{figure}[h!]
@@ -84,7 +84,7 @@ El \textit{script} \texttt{\texttt{Kinect} Manager} es un \texttt{Singleton}\foo
 Este \textit{script} al ser común a todos los ejemplos nombrados anteriormente, implementa todas las funciones y comunicaciones necesarias para su funcionamiento, pero en este caso, se investiga como obtiene la información que le envía al \texttt{cubeman Controller}.
 \texttt{\texttt{Kinect} Manager} se encarga de analizar la información del \texttt{SensorData}, siendo este, una estructura de datos ofrecida por el \textit{script} \texttt{\texttt{Kinect}Interop}\footnote{\textit{script} encargado de tener comunicación directa con el sensor de la \texttt{Kinect}} donde aparece la información de la imagen, pronfundidad, color y datos de los usuarios captado con el sensor. Los datos de los usuarios captados se encapsulan en el \texttt{BodyDataFrame}, esta estructura, a vez, contiene la información del número de usuarios captados, su identificador, la información de los BodyData\footnote{Información de los joint de un cuerpo especifico}, etc.\\
 
-Una vez comprendido el \texttt{SensorDatar}, se observa como el \texttt{\texttt{Kinect} Manager} ,analizando el \texttt{BodyDataFrame}, va actualizando y asignando a cada usuario el identificador correspondiente
+Una vez comprendido el \texttt{SensorData}, se observa como el \texttt{\texttt{Kinect} Manager} ,analizando el \texttt{BodyDataFrame}, va actualizando y asignando a cada usuario el identificador correspondiente
 de un  \texttt{BodyData} en todo momento ,y este a su vez, va pasando al \texttt{Cubeman Controller} esta información para que reproduzca el movimiento.\\
 
 Otro \textit{script} que se debe mencionar es el \texttt{\texttt{Kinect}RecorderPlayer}, que es el encargado de guardar y reproducir un movimiento a partir de un fichero de texto. La información se le pide  al \texttt{\texttt{Kinect} Manager}, y este a su vez, al \texttt{\texttt{Kinect}Interop} devolviéndola en una cadena de caracteres. Esta cadena hace referencia a un \textit{frame}\footnote{Es un fotograma, \texttt{Unity} por defecto reproduce a 60 \textit{frames} por segundo } que tiene la información del instante de tiempo, los \textit{BodyData} captados y las coordenadas (x,y,z) respecto al mundo de todos sus \texttt{Joints}. Los \textit{BodyData} captados aparece primero su identificador y después sus 25 \texttt{Joints}, los \textit{BodyData} no captados aparecerá un cero.
@@ -128,7 +128,7 @@ Como \texttt{Kinect} es una cámara frontal surgen algunos problemas de profundid
 
 \subsection{Avatares y animaciones}
 
-En esta etapa del proyecto, se desarrollarán los  diferentes avatares con una fisionomía humana para dar una sensación mas realista a los \textit{cubeman} y de este modo se proporcionará una perspectiva mas amena al usuario.
+En esta etapa del proyecto, se han desarrollado los  diferentes avatares con una fisionomía humana para dar una sensación mas realista a los \textit{cubeman} y de este modo se proporcionará una perspectiva mas amena al usuario.
 
 \subsubsection{Investigación base} 
 
@@ -169,13 +169,13 @@ En la búsqueda se encontraron aplicaciones dedicadas al modelado de personajes 3
 
 \subsection{Cambios e implementaciones}
 
-A fin de realizar un entorno mas inmersivo se crearon cuatro avatares diferentes, cada uno con una fisionomía propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizaban los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trataba de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
+A fin de realizar un entorno mas realista se crearon cuatro avatares diferentes, cada uno con una fisionomía propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizan los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trata de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
 
 Con el propósito de crear una ropa muy similar a la utilizada por la escuela  \texttt{Abadá-Capoeira}, se usaron prendas prediseñadas en la aplicación \texttt{Fuse Character Creator} como los pantalones, camisetas y el top que utilizarían los avatares del sistema con los retoques apropiados para darle ese color blanco característico.
 
-Los dos avatares principales, como son el alumno y el profesor se desarrollaron con la misma vestimenta que utilizaba la escuela \texttt{Abadá-Capoeira}, en cambio los dos avatares que se emplean para dar un mayor dinamismo a la aplicación utilizan el mismo pantalón largo, mientras que el avatar masculino no utilizará prenda superior y el avatar femenino vestirá un top en color blanco.
+Los dos avatares principales, como son el alumno y el profesor se desarrollaron con la misma vestimenta que utiliza la escuela \texttt{Abadá-Capoeira}, en cambio los dos avatares que se emplean para dar un mayor dinamismo a la aplicación utilizan el mismo pantalón largo, mientras que el avatar masculino no utilizará prenda superior y el avatar femenino vestirá un top en color blanco.
 
-Tras completar la estética de los personajes, \texttt{Fuse Character Creator de Mixamo} ofrece la posibilidad de configurar los huesos de los avatares, para ello es necesario subir a los servidores de \texttt{Mixamo} dichos personajes. Al finalizar la subida la aplicación redirigirá su actividad al navegador web, como ocurría con \texttt{MakeHuman}, \texttt{Mixamo} ofrece la posibilidad de crear varios esqueletos para un mismo esqueleto, en este caso se presentan cuatro casos con 25, 41 (ver Figura \ref{fig:mixamo-rig} ) , 49 y 65 huesos respectivamente.
+Tras completar la estética de los personajes, \texttt{Fuse Character Creator de Mixamo} ofrece la posibilidad de configurar los huesos de los avatares para posteriormente utilizar las animaciones que suministra \texttt{Mixamo}. Para ello será necesario subir a los servidores de \texttt{Mixamo} dichos personajes y cuando se complete el proceso, la aplicación redirigirá su actividad al navegador web. Como ocurría con \texttt{MakeHuman}, \texttt{Mixamo} ofrece la posibilidad de crear varios esqueletos para un mismo personaje, en este caso se presentan cuatro casos con 25, 41 (ver Figura \ref{fig:mixamo-rig}), 49 y 65 huesos respectivamente.
 
 \begin{figure}[t!]
 	\centering
@@ -184,14 +184,14 @@ Tras completar la estética de los personajes, \texttt{Fuse Character Creator de 
 	\label{fig:mixamo-rig}
 \end{figure}
 
-Una vez comprendida la generación de avatares. El avatar elegido es el que contiene 41 huesos porque demuestra una movilidad mas semejante al \textit{cubeman} inicial.
+Una vez comprendida la generación de avatares. El avatar elegido que mejor se adapta a \texttt{Kinect} es el que contiene 41 huesos, ya que demuestra una movilidad más semejante al \textit{cubeman} inicial.
 
-Con el propósito de utilizar las animaciones que suministra \texttt{Mixamo} se observó el ejemplo \texttt{AvatarsDemo}, el cual utiliza un script \texttt{AvatarController} que realiza una conexión entre los \textit{joints} y los huesos incorporados en el avatar. 
+Con el propósito de utilizar las animaciones que suministra \texttt{Mixamo} se observó el ejemplo \texttt{AvataresDemo}, el cual utiliza un script \texttt{AvatarController} que realiza una conexión entre los \textit{joints} y los huesos incorporados en el avatar. 
 
 Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota para obtener un feedback mas ilustrado de la comparación de movimiento.
 \comImpl{tres fotos ginga victoria y derrota}
 
-Para incorporar estas animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity} encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar que animación se ejecuta en cada momento. El estado inicial será la ginga y realizará una transición a la animación de victoria o derrota que dependerá de la comparación del movimiento.  Una vez determinado el anterior estado, este volverá a la animación de ginga.\\
+Para incorporar las animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity}, encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar que animación se ejecuta en cada momento. El estado inicial será la \textit{ginga}, y se realizará una transición a la animación de victoria o derrota que dependerá de la comparación del movimiento del usuario con el del profesor. Una vez determinado el estado, este volverá a la animación de \textit{ginga} para continuar con el siguiente movimiento.
 
 \comImpl{imagen Grafo animator}\\
 
@@ -215,12 +215,12 @@ Posteriormente se necesita hacer una modificación funcional en el gesto \textit{
 A partir de este momento, para poder mostrar la información recogida se implementó una funcionalidad nueva en el \textit{script} \texttt{Registrar\_movimientos}, que consiste en desplazar los avatares a primera escena, modificando los materiales para que se vean transparentes ,y crear así un esqueleto verde parecido a los \textit{cubeman} del principio. Estos avatares simularán el movimiento hasta el \textit{frame} donde se equivocó el usuario y realizará una comprobación de cada \texttt{Joint} para cambiar el hueso de color de verde a rojo. A la vez, se va generando un \textit{string} con una corrección de posicionamiento compuesto por tres partes. Para la primera parte se crea un diccionario que,a partir del número del \texttt{Joint}, devuelve la parte del cuerpo correspondiente. En la implementación de este diccionario se han agrupado \texttt{Joints}, ya que varios forman una misma parte del cuerpo, como por ejemplo, las manos que lo forman tres \texttt{Joints} diferentes. La segunda parte del \textit{string} esta formada por la elección de la dirección , que  se comprueba, realizando la diferencia de la coordenadas X del \texttt{Joint} del usuario con la del \texttt{Joint} de la grabación. Si la diferencia es positiva la dirección será hacia la derecha, en caso contrario, será hacia la izquierda. Y para la tercera parte del \textit{string} se realiza la diferencia con la coordenada Y definiendo así la altura. Si la diferencia es positiva la altura será hacia abajo , en caso contrario hacia arriba.
 Esta lista de correcciones se mostrará en un panel una vez completada evitando los \textit{strings} repetidos.
 
-\comImpl{Imagen completa de analisis con panel}
+\comImpl{Imagen completa de análisis con panel}
 
 
 \subsection{Creación de los escenarios 3D}
 
-Para el desarrollo de los escenarios, se ha intentado crear dos ambientes diferentes. Uno escenificando un entorno de entranamiento como es el caso de un gimnasio para la visualización del alumno y otro mas orientado al profesor y los animadores, como se trata de la playa de Brasil.
+Para el desarrollo de los escenarios, se han creado dos ambientes diferentes: uno escenificando un entorno de entrenamiento como es el caso de un gimnasio para la visualización del alumno (Figura \ref{fig:Alumno}) y otro más orientado al profesor y los animadores, como se trata de una playa Brasileña (Figura \ref{fig:Profesor}).
 
 \subsection{Grabacion de movimientos con gente experta}
 
