@@ -22,7 +22,7 @@ El primer paquete que se prueba es el que nos ofrece \texttt{Microsoft} \footnot
 En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de Unity para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la cámara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
 Debatiendo e intentando comprender si estos errores se producían por conexión de kinect o por funcionamiento incorrecto de la librería que nos ofrecía microsoft se opto por la opción de descartar este paquete para evitar futuras fustraciones.
 
-Después de descartar el paquete que nos ofrecía Microsoft decidimos buscar en el Assets Store de Unity(Explicacion o referencia).Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\textcolor{red}{(?Referencia o imagen?)} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con kinect v2.
+Después de descartar el paquete que nos ofrecía Microsoft decidimos buscar en el Assets Store de Unity(Explicacion o referencia).Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/18708} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con kinect v2.
 
 Este paquete tiene todo lo necesario para reconocer que la kinect está conectada y para poder utilizar los datos que se obtienen del sensor. En una primera toma, el paquete nos ofrece una serie de ejemplos sencillos para poder comprender mejor el funcionamiento de kinect. Para que este paquete funcione es necesario tener instalado Kinect SDK 2.0 que son los drivers de la kinect v2 .
 
@@ -87,10 +87,15 @@ Este \textit{script} al ser común a todos los ejemplos nombrados anteriormente, 
 Una vez comprendido el \texttt{SensorData}, se observa como el \texttt{\texttt{Kinect} Manager} ,analizando el \texttt{BodyDataFrame}, va actualizando y asignando a cada usuario el identificador correspondiente
 de un  \texttt{BodyData} en todo momento ,y este a su vez, va pasando al \texttt{Cubeman Controller} esta información para que reproduzca el movimiento.\\
 
-Otro \textit{script} que se debe mencionar es el \texttt{\texttt{Kinect}RecorderPlayer}, que es el encargado de guardar y reproducir un movimiento a partir de un fichero de texto. La información se le pide  al \texttt{\texttt{Kinect} Manager}, y este a su vez, al \texttt{\texttt{Kinect}Interop} devolviéndola en una cadena de caracteres. Esta cadena hace referencia a un \textit{frame}\footnote{Es un fotograma, \texttt{Unity} por defecto reproduce a 60 \textit{frames} por segundo } que tiene la información del instante de tiempo, los \textit{BodyData} captados y las coordenadas (x,y,z) respecto al mundo de todos sus \texttt{Joints}. Los \textit{BodyData} captados aparece primero su identificador y después sus 25 \texttt{Joints}, los \textit{BodyData} no captados aparecerá un cero.
+Otro \textit{script} que se debe mencionar es el \texttt{\texttt{Kinect}RecorderPlayer}, que es el encargado de guardar y reproducir un movimiento a partir de un fichero de texto. La información se le pide  al \texttt{\texttt{Kinect} Manager}, y este a su vez, al \texttt{\texttt{Kinect}Interop} devolviéndola en una cadena de caracteres. Esta cadena hace referencia a un \textit{frame}\footnote{Es un fotograma, \texttt{Unity} por defecto reproduce a 60 \textit{frames} por segundo } que tiene la información del instante de tiempo, los \textit{BodyData} captados y las coordenadas (x,y,z) respecto al mundo de todos sus \texttt{Joints}. Los \textit{BodyData} captados aparece primero su identificador y después sus 25 \texttt{Joints}, los \textit{BodyData} no captados aparecerá un cero (Figura \ref{fig:ejemplo_txt}).
 \texttt{KinecRecorderPlayer} también discierne entre grabación y reproducción activando solo una de la dos a la vez.
 
-\comImpl{foto de txt}\\
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Imagenes/Capitulos/capitulo5/ejemplo_txt}
+	\caption{Fichero de texto con los datos del BodyData}
+	\label{fig:ejemplo_txt}
+\end{figure}
 
 \subsubsection{Cambios e implementaciones}
 
@@ -98,10 +103,15 @@ Después de haber realizado la investigación y compresión del material que se pue
 
 En primer lugar se debe implementar la forma de poder reproducir un movimiento grabado a la vez que muestra al usuario captado en tiempo real, para ello, se implementa una función llamada \texttt{SetBodyFrameFromCsvAndPoll} en el \texttt{\texttt{Kinect}Interop}. El funcionamiento de esta función es el de obtener primero el \texttt{SensorData} con los datos del usuario captados por la \texttt{Kinect} y después, se busca un \textit{BodyData} que esté libre de ese mismo SensorData, para así, poder rellenarlo con los datos del fichero de texto. También se añade un campo más a la estructura de \textit{BodyData} para saber si los datos son procedentes del sensor o de un fichero de texto. 
 Posteriormente de hacer estos cambios, se realiza una modificación en el \textit{script} \texttt{Cubeman Controller} para poder escoger si los datos proceden del sensor o de un fichero texto.
-Con todas estas mejoras implementadas, se empieza a modificar el escenario de \texttt{Unity} para mostrar dos cámaras. La primera cámara enfoca un escenario donde se encuentra el \textit{cubeman} que representa al usuario captado por el sensor de \texttt{Kinect} y la segunda cámara muestra otro escenario colocado en la esquina superior derecha que contiene otro \textit{cubeman} que está a la espera de reproducir el movimiento que está guardado en un fichero de texto.
+Con todas estas mejoras implementadas, se empieza a modificar el escenario de \texttt{Unity} para mostrar dos cámaras. La primera cámara enfoca un escenario donde se encuentra el \textit{cubeman} que representa al usuario captado por el sensor de \texttt{Kinect} y la segunda cámara muestra otro escenario colocado en la esquina superior derecha que contiene otro \textit{cubeman} que está a la espera de reproducir el movimiento que está guardado en un fichero de texto(Figura \ref{fig:dos_camaras}).
 
 
-\comImpl{foto esqueletos verdes con las dos camaras}\\
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/capitulo5/doscamarasbase}
+	\caption{Escena con los dos cubeman}
+	\label{fig:dos_camaras}
+\end{figure}
 \subsection{Comparación de los movimientos de Usuario}
 
 Otra etapa en el desarrollo de este proyecto se trata de comparar un movimiento grabado con el que esté realizando el usuario.
@@ -120,11 +130,16 @@ En cuanto a la funcionalidad del gesto, se realiza por estados y progresión,  pe
 Una vez analizado la funcionalidad de los gestos de \texttt{Kinect}, se apoyó en esa idea para implemenentar la comparación del movimiento como un gesto de \texttt{Kinect}. Para empezar añadimos el gesto al \texttt{\texttt{Kinect}Gesture} con el nombre \textit{Move}, acto seguido, se implementa la funcionalidad en \textit{CheckForGesture} haciendo que tenga dos estados. El estado cero se encarga de calibrar la posición inicial ,dando al usuario, la oportunidad de colocarse en esa posición y ofreciéndole un margen de tres segundos para que se prepare. 
 
 Para el siguiente estado hay que explicar antes, que la información del movimiento esta guardada previamente en una lista de \textit{strings} y cada elemento corresponde a un \textit{frame}. 
-Después de este inciso se define el siguiente estado como el estado por defecto ,y es así,  porque engloba todos los siguiente estados al estado cero. El número del estado será utilizado para acceder y obtener el \textit{frame} de la lista del movimiento. En este momento se decide que para que sea más eficiente la transisción de estados, se incrementa en más de una unidad el estado, ya que la comparación de dos \textit{frames} consecutivos es muy similar, ahorrandose así comparaciones innecesarias. Para pasar al siguiente estado habrá una comparación de cada uno de los  25 \texttt{Joints} del usuario con los \texttt{Joints} del \textit{frame} correspondiente. La comparación consiste en igualar las coordenadas x e y con un margen de error modificable por el usuario, si cumple este requisito pasará al siguiente estado. La comparación tiene un tiempo límite que será el tiempo del movimiento más dos segundos de espera, en ese tiempo el usuario deberá superar todos los estados para que el movimiento sea realizado correctamente, en caso contrario fracasará y se cancelará el gesto. El resultado del gesto se muestra por pantalla para dar un \textit{feedback} inmediato al usuario. 
+Después de este inciso se define el siguiente estado como el estado por defecto ,y es así,  porque engloba todos los siguiente estados al estado cero. El número del estado será utilizado para acceder y obtener el \textit{frame} de la lista del movimiento. En este momento se decide que para que sea más eficiente la transisción de estados, se incrementa en más de una unidad el estado, ya que la comparación de dos \textit{frames} consecutivos es muy similar, ahorrandose así comparaciones innecesarias. Para pasar al siguiente estado habrá una comparación de cada uno de los  25 \texttt{Joints} del usuario con los \texttt{Joints} del \textit{frame} correspondiente. La comparación consiste en igualar las coordenadas x e y con un margen de error modificable por el usuario, si cumple este requisito pasará al siguiente estado. La comparación tiene un tiempo límite que será el tiempo del movimiento más dos segundos de espera, en ese tiempo el usuario deberá superar todos los estados para que el movimiento sea realizado correctamente, en caso contrario fracasará y se cancelará el gesto (Figura \ref{fig:grafo_movimiento}). El resultado del gesto se muestra por pantalla para dar un \textit{feedback} inmediato al usuario. 
 
 Como \texttt{Kinect} es una cámara frontal surgen algunos problemas de profundidad haciendo que la comparación de la coordenada z se cumpla ocasionalmente, por ello, se toma la decisión de obviarla por su comportamiento extraño.\\
 
-\comImpl{Grafo de comparar movimiento}
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/capitulo5/diagrama_movimiento}
+	\caption{Grafo de comparación de movimiento}
+	\label{fig:grafo_movimiento}
+\end{figure}
 
 \subsection{Avatares y animaciones}
 
@@ -223,8 +238,8 @@ Esta lista de correcciones se mostrará en un panel una vez completada evitando l
 Para el desarrollo de los escenarios, se han creado dos ambientes diferentes: uno escenificando un entorno de entrenamiento como es el caso de un gimnasio para la visualización del alumno (Figura \ref{fig:Alumno}) y otro más orientado al profesor y los animadores, como se trata de una playa Brasileña (Figura \ref{fig:Profesor}).
 \subsubsection{Escenario de gimnasio}
 La creación de escenario del gimnasio se creó a partir de diferentes componentes,  distribuidos en distintos paquetes, ofrecidos en el \texttt{Asset Store} de \texttt{Unity}. En el diseño de suelo se creo un \texttt{Gameobject} tipo panel y  se le incrusto un material ofrecido por el paquete \texttt{Yughues Free Wooden Floor Materials}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/13213}, para simular un suelo de madera. En la construcción de las paredes del escenario se crearon tres paneles, colocándoles de forma vertical formando un cubo abierto, y ademas, se añadió a todos los paneles, un material del paquete \texttt{18 High Resolution Wall  Textures}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/12567} que se asemejan a una textura tipo piedra. Se colocan unos bancos y un casillero para que de sensación de ser una sala de entrenamiento, estos objetos son modelos del paquete \texttt{Locker Room Props}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/3355}. Para no dar una impresión de una habitación cerrada se añaden dos ventanas y un ventilador , estos objetos vienen implementados en el paquete \texttt{Props for the Classroom}
-\footnote{https://www.assetstore.unity3d.com/en/\#!/content/5977},se observo también que en el mismo paquete tenia un objeto con la forma de una pizarra de clase, entonces para añadir una huella educativa se añadió este elemento a escena.
-
+\footnote{https://www.assetstore.unity3d.com/en/\#!/content/5977},se observó también que en el mismo paquete tenia un objeto con la forma de una pizarra de clase, entonces para agregar una huella educativa se añadió este elemento a escena.
+\comImpl{imagen del primer escenario}
 \subsubsection{Escenario de isla}
 \subsection{Grabacion de movimientos con gente experta}
 
@@ -252,7 +267,7 @@ Este proceso consistía en grabar una batería de movimientos de capoeira \cite{ca
 	\item Esquiva de frente, es un técnica para esquivar un ataque elevado y consiste en desplazar el cuerpo hacia abajo.
 	\item Negativa, es una posición defensiva utilizado para esquivar o para desplazarse por el suelo.
 
-	
+\comImpl{Foto de alguien grabandole}
 	
 \end{itemize}
 
