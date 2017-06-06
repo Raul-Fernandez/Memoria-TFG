@@ -221,10 +221,46 @@ Esta lista de correcciones se mostrará en un panel una vez completada evitando l
 \subsection{Creación de los escenarios 3D}
 
 Para el desarrollo de los escenarios, se han creado dos ambientes diferentes: uno escenificando un entorno de entrenamiento como es el caso de un gimnasio para la visualización del alumno (Figura \ref{fig:Alumno}) y otro más orientado al profesor y los animadores, como se trata de una playa Brasileña (Figura \ref{fig:Profesor}).
+\subsubsection{Escenario de gimnasio}
+La creación de escenario del gimnasio se creó a partir de diferentes componentes,  distribuidos en distintos paquetes, ofrecidos en el \texttt{Asset Store} de \texttt{Unity}. En el diseño de suelo se creo un \texttt{Gameobject} tipo panel y  se le incrusto un material ofrecido por el paquete \texttt{Yughues Free Wooden Floor Materials}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/13213}, para simular un suelo de madera. En la construcción de las paredes del escenario se crearon tres paneles, colocándoles de forma vertical formando un cubo abierto, y ademas, se añadió a todos los paneles, un material del paquete \texttt{18 High Resolution Wall  Textures}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/12567} que se asemejan a una textura tipo piedra. Se colocan unos bancos y un casillero para que de sensación de ser una sala de entrenamiento, estos objetos son modelos del paquete \texttt{Locker Room Props}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/3355}. Para no dar una impresión de una habitación cerrada se añaden dos ventanas y un ventilador , estos objetos vienen implementados en el paquete \texttt{Props for the Classroom}
+\footnote{https://www.assetstore.unity3d.com/en/\#!/content/5977},se observo también que en el mismo paquete tenia un objeto con la forma de una pizarra de clase, entonces para añadir una huella educativa se añadió este elemento a escena.
 
+\subsubsection{Escenario de isla}
 \subsection{Grabacion de movimientos con gente experta}
 
+En esta etapa del proyecto se visitó la Asociación Cultural Deportiva Rio\footnote{https://www.asociacionrio.com/}, donde se reúnen los practicantes expertos en capoeira, para realizar una serie de grabaciones y pruebas.
 
+\subsubsection{Movimientos grabados}
+Este proceso consistía en grabar una batería de movimientos de capoeira \cite{capoeira2007little} para seleccionar los captados correctamente por \texttt{Kinect}. Para facilitar la grabación al profesor de capoeira, se optó por capturar varias repeticiones del mismo movimiento en la misma grabación. De este modo, y con la supervisión del profesor, se registraron 20 técnicas de capoeira:
+\begin{itemize}
+	\item Ginga,  es la técnica fundamental de la capoeira, consiste en realizar un movimiento constante que prepara al usuario para acciones como evadir, fintar o atacar, así como conservar el impulso. La forma general de la ginga es un continuo paso triangular, retrocediendo un pie y luego con el otro en diagonal mientras se mantiene las piernas separadas. Para este movimiento se realizaron tres grabaciones diferentes porque es un movimiento que puede tener diversas variantes.
+	\item Aú, movimiento que consiste en dar una voltereta lateral.
+	\item Armada, técnica en donde el usuario gira sobre si mismo en vertical golpeando con el talón al oponente.
+	\item Queixada, movimiento que consiste en dar un paso quedándose de costado al oponente y se realiza una patada con un movimiento circular.
+	\item Bênção, técnica que que se ejecuta con una patada frontal básica, realizada contra el abdomen o el pecho del oponente.
+	\item Chapa-Pisào, movimiento similar al Bênção pero se realiza con la planta del pie y paralelo al suelo.
+	\item Gancho, técnica que consiste en levantar la pierna en un diagonal hasta una posición alta, para después contraer la rodilla  y golpear con el talón en dirección descendente.
+	\item Martelo, movimiento de patada que tiene como objetivo golpear con el empeine en la sien del oponente.
+	\item Meia Lua de Compasso, técnica que consiste en apoyar una mano en el suelo mientras se gira 180º y se lanza la pierna opuesta en un movimiento circular y ascendente, para golpear con el talón en la cabeza del oponente.  
+	\item Meia Lua de Frente, movimiento que realiza una patada frontal de fuera a dentro
+	\item Ponteira, movimiento que consiste en estirar la pierna hacia el oponente y golpearlo con la punta del pie.
+	\item Joelhada, movimiento que se realiza alzando la rodilla hacia delante con la intención de golpear.
+	\item Galopante, técnica que realiza un golpe con la mano abierta parecido a una bofetada.
+	\item Telefone, técnica que sirve para golpear con las dos manos en los tímpanos del oponente.
+	\item Despreço, movimiento que consiste en dar una bofeta pero con la parte externa de la mano.
+	\item Escada,
+	\item Esquiva de frente, es un técnica para esquivar un ataque elevado y consiste en desplazar el cuerpo hacia abajo.
+	\item Negativa, es una posición defensiva utilizado para esquivar o para desplazarse por el suelo.
+
+	
+	
+\end{itemize}
+
+
+\subsubsection{Elección y ajuste de movimientos}
+Después del proceso de grabación ,se tuvieron que seleccionar los movimientos que mejor se asemejaban al real, recortando el intervalo de \textit{frames} más adecuado para incluirlo en la aplicación.
+De los 20 movimientos grabados los seleccionados fueron :Bênção, Ginga, Joehjada, Escada, Galopante, Meia Lua de Frente,Chapa-Pisào y Punteira.
+Estos 8 movimientos fueron factibles para su uso porque el resto, al incluir giros, presentaron problemas en la grabación. Esto se debe a que \texttt{Kinect} sólo posee una cámara frontal, de modo que al rotar alrededor del eje vertical se acaba perdiendo la referencia de cuáles son las extremidades izquierda y derecha. Como resultado, al darse la vuelta, la captura vuelve a mostrar al usuario de frente, pero con los brazos y las piernas cruzadas.
 %-------------------------------------------------------------------
 %-------------------------------------------------------------------
 
