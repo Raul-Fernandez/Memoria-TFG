@@ -20,7 +20,7 @@
 \label{cap2:sec:captura}
 La captura de movimiento (abreviada \texttt{Mocap}, en inglés \textit{Motion Capture}) es el proceso por el cual el movimiento, ya sea de objetos, animales o mayormente personas, se traslada a un modelo digital 3D.
 
-En la actualidad, esta técnica llamada fotogrametría, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes, de ese modo se obtiene una mayor sensación de realismo.\cite{captura} \citeauthor{wiki1}.
+En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes, de ese modo se obtiene una mayor sensación de realismo.\cite{captura} \citeauthor{wiki1}.
 
 
 
@@ -31,47 +31,51 @@ En la actualidad, esta técnica llamada fotogrametría, se utiliza en la industria
 
 \subsection{Precursores}
 
-Aristoteles (384-322 AC) podría ser considerado el primer biomecánico, escribió el libro "De Motu Animalium" (Movimiento de los animales). Él no solo veía los cuerpos de los animales como sistemas mecánicos, sino que perseguía la idea de como diferenciar la realización de un movimiento y como poderlo hacer realmente.
+Ya en la antigua Grecia, Aristoteles (384-322 AC) escribió el libro "De Motu Animalium" \footnote{Movimiento de los animales}. Él no solo veía los cuerpos de los animales como sistemas mecánicos, sino que perseguía la idea de como diferenciar la realización de un movimiento y como poderlo hacer realment, por lo que podría ser considerado el primer biomecánico de la historia.
 
-Leonardo da Vinci (1452-1519) trató de describir algunos mecanismos que utiliza el cuerpo humano para poder desplazarse, como un humano puede saltar, caminar, mantenerse de pie...
+Aproximadamente dos mil años después, Leonardo da Vinci (1452-1519) trató de describir algunos mecanismos que utiliza el cuerpo humano para poder desplazarse, como un humano puede saltar, caminar, mantenerse de pie...
 
-Eadweard Muybridge (1830-1904) fué el primer fotógrafo capaz de diseccionar el movimiento humano y animal, a través de múltiples cámaras tomando varias fotografías para captar instantes seguidos en el tiempo. Este experimento llamado " el caballo en movimiento", mostrado en la figura "tal",  utilizó esta técnica de fotografía.
+Como pionero en la edad moderna, Eadweard Muybridge (1830-1904) fué el primer fotógrafo capaz de diseccionar el movimiento humano y animal, a través de múltiples cámaras tomando varias fotografías para captar instantes seguidos en el tiempo. Este experimento llamado " el caballo en movimiento", mostrado en la figura "tal",  utilizó esta técnica de fotografía.
 
-\comImpl{meter figura}
+\comImpl{Meter foto con los caballos}
 
 \subsection{Nacimiento de la captura de movimiento}
 
-Con la aparicioón de la técnica de la rotoscopia se conseguía naturalizar los
-movimientos de los personajes animados. Los estudios Walt Disney Pictures utilizaron la
-rotoscopia en 1937 en ?Blancanieves y los siete enanitos? para la animacio?n de los
-personajes del pri?ncipe y de Blancanieves. Esta te?cnica consiste en reemplazar los
-fotogramas de una grabacio?n real por dibujos calcados sobre cada fotograma (Figura 2.2)
-
-
-En paralelo, los laboratorios de biomeca?nica comenzaban a utilizar ordenadores para analizar el movimiento humano. En la de?cada de los 80, Tom Calvert, profesor de kinesiologi?a y ciencias de la computacio?n en la universidad Simon Fraser, Canada?, incorporo? potencio?metros a un cuerpo y la salida la uso? para mover personajes animados por ordenador para estudios coreogra?ficos y asistencia cli?nica para pacientes con problemas de locomocio?n.
 
 %-----------OK---------------
 
-En la década de los 70, cuando empezaba a surgir la posibilidad de realizar animaciones de personajes por ordenador, se conseguía naturalizar los movimientos mediante técnicas clásicas de diseño, como la técnica de rotoscopia. Esta técnica consiste en reemplazar los frames de una grabación real por dibujos calcados cada frame.
+En la década de los 70, cuando empezaba a surgir la posibilidad de realizar animaciones de personajes por ordenador, se conseguía naturalizar los movimientos mediante técnicas clásicas de diseño, como la técnica de rotoscopia. Esta técnica consiste en reemplazar los frames de una grabación real por dibujos calcados cada frame. Los estudios \textit{Walt Disney Pictures} utilizaron esta técnica en la película de 1937 ``Blancanieves y los siete enanitos'', para animar a los personajes del principe y Blancanieves. 
 
-Pero mientras, los laboratorios de biomecánica empezaban a usar los ordenadores como medio para analizar el movimiento humano. En la década de los 80, un profesor de kinesiología y ciencias de la computación en la universidad Simon Fraser (Canadá), incorporó potenciometros a un cuerpo y la salida la usó para generar personajes animados por ordenador, con el objetivo de ser utilizados por estudios coreográficos y asistencia clínica para ayudar a pacientes con problemas de locomoción. 
+\comImpl{Meter foto de Blancanieves}
+
+Pero mientras, los laboratorios de biomecánica empezaban a usar los ordenadores como medio para analizar el movimiento humano. En la década de los 80, \texttt{Tom Calvert}, un profesor de kinesiología y ciencias de la computación en la universidad Simon Fraser (Canadá), incorporó potenciómetros a un cuerpo y la salida la usó para generar personajes animados por ordenador, con el objetivo de ser utilizados por estudios coreográficos y asistencia clínica para ayudar a pacientes con problemas de locomoción. 
+
+\comImpl{Meter foto con los caballos}
+
+A principios de los años 80, centros como el MIT\footnote{Massachusetts Institute of Technology} empezaron a realizar experimentos con dispositivos de seguimiento visual aplicados en el cuerpo humano. Mas tarde, empiezan a cobrar importancia los primeros sistemas de seguimiento visual como el \texttt{Op-Eye} y el \texttt{SelSpot}. Estos sistemas normalmente usaban pequeños marcadores adheridos al cuerpo (Leds parpadeantes o pequeños puntos reflectantes) con una serie de cámaras alrededor del espacio donde se realizaba la actividad.
+
+\comImpl{Referenciar relación con la tecnología de los marcadores}
+
+En 1988, Brad deGraf y Wahrman desarrollaron \textit{Mike the Talking Head} de Silicon Graphics, capaz de mostrar las capacidades de sus nuevos equipos 4D en tiempo real. Mike estaba dirigido por un controlador que permitía controlar diferentes parámetros de la cara del personaje: como los ojos, boca, expresión y posición de la cabeza. El hardware de Silicon Graphics proporcionaba una interpolación en tiempo real entre las expresiones faciales y la geometría de la cabeza del personaje y del usuario. En la conferencia de SIGGRAPH, Mike fue mostrado al público, donde se demostró que la tecnología \textit{mocap} estaba preparada para su explotación. 
+
+
+\comImpl{Imagen de Mike deGraf}
+
+En 1985, Jim Henson Productions\footnote{Organización de entretenimiento norteamericana} intentó crear versiones virtuales de sus personajes, pero no obtuvieron el éxito deseado, debido principalmente a la limitación de las capacidades de la tecnología en ese instante. Con los equipos 4D de Silicon Graphics y la perspicacia de Pacific Data Images\footnote{Productora de animación por ordenador}, en 1988 los miembros de la compañía encontraron una solución viable para controlar las animaciones. Fueron capaces de regular la posición y los movimientos de la boca de un personaje a baja resolución y en tiempo real a través de la captura de movimiento de las manos de un actor con un aparato llamado Waldo, para su posterior interpretación en un ordenador. De esta manera surgió la primera marioneta virtual conocida como Waldo C. Graphic. 
+
+\comImpl{Meter foto Waldo}
+
+Años mas tarde, en los 90 deGraf continuó investigando en solitario en el desarrollo de un sistema de animación en tiempo real conocido como ``Alive''. Para lograr animar un personaje interpretado con ``Alive'', deGraf desarrolló un dispositivo especial con cinco pistones, los cuales representaban los dedos de la mano de la persona que controlaba al personaje virtual a modo de titiritero.
+
+Con todo esto, deGraf pasó a formar parte de la compañía Colossal Pictures, donde animó a ``Moxy'':un perro generado por ordenador que presentaba un programa en Cartoon Network, mediante el sistema ``Alive''. ``Moxy'' es interpretado en tiempo real para publicidad, pero su uso en el programa era renderizado. Los movimientos del actor se capturaban mediante un sistema electromagnético con sensores en la cabeza, torso, manos y pies.
+
+\comImpl{Imagen de Moxy}
+
 
 %----------OK----------
 
-A finales de los años 70, cuando se empezaba a hacer posible la animación de personajes por ordenador, los diseñadores comenzaron a usar las técnicas clásicas de diseño(como el rotoscopio). El rotoscopio era una técnica en la cual se utilizaban frames reales que se utilizaban como base para diseñar algo por encima, similar a calcar un folio por encima de otro que contiene lo que queremos copiar.
-Pero mientras, se empezaron a usar los ordenadores para analizar el movimiento humano, en estudios de biomecánica. Las técnicas y dispositivos usados en éstos empezaron a adoptarse en la comunidad de GC. 
-
-Al principio de los años 80 , Tom Calvert, un profesor de kinesiología y ciencias de la computación en la Simon Fraser University, adhirió potenciómetros a un cuerpo y usó la salida para generar personajes animados por ordenador con objeto de ser usado en estudios de coreografía y asistencia clínica para pacientes con problemas de locomoción. Por ejemplo, para analizar la flexión de rodilla, creó una especie de exoesqueleto para cada pierna, cada uno de los cuales tenia adherido un potenciometro para analizar el grado de flexión. La señal analógica era digitalizada e introducida en un programa que hacía una simulación mediante una animación en el ordenador.
-
-
-
-
 %-------------------------------------------------------------------
-Poco despues, comienzan a salir los primeros sistemas de seguimiento visual como el Op-Eye y el SelSpot. A principios de los 80, tanto el MIT como el CGL del NYTC experimentaron con dispositivos de seguimiento visual aplicados en el cuerpo humano.
 
-Estos sistemas normalmente usan pequeños marcadores adheridos al cuerpo(tanto LEDs parpadeantes como pequeños puntos reflectantes) y una serie de cámaras alrededor del espacio de maniobras. Una combinación de hardware especial y software distinguen los marcadores en el campo visual de cada cámara, y mediante comparación, calculan la posición tridimensional de cada marcador en cada instante. 
-
-La tecnología está limitada por la velocidad a la que los marcadores pueden ser rastreados(esto afecta al número de posiciones por segundo que pueden ser capturadas), por la oclusión de los marcadores por el cuerpo y por la resolución de las cámaras(específicamente por su capacidad para diferenciar distintos marcadores próximos). Los primeros sistemas podían rastrear sólo una docena de marcadores al mismo tiempo. Los sistemas más recientes pueden distinguir varias docenas. Los problemas de oclusión se pueden superar con el uso de más camaras, pero incluso con eso, los sistemas ópticos más modernos suelen requerir un post-procesamiento manual para recuperar trayectorias cuando un marcador se pierde de vista. Esto cambiará según los sistemas se vuelvan más sofisticados. El problema de la resolución está relacionado con varias variables, como el precio de la cámara, el campo de visión, y el espacio de movimientos. A mayor resolución requerida, mayor el precio de la cámara. La misma cámara puede dar una mejor resolución de movimiento si está enfocando un menor campo de visión, pero esto limita la capacidad de los movimientos a realizar. Por ello, casi todos los resultados de los sistemas de captura ópticos necesitan una post-producción para analizar, procesar y limpiar la información antes de ser utilizados. 
 
 
 \section{Tecnología de la captura de movimiento}
