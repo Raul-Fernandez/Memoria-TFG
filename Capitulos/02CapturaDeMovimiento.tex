@@ -12,12 +12,12 @@
 %-------------------------------------------------------------------
 \section{Captura de movimiento}
 
+\label{cap2:sec:captura}
 
 
 %-------------------------------------------------------------------
 
 
-\label{cap2:sec:captura}
 La captura de movimiento (abreviada \texttt{Mocap}, en inglés \textit{Motion Capture}) es el proceso por el cual el movimiento, ya sea de objetos, animales o mayormente personas, se traslada a un modelo digital 3D.
 
 En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes, de ese modo se obtiene una mayor sensación de realismo.\cite{captura} \citeauthor{wiki1}.
@@ -56,21 +56,37 @@ A principios de los años 80, centros como el MIT\footnote{Massachusetts Institut
 
 \comImpl{Referenciar relación con la tecnología de los marcadores}
 
-En 1988, Brad deGraf y Wahrman desarrollaron \textit{Mike the Talking Head} de Silicon Graphics, capaz de mostrar las capacidades de sus nuevos equipos 4D en tiempo real. Mike estaba dirigido por un controlador que permitía controlar diferentes parámetros de la cara del personaje: como los ojos, boca, expresión y posición de la cabeza. El hardware de Silicon Graphics proporcionaba una interpolación en tiempo real entre las expresiones faciales y la geometría de la cabeza del personaje y del usuario. En la conferencia de SIGGRAPH, Mike fue mostrado al público, donde se demostró que la tecnología \textit{mocap} estaba preparada para su explotación. 
-
-
-\comImpl{Imagen de Mike deGraf}
-
 En 1985, Jim Henson Productions\footnote{Organización de entretenimiento norteamericana} intentó crear versiones virtuales de sus personajes, pero no obtuvieron el éxito deseado, debido principalmente a la limitación de las capacidades de la tecnología en ese instante. Con los equipos 4D de Silicon Graphics y la perspicacia de Pacific Data Images\footnote{Productora de animación por ordenador}, en 1988 los miembros de la compañía encontraron una solución viable para controlar las animaciones. Fueron capaces de regular la posición y los movimientos de la boca de un personaje a baja resolución y en tiempo real a través de la captura de movimiento de las manos de un actor con un aparato llamado Waldo, para su posterior interpretación en un ordenador. De esta manera surgió la primera marioneta virtual conocida como Waldo C. Graphic. 
 
 \comImpl{Meter foto Waldo}
 
-Años mas tarde, en los 90 deGraf continuó investigando en solitario en el desarrollo de un sistema de animación en tiempo real conocido como ``Alive''. Para lograr animar un personaje interpretado con ``Alive'', deGraf desarrolló un dispositivo especial con cinco pistones, los cuales representaban los dedos de la mano de la persona que controlaba al personaje virtual a modo de titiritero.
+En 1988, Brad deGraf y Wahrman desarrollaron \textit{Mike the Talking Head} de Silicon Graphics, capaz de mostrar las capacidades de sus nuevos equipos 4D en tiempo real. Mike estaba dirigido por un controlador que permitía controlar diferentes parámetros de la cara del personaje: como los ojos, boca, expresión y posición de la cabeza. El hardware de Silicon Graphics proporcionaba una interpolación en tiempo real entre las expresiones faciales y la geometría de la cabeza del personaje y del usuario. En el congreso de SIGGRAPH, Mike fue mostrado al público, donde se demostró que la tecnología \textit{mocap} estaba preparada para su explotación. 
+
+
+\comImpl{Imagen de Mike deGraf}
+
+Años mas tarde, en los 90, deGraf continuó investigando en solitario en el desarrollo de un sistema de animación en tiempo real conocido como ``Alive''. Para lograr animar un personaje interpretado con ``Alive'', deGraf desarrolló un dispositivo especial con cinco pistones, los cuales representaban los dedos de la mano de la persona que controlaba al personaje virtual a modo de titiritero.
 
 Con todo esto, deGraf pasó a formar parte de la compañía Colossal Pictures, donde animó a ``Moxy'':un perro generado por ordenador que presentaba un programa en Cartoon Network, mediante el sistema ``Alive''. ``Moxy'' es interpretado en tiempo real para publicidad, pero su uso en el programa era renderizado. Los movimientos del actor se capturaban mediante un sistema electromagnético con sensores en la cabeza, torso, manos y pies.
 
 \comImpl{Imagen de Moxy}
 
+Tras estos avances, Pacific Data Images desarrolló un exoesqueleto de plástico, de modo que el actor se colocaría el traje con el objetivo de capturar los movimientos corporales: de la cabeza, pecho y brazos, a través de potenciómetros situados en la capa de plástico. De esta manera, los actores podían controlar los personajes virtuales mimetizando sus movimientos. Pese a que el traje se utilizó en varios proyectos, no se consiguieron los resultados esperados, ya que el ruido de los circuitos y el diseño inapropiado del traje no lo permitían. 
+
+En torno a 1992, la empresa SimGraphics desarrolló un sistema de rastreo facial llamado \textit{Face Waldo}. Consiguieron capturar la mayor parte de los movimientos usando sensores adheridos a la barbilla, labios, mejillas, cejas y en el armazón del casco que llevaba el actor para su posterior aplicación en un personaje virtual en tiempo real. Este sistema logró ser novedoso ya que el actor podía manejar las expresiones faciales de un personaje a través de sus movimientos, logrando unos gestos mas naturales que los capturados anteriormente.
+
+Lo que produjo un éxito mayúsculo con este proyecto fue la interpretación en tiempo real de Mario, el personaje principal de la saga de videojuegos \textit{Mario Bros}. Estaba controlado por un actor mediante \textit{Face Waldo}, Mario conseguía dialogar con los miembros de una conferencia, respondiendo a sus preguntas. A partir de ese momento, SimGraphics se centró en la animación en directo, desarrollando personajes para televisión y otros eventos en directo, mejorando la fiabilidad del sistema para el rastreo facial. 
+
+\comImpl{Imagen de Mario}
+
+Poco después, en el congreso de SIGGRAPH en 1993, la empresa Acclaim\footnote{Empresa encargada del desarrollo, publicación, venta y distribución de videojuegos para diferentes compañias (Sega, Nintendo, Sony, Microsoft...)} asombró al público con animaciones realistas y complejas de dos personajes animados en su totalidad mediante captura de movimientos. En los años anteriores, habían desarrollado de forma encubierta un sistema de rastreo óptico de alta definición, muy superior a los citados anteriormente, capaz de seguir 100 marcadores de forma simultanea en tiempo real.
+
+De forma gradual, la técnica \textit{mocap} se fue expandiendo entre las empresas desarrolladoras de sistemas de captura de datos, con el objetivo de crear productos y métodos que albergasen nuevos sectores empresariales. Gracias al desarrollo previo, en 1995 hizo su aparición el primer videojuego en el que se aplicó esta técnica de forma extensa, se trataba de Highlander: The Last of the Macleods de la compañía Atari, el cual marcó el inicio del desarrollo tecnológico sobre videojuegos y productos audiovisuales. 
+
+A lo largo de los años, fueron apareciendo largometrajes que mostraban como la captura de movimientos ha evolucionando día tras día y con una gran proyección de futuro, ha pasando de ser algo que utilizaban de forma esporádica algunos personajes, a ser indispensable en cualquier producción. Como por ejemplo en los \textit{films}: Jar Jar Binks en la saga de \textit{Star Wars}, el personaje de La Momia, Gollum en la trilogía de El Señor de los Anillos y de El Hobbit, Final Fantasy: La fuerza interior, Avatar, etc. También existen videojuegos recientes que utilizan esta tecnología en su desarrollo: The Last os Us, Beyond: Two Souls, la saga Uncharted, Until Dawn, L.A. Noire, etc.
+
+
+\comImpl{Imagen de pelicula y videojuego con mocap}
 
 %----------OK----------
 
