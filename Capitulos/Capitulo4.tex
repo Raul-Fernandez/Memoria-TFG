@@ -15,8 +15,8 @@ En este capítulo se expondrán los  materiales  y métodos utilizados para el desa
 \section{Software y hardware empleados}
 %-------------------------------------------------------------------
 \label{cap4:sec:Software y hardware empleados}
-El software principal utilizado en este proyecto es Unity 5.5 (poner referencia), que es un motor de desarrollo de videojuegos.
-Para la ediciónn , compilaci?n y depuraci?n de la programaci?n de Unity se ha utilizado Visual Studio 2015 (poner referencia) con el lenguaje de programaci?n C\#.\\
+El software principal utilizado en este proyecto es Unity 5.5 \cite{Unity_Manual}, que es un motor de desarrollo de videojuegos.
+Para la edición , compilación y depuración de la programación de Unity se ha utilizado Visual Studio 2015 \cite{VSMS} con el lenguaje de programación C\#.\\
 \\
 \comImpl{Aqui raul pones los programas de modelado de avatar. Animaciones de mixamo,.}\\
 \\
@@ -32,29 +32,64 @@ El hardware principal usado en este proyecto es el dispositivo de captura de mov
 \subsection{Entorno de desarrollo : Unity 3D}
 %-------------------------------------------------------------------
 \label{cap4:sec:Entorno de desarrollo : Unity 3D}
-El objetivo de este proyecto es la captura y el an?lisis de movimiento relacionados con el arte marcial afro-brasile?o capoeira(?referencia?). Con esto en mente, se llega a la primera decisi?n de que plataforma escoger para el desarrollo de este proyecto.\\
+El objetivo de este proyecto es la captura y el análisis de movimiento relacionados con el arte marcial afro-brasileño capoeira. Con esto en mente, se llega a la primera decisión de que plataforma escoger para el desarrollo de este proyecto.
 
-Los entornos a elegir ser?an Visual Studio 2015, Unity 3D y Unreal Engine 4 (referencia). El primero descartado es desarrollar directamente en Visual Studio 2015 porque se busca crear tambi?n un escenario 3D y, tanto Unity como Unreal ,facilitan la creaci?n de estos escenarios.\\\\
-En cuanto a la decisi?n de elegir entre Unity 3D o Unreal Engine 4 fue basada en la comunidad que hay detr?s de cada uno de ellos, y sobre todo, en lo que se quiere abarcar con este proyecto. Unreal suele ser utilizado por las empresas para juegos grandes y mas profesionales , mientras que Unity se puede aplicar a peque?as y grandes aplicaciones siendo su aprendizaje de este mas intuitivo que Unreal.
-\\\\
-Y por ultimo la elecci?n de lenguaje de programacion siendo el lenguaje de C\# una opci?n m?s sencilla para el desarrollo de este proyecto.(buscar diefrencias claras)
+Los entornos a elegir fueron Visual Studio 2015 \cite{VSMS}, Unity \cite{Unity} y Unreal Engine \cite{Unreal}. El primero descartado fue Visual Studio 2015 porque se busca crear también un escenario 3D y, tanto Unity como Unreal ,ofrecen herramientas útiles para la creación de estos escenarios.\\\\
+En cuanto a la decisión de elegir entre Unity o Unreal Engine fue basada en la comunidad que hay detrás de cada uno de ellos, y sobre todo, en lo que se quiere abarcar con este proyecto. Unreal suele ser utilizado por las empresas para juegos grandes y mas profesionales , mientras que Unity se puede aplicar, tanto a pequeñas como a grandes aplicaciones, siendo su aprendizaje de este mas intuitivo que Unreal.\\
 
+Un motor de juegos se especifica como la rutina de programación que permiten el diseño, la creación y la representación de un videojuego. En este caso, se adecua correctamente ya que se pretende realizar un entorno 3D donde los usuarios se perciban y aprendan movimientos controlando un avatar.
 
-\section*{Comunidad de Unity}
- Video: 640x480 @30 fps
-%-------------------------------------------------------------------
-\subsection{Kinect V2}
-%-------------------------------------------------------------------
+La funcionalidad de un motor de juegos consiste en proveer al juego de un motor de renderizado para los gráficos 2D y 3D,  motor físico, sonidos, scripting, animación, un escenario gráfico, etc..\\
+
+Unity es un motor de juegos desarrollado por la  compañía \texttt{Unity Technologies} y utiliza los lenguajes de programación C ,C++ , C\# y javascript.
 
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagenes/Capitulos/4/logo_unity}
+	\caption{Logo Unity}
+	\label{fig:logo_Unity}
+\end{figure}
 
 
-\comImpl{Enlaces sobre las caracteristicas de Kinect}
+En un primer momento Unity salió al mercado ofreciendo un software de calidad y barato añadiendo el objetivo de que pequeñas y grandes empresas pudieran utilizarlo por igual, dando además, la posibilidad de que su contenido sea compatible con prácticamente cualquier medio o dispositivo\cite{Unity-relations}. Gracias a ello, Unity creció exponencialmente en el mercado, generando así, una gran comunidad que puede servir de pilar de ayuda para los nuevos desarrolladores.
 
-\medskip
-https://msdn.microsoft.com/library/jj131033.aspx\\
-https://msdn.microsoft.com/library/dn782025.aspx\\
-https://developer.microsoft.com/es-es/windows/kinect/hardware
+Unity ofrece diferentes tipos de versiones como la personal, que es gratuita y la profesional, que es de pago. En la versión personal es necesario promocionar el logotipo de Unity y carece de funcionalidades adicionales de renderizado del motor que la profesional si contiene.
+
+Otro aspecto importante de Unity es el Asset Store. Es una biblioteca del editor que contiene una multitud de paquetes o \textit{Assets} comerciales y gratuitos creados, de forma continua, por la comunidad o por \texttt{Unity Technologies}. Estos paquetes pueden contener modelados 3D, texturas, animaciones y demás de contenido que servirá de ayuda al proyecto al no poder contar con un experto diseñador. 
+
+La apariencia del editor de Unity se observa en la figura \ref{fig:editor_Unity}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/4/editor-unity}
+	\caption{Apariencia de editor Unity}
+	\label{fig:editor_Unity}
+\end{figure}
+
+Como se observa en la imagen, el editor de Unity esta formado por varios paneles. La estructuración básica de un juego de Unity se realiza mediante escenas, para tener una previsualizanción de los elementos que aparecen en una escena se utiliza el panel uno denominado \textit{scene}. Este panel representa una dimensión 3D donde se podrá rotar y desplazar en los tres ejes ,para poder así, modificar todos los elementos de la escena en cualquier ángulo.\\
+
+El segundo panel denominado \textit{Game} muestra la vista generada por la cámara, es decir, la imagen que se verá en el juego.\\
+
+Los elementos incorporados a la escena se archivan en el panel tercero con el nombre \textit{Hierarchy}. Estos pueden ser  objetos 3D, cámara, sonidos, luces,e incluso objetos de tipo GUI para la implemetación de interfaces. Los elementos se muestran de una forma jerárquica y al seleccionar uno se expondrán sus características y componentes en el panel cuarto denominado \textit{Inspector}. Por ejemplo, al seleccionar la cámara en el \textit{Hierarchy} muestra su componente \textit{transform}, este muestra la información de su posición y rotación, pudiendo ser modificable.\\
+
+El panel quinto llamado \textit{Project} agrupa ,en forma de directorio, todos los scripts , paquetes , imágenes y archivos relacionados con el proyecto.\\
+
+La ejecución de pruebas del juego se realiza por medio del \textit{Play mode} situado en el panel sexto. Esta funcionalidad permite poner en funcionamiento el juego , pararlo y detener su ejecución, siendo esto, fundamental para comprobar y depurar un juego \cite{Unity_Manual}.\\
+
+Una vez estudiado el editor de Unity se toma la decisión de que lenguaje de programación utilizar. Unity soporta dos lenguajes:
+\begin{itemize}
+	\item C\#: lenguaje estandar similar a C++ y Java.
+ 	\item \textit{UnityScript} : lenguaje basado en javascript propio de Unity.  
+\end{itemize} 
+Se optó por la decisión de utilizar C\# porque se acomoda mejor a la aplicación, puesto que no está orientada a web, y además ofrece unas características mejores que el \textit{UnityScript}.\\
+
+Para controlar los eventos de un objeto o los eventos de las entradas de los usuario, Unity utiliza scripts.De forma básica los scripts tienen implementado un método \textit{Start} para inicializar las variables del objeto y un método \textit{Update} encargado de actualizar los parámetros a partir del tratamiento de eventos.\\
+
+Se utilizó Visual Studio 2015 \cite{VSMS} para la depuración de scripts, ya que proporciona visualización de las variables utilizadas en tiempo de ejecución, y además, da la posibilidad de ejecutar el script paso a paso. También otro factor clave fue que este entorno de programación se tenía experiencia previa de uso.
+
+
+
 
 
 \subsection{MakeHuman}
@@ -103,6 +138,13 @@ Es una aplicación dedicada al modelado, renderizado, animación y creación de grá
 \subsection{MonoDevelop}
 
 
+
+\comImpl{Enlaces sobre las caracteristicas de Kinect}
+
+\medskip
+https://msdn.microsoft.com/library/jj131033.aspx\\
+https://msdn.microsoft.com/library/dn782025.aspx\\
+https://developer.microsoft.com/es-es/windows/kinect/hardware
 %Y tambi?n ponemos el acr?nimo \ac{CVS} para que no cruja.
 
 %Ten en cuenta que si no quieres acr?nimos (o no quieres que te falle la compilaci?n en ``release'' mientras no tengas ninguno) basta con que no definas la constante \verb+\acronimosEnRelease+ (en \texttt{config.tex}).
