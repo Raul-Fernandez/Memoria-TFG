@@ -106,7 +106,7 @@ En el proceso de captura de movimiento mecánica, el actor viste unos trajes espe
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/2/mocap_mecanica}
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/mocap_mecanica}
 	\caption{Sistema de captura de movimiento mecánico}
 	\label{fig:mocapmecanica}
 \end{figure}
@@ -117,14 +117,80 @@ Estos sistemas tienen el problema de que son incapaces de medir translaciones gl
 \subsection{Captura de movimiento electromagnética}
 
 
-Los sistemas de captura de movimiento electromagnética, están formados por sensores creados por tres espirales ortogonales que miden el flujo magnético, determinando tanto la posición como la orientación del sensor. Un transmisor genera un campo electromagne?tico de baja frecuencia que los receptores detectan y transmiten a la unidad electro?nica de control, donde se filtra y amplifica. A continuación, los datos se envían a un ordenador central, donde se deduce la orientación y posición de todos los sensores del escenario.
+Los sistemas de captura de movimiento electromagnética, están formados por sensores creados por tres espirales ortogonales que miden el flujo magnético, determinando tanto la posición como la orientación del sensor. Un transmisor genera un campo electromagnético de baja frecuencia que los receptores detectan y transmiten a la unidad electrónica de control, donde se filtra y amplifica. A continuación, los datos se envían a un ordenador central, donde se deduce la orientación y posición de todos los sensores del escenario.
 
+Un sistema magnético estándar consta de 18 sensores, una unidad de control electrónica y un software para el procesamiento. En cambio, un sistema de última generación puede tener hasta 90 sensores capaces de capturar hasta 144 muestras por segundo, teniendo un coste medio\footnote{Entorno a 4.000 y 11.000 ?}.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/mocap_electromagnetica}
+	\caption{Sistema de captura de movimiento electromagnético}
+	\label{fig:mocapelectromagnetica}
+\end{figure}
 
+Existen dos tipos de rastreadores electromagnéticos:
 
+\begin{itemize}
+	\item \textit{Flock of Birds de
+		Ascension Technology Corporation}: usa pulsos magnéticos cuadrados.
+	\item   \textit{Patriot de Polhemus}: usa campos magnéticos sinusoidales.
+\end{itemize}
 
-Captura de movimientos óptica 
+Ambos sistemas tienen el inconveniente de producir interferencias con materiales metálicos debido a su conductividad, ya que se crean campos magnéticos que interfieren con el campo magnético del emisor. De ese modo, se trata de un sistema difícil de transportar a diferentes escenarios. El proceso de captura no es en tiempo real, aunque se aproxima bastante, pese a que tiene un número de capturas por segundo demasiado bajo. Como punto a favor, es mas fácil procesar los datos que en otros sistemas \textit{mocap}, ya que los datos obtenidos están en relación con la posición del actor.
 
+\subsection{Captura de movimiento óptica}
+
+Los sistemas ópticos emplean los datos recogidos por sensores de imagen para obtener la posición de un elemento en el espacio, utilizando \textit{markers}\footnote{Indicadores} pegados al cuerpo del actor, aunque los sistemas modernos permiten recoger los datos rastreando la superficie de forma dinámica. 
+
+Estos sistemas permiten la grabación en tiempo real, ya que utilizan un ordenador que recibe la entrada de una o mas cámaras digitales CCD\footnote{Charge-coupled device} sincronizadas produciendo proyecciones simultáneas. Habitualmente se utilizan entorno a 4 o 32 cámaras, siempre y cuando no se añadan de forma innecesarias, ya que complicarían el procesamiento de la información.
+
+Las cámaras utilizadas en este tipo de sistemas tienen una velocidad de captura de entre 30 y 1.000 fotogramas por segundo. Estos sistemas se deben calibrar mediante el rastreo de un objeto visible, de modo que se calcule la posición de cada cámara respecto de ese punto, en el caso de que una cámara se mueva, será necesario recalibrar el sistema.
+
+Existen varios clases de sensores para este tipo de captura de movimiento:
+
+\subsubsection{Indicadores activos}
+
+Este sistema está compuesto por leds que emiten su propia luz determinando la posición del actor, de esta manera se consigue aumentar la distancia a la que se puede desplazar el artista. La posición de los marcadores se determina iluminando uno o varios indicadores, de manera sincrónica a las cámaras en cada instante de tiempo, a una frecuencia de muestreo muy alta. De modo que los indicadores deben estar sincronizados con todas la cámaras para realizar una sola captura en cada iluminación.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/mocap_indicadoresactivos}
+	\caption{Sistema de captura de movimiento óptico con indicadores activos}
+	\label{fig:mocapindicadoresactivos}
+\end{figure}
+
+\subsubsection{Indicadores pasivos}
+
+Estos indicadores, se tratan de bolas de goma recubiertas de un material reflectante que se adhieren al traje del actor en puntos estratégicos. De esta forma, la luz que reflejan se origina cerca de las cámaras, siendo recogida por estas. 
+
+\comImpl{Coger una imagen}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/mocap_indicadorespasivos}
+	\caption{Sistema de captura de movimiento óptico con indicadores pasivos}
+	\label{fig:mocapindicadorespasivos}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/mocap_indicadorespasivos2}
+	\caption{Sistema de captura de movimiento óptico con indicadores pasivos}
+	\label{fig:mocapindicadorespasivos2}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.4\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/mocap_indicadorespasivos3}
+	\caption{Sistema de captura de movimiento óptico con indicadores pasivos}
+	\label{fig:mocapindicadorespasivos3}
+\end{figure}
+
+Este tipo de sistemas pueden capturar un gran número de marcadores a una frecuencia de muestreo de hasta 2000 fotogramas por segundo. Se suelen utilizar principalmente para el registro de movimiento facial. El precio de estos marcadores oscila entre 17.000 y 75.000 ?.
+
+\subsubsection{Indicadores activos modulados en el tiempo}
+
+Utilizando luz estroboscópica, se mejora el sistema respecto a los indicadores activos estándar, y mediante la iluminación de manera grupal se determina la identidad de cada marcador a través de la frecuencia de destello. De esta manera, se consiguen frecuencias de captura mayores, con el inconveniente de aumentar la carga del sistema. 
 
 Captura de movimientos en vídeo o Markerless , LUZ ESTRUCTURADA de kinect
 
