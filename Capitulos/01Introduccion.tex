@@ -31,17 +31,60 @@ La capoeira es un arte marcial afro-brasileño que combina facetas de danza, músi
 
 Una de las características fundamentales de la capoeira, como de muchas otras artes marciales, consiste en la realización de manera repetida de un mismo movimiento para ir mejorando paulatinamente su ejecución, tanto en su trayectoria como en su velocidad o su fuerza. Sin embargo, especialmente en el caso de los principiantes, resulta complejo apreciar si existe mejora sin la supervisión constante de un entrenador, lo cual no resulta posible en la mayor parte de las ocasiones. Por este motivo, se ha planteado el desarrollo de un entrenador de capoeira, inicialmente en un nivel básico, que, mediante la utilización de tecnologías que ya son de uso doméstico (como son un ordenador personal y \texttt{Kinect}), supervise el proceso de entrenamiento de una persona que se inicie en el aprendizaje de la capoeira. 
 
-\section{Objetivos}
+\section{Objetivos del trabajo}
 Los objetivos a desempañar en este trabajo de fin de grado(TFG) son:
 \begin{itemize}
-	\item Realizar un estudio de las métodos de captura de movimiento y trabajos relacionados con el fin de comprender la tecnología de captura de movimiento. 
-	\item Estudiar el funcionamiento y descubrir el alcance que puede tener \texttt{kinect}.
-	\item Diseñar una metodología utilizando \texttt{kinect} para la comparación de movimiento mediante un entrenador virtual aplicado a capoeira .
-	\item Implementar y diseñar una aplicación en un entorno 3D que simule un entrenador virtual para que realice las correcciones de los movimiento de los usuarios.
+\item Identificar las limitaciones que presenta el dispositivo \texttt{kinect}, para lograr una captura de movimientos de capoeria de una forma correcta.
+
+\item Implementar y diseñar una aplicación ,con la ayuda de un motor de juego, que simule un entrenador virtual. para que realice las correcciones de los movimiento de los usuarios.
+
+\item Realizar un análisis de los movimientos de capoeira capturados con \texttt{Kinect}, y lograr así, clasificar cuáles han sido los movimiento mejor registrados para el entrenamiento.
+
 \end{itemize} 
 
 \section{Plan de Trabajo}
-se puede dividir en fases como diseño implementacion documentacion. añadir tabla con fechas  decir que teniamos reuniones semanales para llevar un historico del progreso del poryecto etc.
+
+
+
+Este proyecto se ha construido en tres fases : especificación, implementación y documentación del proyecto. Las tareas de cada fase se muestran en la Tabla \ref{tabla:Plan_proyecto}
+
+En la primera fase se instauraron cuales fueron los objetivos y el alcance del Trabajo de Fin de Grado, siendo necesario organizar fechas para concretar reuniones con los tutores, determinando así, el seguimiento del desarrollo del proyecto.
+
+Posteriormente ,en la segunda fase se implementan las especificaciones planteadas en la fase anterior. Esta fase se divide en una serie de pasos, siendo el primero la elección del entorno a utilizar, de modo que se adecue a la tecnología de kinect y se ajuste a nuestra forma de trabajo. En el segundo paso se creó la aplicación con su entorno 3D, añadiendo la lógica comparativa del movimiento e incorporando diferentes avatares. Y el último paso, una vez acabada la aplicación, se realizaron las grabaciones con gente experta en capoeira, analizando y ajustando sus movimiento, para incorporarlos al entrenador virtual.
+
+Y por último en la fase de documentación, se elaboró toda la información y documentación necesaria para la implementación del Trabajo de Fin de Grado. Esta fase se ejecuta paralelamente con la fase de implementación.
+
+
+
+
+
+\begin{table}[htb]
+	\centering
+	\begin{tabular}{|c|l|l|l|}
+		\hline
+		Fases & Tareas del proyecto & Fecha inicio & Fecha final\\
+		\hline \hline
+		\multirow{4}{3cm}{Especificación del proyecto} &
+		Definición del proyecto &  &  \\ \cline{2-4} 
+		& Plateamiento de los objetivos & & \\ \cline{2-4}
+		& Reuniones semanales con los tutores & 13/12/2016 & 15/06/2017\\ \cline{1-4}
+		\multirow{3}{3cm}{Implementación del proyecto} &
+		Elección del entorno de desarrollo& 13/12/2016  & 20/12/2016\\ \cline{2-4}
+		&Creación del entrenador virtual & 22/02/2017  & 05/05/2017\\ \cline{2-4}
+		&Diseño de avatares & 11/04/2017  & 14/05/2016\\ \cline{2-4}
+		&Creación de escenarios 3D & 15/05/2016 & 22/05/2016\\ \cline{2-4}
+		&Grabación con gente experta & 06/05/2017 & 13/05/2017 \\ \cline{1-4}
+		\multirow{2}{3cm}{Documentación del proyecto}  &    Documentación para el proyecto & 09/04/2017 & 15/06/2017  \\ \cline{2-4}
+		& Realización de la memoria & 01/05/2017 & 15/06/2017 \\ \cline{1-4}
+	\end{tabular}
+	\caption{Tabla de plan de proyecto.}
+	\label{tabla:Plan_proyecto}
+\end{table}
+
+
+
+
+
 \section{Estructura de la memoria}
 Este trabajo se estructura en siete capítulos definidos de la siguiente manera:
 \begin{itemize}
