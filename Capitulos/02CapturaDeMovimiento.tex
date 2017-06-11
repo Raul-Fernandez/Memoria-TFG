@@ -216,6 +216,25 @@ Captura de movimientos inercial
 
 
 
+\section{Trabajo relacionado}
+Para la realización de este proyecto se han revisado trabajos anteriores en el área de los \textit{Reactive Virtual Trainers}. En este apartado se describirán los análisis de esos proyectos, y de este modo, poder aclarar y enfocar el desarrollo de este trabajo.
+
+\subsection*{Captura de movimiento en la danza}
+Uno de los campos en donde la captura de movimiento aparece es en la danza y un claro ejemplo es \citep{Kyan:2015:ABD:2753829.2735951}. En este artículo se describe una forma de evaluar y visualizar en tiempo real, los movimientos de la danza de ballet. Para desempeñar esa tarea utilizan como recurso la tecnología de \texttt{kinect}, y gracias a ella, registran los movimientos de bailarines profesionales, de modo que , sean una base para las comparaciones de movimientos. Estos, a su vez , son representados como un \textit{espacio de posturas} en forma de trayectorias de gestos. La evaluación de la coreografía empezará cuando detecte al bailarín aficionado. Con el fin de proporcionar una puntuación para cada coreografía,
+se compara la posición alineada y velocidad del bailarín aficionado con las correspondientes del bailarín profesional.
+
+
+\subsection*{Captura de movimiento en artes marciales}
+Otros de los campos donde es útil la captura de movimiento ,ya que es necesario la repetición para lograr entender y dominar las técnicas, son en las artes marciales. En este proyecto de máster \cite{Keerthy:Thesis:2012}  se diseña un maestro virtual de Kung fu con el dispositivo de \texttt{kinect}. Previamente se graban las técnicas del maestro en el arte marcial , para realizar futuras comparaciones con usuarios aficionados que quieran adentrarse y aprender en el mundo del Kung fu. Aunque existen muchos algoritmos de comparación, en este trabajo se ha elegido, el algoritmo
+\textit{Dynamic Time Warping} , que utiliza la fórmula  distancia euclidea. Una de las principales ventajas del algoritmo \textit{Dynamic Time Warping} es, superar los problemas de análisis de movimiento en velocidad y tiempo. La distacia euclidiana se define como la distancia entre dos puntos de un espacio euclídeo, la cual se deduce a partir del teorema de Pitágoras.\\
+
+La distancia euclidiana$(d_e)$ de dos puntos P(X,Y,Z), Q(x,y,z) viene definida por :
+$$d_e(P,Q)=\sqrt{(X_i+x_i)^2 + (Y_i+y_i)^2 +(Z_i+x_i)^2 }$$
+La fórmula se ejecuta en un espacio de tres dimensiones.
+
+\subsection*{Captura de movimiento en actividades físicas}
+Uno de los factores importantes en la ejecución de actividades físicas es el evitar lesión por mala práctica. En esta tesis \cite{Staab:Thesis:2014} implementan un entrenador virtual para promover la actividad saludable , y enseñar de una forma correcta, la realización de las ejercicios para prevenir lesiones. Los movimientos del entrenador virtual son generados a partir de la clasificación y el análisis de ejercicios previamente grabados, creando así, un modelo estadístico de cada actividad. Cuando el usuario realiza la tarea se proporcionado un porcentaje de acierto para la posición, una indicación para su corrección y los grados de rotación que se deben de aplicar. Aunque, realiza una corrección precisa, tiene una decadencia cuando los movimientos son giros sobre el mismo eje.
+
 % Variable local para emacs, para  que encuentre el fichero maestro de
 % compilación y funcionen mejor algunas teclas rápidas de AucTeX
 %%%
