@@ -20,7 +20,7 @@
 
 La captura de movimiento (abreviada \texttt{Mocap}, en inglés \textit{Motion Capture}) es el proceso por el cual el movimiento, ya sea de objetos, animales o mayormente personas, se traslada a un modelo digital 3D.
 
-En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes. De ese modo se obtiene una mayor sensación de realismo. \cite{captura} \citeauthor{wiki1}.
+En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores y desarrolladores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes. De ese modo se obtiene una mayor sensación de realismo. \cite{captura} \citeauthor{wiki1}.
 
 
 
@@ -198,16 +198,24 @@ Se trata de un sistema en el que no se requiere el uso de trajes especiales para
 
 Inicialmente, este medio de transmisión se empleó para el desarrollo de unos guantes capaces de capturar el movimiento de los dedos, pero en la actualidad, se han creado trajes idóneos para captar cualquier parte del cuerpo. Con el objetivo de registrar los movimientos, se fijan sensores de fibra óptica flexibles, consiguiendo atenuar la luz transmitida, y así, medir las rotaciones de las articulaciones. Estos sensores no son capaces de medir la posicio?n del actor en el escenario, sino que el sistema calcula la posicio?n de las extremidades capturadas. 
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth, height=0.5\textheight]{Imagenes/Capitulos/2/mocap_fibraoptica}
+	\caption{Sistema de captura de movimiento mediante fibra óptica}
+	\label{fig:mocapfibraoptica}
+\end{figure}
+
 
 \subsection{Captura de movimiento mediante ultrasonidos}
 
+Este sistema utiliza emisores que generan pulsos ultrasónicos (imperceptible por el ser humano) capturados por uno o varios receptores (a modo de radar), permitiendo averiguar la posición del emisor en el escenario, incluso en algunos casos, su orientación. La desventaja de estos sistemas es que son demasiado voluminosos, siendo incapaces de trabajar con movimientos bruscos. Aunque en comparación con otros sistema de captura de movimiento, el precio supone una gran ventaja, ya que ronda los 2500 \euro.
 
+\subsection{Captura de movimiento mediante sistemas inerciales}
+
+Con el objetivo de capturar el movimiento, los sistemas inerciales emplean sensores (como giroscopios y acelerómetros) con el propósito de obtener información sobre la velocidad angular y la aceleración del sensor. Con estos datos, es posible establecer la velocidad angular, la posición y el eje de giro. La información obtenida de los sensores, se transmite a un ordenador donde se puede observar el movimiento capturado sobre una figura ya animada. 
 
 Captura de movimientos en vídeo o Markerless , LUZ ESTRUCTURADA de kinect
 
-
-Captura de movimientos inercial
-\medskip
 
 %Y también ponemos el acrónimo \ac{CVS} para que no cruja.
 
