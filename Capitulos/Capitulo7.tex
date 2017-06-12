@@ -6,7 +6,7 @@
 
 
 
-\chapter{Conclusiones y Trabajo futuro}
+\chapter{Conclusiones, Trabajo futuro y Discusión}
 \label{cap7:sec:Conclusiones y Trabajo futuro}
 
 
@@ -25,7 +25,7 @@ Aunque aún no se ha realizado una evaluación extensa con usuarios novatos y expe
 \section{Trabajo futuro}
 Este proyecto tiene potencial en el campo de entrenamiento de actividades físicas ya que, analizando el movimiento del usuario, le ofrece un feedback inmediato basándose en el movimiento de un experto, y así transmitirle una mejora de su actividad. Además tiene un alcance en el ámbito doméstico ya que el los dispositivos necesarios son productos asequibles y baratos.
 
-Una funcionalidad que se puede implementar en un futuro sería la gestión de diferentes usuarios y así tener un histórico de la progresión de los movimientos. Cuando el usuario acceda con su cuenta en la aplicación le aparecerá el porcentaje con el avance de cada movimiento.
+Una funcionalidad que se puede implementar en un futuro sería la gestión de diferentes usuarios y, así, tener un registro de la progresión de los movimientos. Cuando el usuario acceda con su cuenta, se mostrará  el porcentaje con el avance conseguido de cada movimiento.
 
 Otra característica que se propone es añadir más funcionalidad al experto que graba los movimientos. Con ello tendrá los privilegios de tratar y modificar los movimientos grabados ajustando y recortado sus \textit{frames}.
 
@@ -36,6 +36,14 @@ Este procedimiento de análisis de movimiento se puede aplicar también en el ámbi
 Otro factor para mejorar la captura de movimiento sería añadir otra kinect para lograr reconocer los movimientos que impliquen giros. Esta solución similar se plantea en \cite{gao2015leveraging} donde utilizan dos \texttt{Kinect} para solucionar este problema, aunque esta opción aleja la solución de su uso doméstico.
 
 Finalmente, también se contempla el análisis de los movimientos de más de un usuario de manera simultánea, de forma que se puedan reproducir situaciones similares al trabajo por parejas que tiene lugar en una \textit{roda} de capoeira, donde se ponen en práctica técnicas de combate cuerpo a cuerpo.
+
+\section{Discusión}
+
+Como se mencionó en la introducción, uno de los objetivos al desarrollar este sistema era que pudiese funcionar con tecnología de uso doméstico, lo cual restringe notablemente el abanico de posibilidades a considerar. La configuración elegida para el sistema utiliza una única cámara para la captación del movimiento del usuario, proporcionada por \texttt{Kinect}. Esto limita mucho la capacidad del sistema de percibir los movimientos en toda su complejidad, sobre todo en aquellos casos en que hay rotación del torso, lo cual puede generar confusiones entre distintos miembros del avatar que tengan simetría axial (tras el giro el sistema confunde un brazo con otro, y piensa que el usuario sigue de frente cuando en realidad está de espaldas). Lo mismo sucede a la hora de analizar la profundidad de algunos de los movimientos realizados. Se espera en el futuro poder ampliar este trabajo con la utilización de mayor número de cámaras.
+
+Por otro lado, algunos de los trabajos estudiados (e.g. \cite{Keerthy:Thesis:2012,Kyan:2015:ABD:2753829.2735951}) utilizan técnicas más sofisticadas para analizar los movimientos de los usuarios que las usadas en este trabajo. Si bien esto puede ser útil en niveles de aprendizaje avanzados, con principiantes en la práctica de la capoeira las diferencias con los movimientos realizados por el profesor son poco sutiles, con lo que un método más sencillo de comparación de movimientos resulta, por un lado, menos complejo y más rápido de calcular, y por otro, el resultado de la comparación resulta más fácilmente traducible a texto para proporcionar al aprendiz explicaciones útiles acerca de cómo mejorar la realización de las técnicas.
+
+El trabajo realizado se enmarca en el contexto del proyecto IDiLyCo: Inclusión Digital, Lenguaje y Comunicación (TIN2015-66655-R), en el que se espera poder dar aplicación a las tecnologías básicas desarrolladas para construir herramientas para la asistencia a personas con necesidades especiales.
 
 \section{Conclusions}
 
