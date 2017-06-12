@@ -12,13 +12,13 @@
 \label{cap5:sec:Desarrollo Del Proyecto}
 Una vez elegida la tecnología y las plataformas que se van a utilizar, se empieza a preparar el desarrollo del proyecto. En este capitulo se explicará que librerías y paquete de \texttt{Unity} se necesitan para tener una buena conexión con \texttt{Kinect} y, además, que información obtenida del sensor de movimiento podemos aprovechar para el proyecto. Después de esta aclaración, se expondrá como grabar y reproducir los movimientos del usuario captado, analizando los datos ofrecidos por el sensor de \texttt{Kinect}.
 
-En la siguiente sección se especificará el proceso realizado para la comparación de los movimientos capturados, de modo que, el usuario obtendrá una respuesta concisa. Para ofrecer una aplicación dinámica y que el usuario reciba un \textit{feedback} gestual, se ilustra como se diseña y implementan avatares con animaciones en \texttt{Unity}.
+En la siguiente sección se especificará el proceso realizado para la comparación de los movimientos capturados, de modo que, el usuario obtendrá una respuesta concisa. Para ofrecer una aplicación dinámica y que el usuario reciba un \textit{feedback} gestual, se ilustra como se diseña e implementan avatares con animaciones en \texttt{Unity}.
 
 De forma sucesiva, se describe el diseño de los escenarios 3D para ubicar a los avatares principales y secundarios de la aplicación. De este modo se han diseñado dos escenarios, uno para el entrenamiento del usuario y otro para reproducir el movimiento a realizar.
 
 En el apartado posterior, se describe una manera de acabar la comparación del movimiento de forma más completa. Ofreciendo así, un análisis de cada parte del cuerpo describiendo el modo de corregir el movimiento.
 
-Y por último ,una vez acabada la funcionalidad de la aplicación, se describe la grabación de movimientos realiza con los profesionales de la escuela \texttt{Abadá-Capoeira}. Realizando así, una batería de pruebas para seleccionar y ajustar el movimiento más preciso. 
+Y por último, una vez acabada la funcionalidad de la aplicación, se realizan la grabaciones de los movimientos con los profesionales de la escuela \texttt{Abadá-Capoeira}. Elaborando así, una batería de pruebas para seleccionar y ajustar el movimiento más preciso. 
 
 
 %-------------------------------------------------------------------
@@ -37,22 +37,22 @@ Este paquete tiene todo lo necesario para reconocer que la kinect está conectada
 
 Los ejemplos que tiene implementado el paquete de Kinect v2 Examples with MS-SDK  son variados:
 \begin{itemize}
-	\item AvatarsDemo, simulador que muestra un avatar en tercera persona que correspondería a la persona captada y se puede controlar sobre el escenario 3D.
-	\item BackgroundRemovalDemo, son ejemplos que cambian el fondo que se encuentra detrás del usuario captado.
-	\item ColliderDemo, una serie de ejemplos para ver el funcionamiento de colisiones del usuario captado con los objetos que aparecen en la escena.
-	\item FaceTrackingDemo, este ejemplo reconoce la dirección de tu cabeza para girar la cámara de la imagen para simular la vista humana.
-	\item FittingRoomDemo, este ejemplo te da la opción de ponerte ropa encima de tu imagen real captada.
-	\item GesturesDemo, serie de ejemplos de funcionamiento de los gestos de kinect.
-	\item InteractionDemo, este ejemplo muestra como el usuario puede girar,rotar y agrandar un objeto con el movimiento de sus manos.
-	\item KinectDataServer, implementa un servidor de datos para guardar información como gestos de kinect.
-	\item MovieSequenceDemo, este ejemplo mostrará como reproducir un conjunto de frames de película con el cuerpo del usuario.
-	\item MultiSceneDemo, este ejemplo concatenará diferentes escenas de Unity basadas en las componentes de este paquete.
-	\item OverlayDemo, son tres ejemplos que muestras como interactuar con los objetos de la escena, para ello, se basa en el movimientos de los brazos y manos para hacer que los objetos se mueven, roten y se desplazen.
-	\item PhysicsDemo, muestra un simulación de físicas que capta el movimiento del brazo para lanzar una pelota virtual.
-	\item RecorderDemo, ejemplo que muestra como grabar y reproducir un movimiento captado por kinect.
-	\item SpeechRecognitionDemo, ejemplo que sirve para realizar acciones por comandos por voz, aunque se producen errores cuando se probó este ejemplo.
-	\item VariousDemos, implementa dos ejemplos, como pintar en el aire moviendo los brazos y el otro dibuja bolas verdes que se colocan en tus articulaciones simulado un esqueleto.
-	\item VisualizerDemo, este ejemplo convierte la escena, según lo ve el sensor, en una malla y la superpone sobre la imagen de la cámara.\\\\	
+	\item \textit{AvatarsDemo}, simulador que muestra un avatar en tercera persona que correspondería a la persona captada y se puede controlar sobre el escenario 3D.
+	\item \textit{BackgroundRemovalDemo}, son ejemplos que cambian el fondo que se encuentra detrás del usuario captado.
+	\item \textit{ColliderDemo}, una serie de ejemplos para ver el funcionamiento de colisiones del usuario captado con los objetos que aparecen en la escena.
+	\item \textit{FaceTrackingDemo}, este ejemplo reconoce la dirección de tu cabeza para girar la cámara de la imagen para simular la vista humana.
+	\item \textit{FittingRoomDemo}, este ejemplo te da la opción de ponerte ropa encima de tu imagen real captada.
+	\item \textit{GesturesDemo}, serie de ejemplos de funcionamiento de los gestos de kinect.
+	\item \textit{InteractionDemo}, este ejemplo muestra como el usuario puede girar,rotar y agrandar un objeto con el movimiento de sus manos.
+	\item \textit{KinectDataServer}, implementa un servidor de datos para guardar información como gestos de kinect.
+	\item \textit{MovieSequenceDemo}, este ejemplo mostrará como reproducir un conjunto de frames de película con el cuerpo del usuario.
+	\item \textit{MultiSceneDemo}, este ejemplo concatenará diferentes escenas de Unity basadas en las componentes de este paquete.
+	\item \textit{OverlayDemo}, son tres ejemplos que muestras como interactuar con los objetos de la escena, para ello, se basa en el movimientos de los brazos y manos para hacer que los objetos se mueven, roten y se desplazen.
+	\item \textit{PhysicsDemo}, muestra un simulación de físicas que capta el movimiento del brazo para lanzar una pelota virtual.
+	\item \textit{RecorderDemo}, ejemplo que muestra como grabar y reproducir un movimiento captado por kinect.
+	\item \textit{SpeechRecognitionDemo}, ejemplo que sirve para realizar acciones por comandos por voz, aunque se producen errores cuando se probó este ejemplo.
+	\item \textit{VariousDemos}, implementa dos ejemplos, como pintar en el aire moviendo los brazos y el otro dibuja bolas verdes que se colocan en tus articulaciones simulado un esqueleto.
+	\item \textit{VisualizerDemo}, este ejemplo convierte la escena, según lo ve el sensor, en una malla y la superpone sobre la imagen de la cámara.\\\\	
 \end{itemize}
 Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para aprovechar su funcionalidad y tener un apoyo base para el desarrollo del proyecto. Los ejemplos seleccionados serían el \texttt {AvatarsDemo, GestureDemo y RecorderDemo}. Más adelante se explica con mas detalle que se utiliza de estos ejemplos.\\\\
 
@@ -67,7 +67,7 @@ Como el objetivo principal de este proyecto es el entrenamiento de actividades f
 
 En una primera vista se muestra como \texttt{Kinect} capta al usuario, esta representación se hace mediante un \textit{cubeman}\footnote{Esqueleto verde que emula el movimiento de la persona captada.} que simula todo el movimiento que realiza el usuario.
 
-La representación del movimiento del usuario se muestra mediante un \textit{cubeman}, que simula todo el movimiento que realiza el usuario. Esta figura se crea gracias al \textit{script} de \texttt{Cubeman Controller}, el cual se inicializa con el número del cuerpo que se quiere mostrar, siendo seis las personas que pueden ser detectadas por \texttt{Kinect v2}, y también pudiendo escoger una representación del \textit{cubeman} en modo espejo. Los datos del \textit{cubeman} (ver Figura \ref{fig:doscamarasbase}) están definidos con 25 \texttt{GameObjects} llamados \texttt{Joints}, que hacen una representación de las articulaciones del cuerpo humano. Estos \texttt{Joints} se representan en \texttt{Unity} con unas coordenadas (X,Y,Z) y una rotación. Toda la información del movimiento se obtiene a partir del sensor de \texttt{Kinect}.
+Esta figura se crea gracias al \textit{script} de \texttt{Cubeman Controller}, el cual se inicializa con el número del cuerpo que se quiere mostrar, siendo seis las personas que pueden ser detectadas por \texttt{Kinect v2}, y también pudiendo escoger una representación del \textit{cubeman} en modo espejo. Los datos del \textit{cubeman} (ver Figura \ref{fig:doscamarasbase}) están definidos con 25 \texttt{GameObjects} llamados \texttt{Joints}, que hacen una representación de las articulaciones del cuerpo humano. Estos \texttt{Joints} se representan en \texttt{Unity} con unas coordenadas (X,Y,Z) y una rotación. Toda la información del movimiento se obtiene a partir del sensor de \texttt{Kinect}.
 Los 25 \texttt{Joints} serían : cadera central y laterales , pecho, clavícula, cuello, cabeza, hombros, codos, muñecas, pulgares, manos centrales, rodillas, tobillos y pies.
 
 \begin{figure}[h!]
@@ -105,7 +105,7 @@ Otro \textit{script} que se debe mencionar es el \texttt{\texttt{Kinect}Recorder
 	\label{fig:ejemplo_txt}
 \end{figure}
 
-\subsection{Cambios e implementaciones}
+\subsection{Implementacion de la Grabación y reprodución de los movimientos }
 
 Después de haber realizado la investigación y compresión del material que se puede aprovechar para grabar y reproducir un movimiento, se plantean una series de desafíos e implementaciones que se deben realizar.
 
@@ -134,7 +134,7 @@ Con esta idea en mente ,se estudió el ejemplo de \texttt{GestureDemo} que recono
 En cuanto a la funcionalidad del gesto, se realiza por estados y progresión,  permaneciendo en el primer estado hasta que identifique una posición especifica. Para completar el gesto se tendrá un tiempo determinado para llegar a la progresión final del movimiento, sino el gesto se cancelará.
 
 
-\subsection{Cambios e implementaciones}
+\subsection{Implementacione de la comparación del movimiento}
 
 Una vez analizado la funcionalidad de los gestos de \texttt{Kinect}, se apoyó en esa idea para implemenentar la comparación del movimiento como un gesto de \texttt{Kinect}. Para empezar añadimos el gesto al \texttt{\texttt{Kinect}Gesture} con el nombre \textit{Move}, acto seguido, se implementa la funcionalidad en \textit{CheckForGesture} haciendo que tenga dos estados. El estado cero se encarga de calibrar la posición inicial ,dando al usuario, la oportunidad de colocarse en esa posición y ofreciéndole un margen de tres segundos para que se prepare. 
 
@@ -191,7 +191,7 @@ Para comprobar como se visualizaban los movimientos de un avatar con ropa, se ut
 
 En la búsqueda se encontraron aplicaciones dedicadas al modelado de personajes 3D como \texttt{Blender}, pero con una curva de aprendizaje demasiado larga para las necesidades dadas. También se examino una aplicación llamada \texttt{MarvelousDesigner} la cual se emplea para desarrollar prendas de vestir. El problema surgía cuando se intentaba importar el avatar creado con \texttt{MakeHuman}, ya que no eran compatibles los formatos de las dos aplicaciones y por lo tanto se descartó seguir por esa vía. En el camino se observó que existía una compañía llamada \texttt{Mixamo} que ofrecía una aplicación para el desarrollo de avatares y a su vez, un entorno dedicado a la animación de los personajes creados. Por este motivo, se tomó la decisión de cambiar a \texttt{Fuse Character Creator de Mixamo} como aplicación para el desarrollo de los personajes, ya que se amoldaba perfectamente a las necesidades de este proyecto.
 
-\subsection{Cambios e implementaciones}
+\subsection{Implementación de avatares y escenarios}
 
 A fin de realizar un entorno mas realista se crearon cuatro avatares diferentes, cada uno con una fisionomía propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizan los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trata de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
 
@@ -232,7 +232,7 @@ Para este apartado se observó el desarrollo de la comparación de movimiento impl
 
 El planteamiento del análisis comienza reproduciendo el movimiento del avatar del usuario junto al avatar de la grabación, deteniéndose ,si llegara el caso,  en el \textit{frame} donde el usuario cometió el error. En ese instante cambiará los huesos del avatar controlado por el usuario a un color rojo, en consecuencia de una colocación incorrecta del hueso. Adicionalmente mostrará un panel con un texto describiendo las correcciones que se deben aplicar. Esta información se compondrá de la parte de cuerpo que se está analizando , añadiendo seguidamente, la dirección y la altura que servirán de pautas para que el usuario corrija su posición.
 
-\subsection{Cambios e implementaciones}
+\subsection{Implementación del análisis del movimiento}
 Una vez planteada las especificaciones del análisis se empieza con  su implementación. En primer lugar se creó un \textit{script} llamado \texttt{Registrar\_movimientos}, el cual, guarda toda la información del movimiento hasta donde el usuario comete el error. Esta información contiene el estado\footnote{Corresponde al frame que se esta comparando.} donde se produce el error y los datos de los \texttt{Joints} de los avatares.
 Posteriormente se necesita hacer una modificación funcional en el gesto \textit{Move} de \texttt{\texttt{Kinect}Gesture}, para conseguir así, rellenar esa información. Esta modificación consiste en enviar la información del estado y los \textit{joints} de los avatares al \texttt{Registrar\_movimientos}, una vez superada la comparación de ese \textit{frame}. Con esta lógica se quedará registrado el movimiento hasta que el usuario cometa el error.
 
@@ -292,14 +292,72 @@ Después del proceso de grabación ,se tuvieron que seleccionar los movimientos qu
 De los 20 movimientos grabados los seleccionados fueron :Bênção, Ginga, Joehjada, Escada, Galopante, Meia Lua de Frente, Chapa-Pisào y Punteira.
 Estos 8 movimientos fueron factibles para su uso porque el resto, al incluir giros, presentaron problemas en la grabación. Esto se debe a que \texttt{Kinect} sólo posee una cámara frontal, de modo que al rotar alrededor del eje vertical se acaba perdiendo la referencia de cuáles son las extremidades izquierda y derecha. Como resultado, al darse la vuelta, la captura vuelve a mostrar al usuario de frente, pero con los brazos y las piernas cruzadas.
 
-\section{Conclusiones obtenidas del capítulo}
+\section{Transición de las escenas}
+
+
+En \texttt{Unity}, como se ha mencionado anteriormente, las escenas contienen los objetos del juego. Se pueden usar para crear un menú principal, animaciones, niveles, etc. En cada escena se ha creado un entorno diferenciado para cada una de las necesidades dadas.
+
+Este entorno está pensado para ser utilizado por el alumno para que pueda aprender a realizar diferentes movimientos de capoeira sin la necesidad de que esté presente un profesor. El entrenamiento consiste en imitar una serie de movimientos, los cuales han sido previamente capturados por varios expertos en el arte marcial. El entrenamiento virtual se desarrolla acorde al nivel que posea el alumno, ya sea principiante, aprendiz o avanzado, de este modo, el alumno va aprendiendo a realizar los movimientos de forma progresiva.
+
+Gracias a que el sistema compara \textit{frame} a \textit{frame} la posición del alumno con la del profesor virtual, este podrá realizar un análisis de las transiciones en las que está cometiendo algún error. 
+
+Tras realizar una abstracción del flujo de ejecución que realiza el entrenador virtual entre las diferentes escenas, se muestra el diagrama de la lógica del sistema en la figura \ref{fig:diagram} 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.7\textheight]{Imagenes/Capitulos/6/Diagram}
+	\caption{Diagrama que ilustra la lógica del sistema}
+	\label{fig:diagram}
+\end{figure}
+
+
+\subsection{Escena de Inicio}
+
+Se trata de la escena inicial del juego. Presenta una interfaz de tipo UI, la cual contiene el nombre de la aplicación y una breve descripción. Además se muestran los tres emblemas de las diferentes organizaciones presentes, como son la UCM, FDI y Abadá-Capoeira.
+
+\subsection{Escena de Menú Principal}
+
+Tras pulsar el botón de inicio en la anterior escena, pasamos al menú principal, en el cual se puede decidir si se quiere empezar a entrenar, visualizar una ayuda sobre como utilizar la aplicación, los créditos o volver a la escena de inicio.
+
+\subsection{Escena de Ayuda}
+
+Esta escena muestra varios mensajes de ayuda en los que se explica detalladamente el funcionamiento de la aplicación, además de como obtener un mayor rendimiento, ya que serán necesarias una pequeñas pautas para su utilización. También se resolverán las diferentes dudas que le puedan surgir al alumno.
+
+\subsection{Escena de Créditos}
+
+Al igual que en la escena de ayuda, solo se podrá acceder desde el menú principal. Se muestran los créditos sobre los desarrolladores, organismos implicados, agradecimientos y las licencias utilizadas en el proyecto.
+
+
+\subsection{Escena de Profesor}
+
+Cuando el usuario inicia el sistema como profesor, puede acceder a la funcionalidad de grabación de nuevos movimientos. Al comenzar a realizar la captura es necesario introducir el nombre deseado para el nuevo movimiento y colocarse a unos tres metros de \texttt{Kinect} para ser capturado correctamente. A partir de ese momento, el sistema graba los movimientos realizados por el usuario y los guarda en ficheros de texto para poder utilizarlos tanto para mostrárselos a los alumnos como para compararlos con los movimientos de estos cuando se encuentren practicando. Con el fin de de obtener una mayor inmersión en la aplicación, se utiliza el modo espejo como efecto para reproducir los movimientos captados. 
+
+El profesor también puede utilizar la funcionalidad del alumno, ya que será necesario revisar y reproducir el correcto funcionamiento de los nuevos movimientos capturados con \texttt{Kinect}. Inicialmente, la aplicación incluye ocho movimientos capturados a instructores de la escuela \texttt{Abadá-Capoeira}.\footnote{http://www.abadacapoeira.com.br/}
+
+
+\subsection{Escena de Alumno}
+
+Si el usuario es un alumno, se entrará en la escena principal del proyecto, donde se desarrolla toda la funcionalidad del entrenamiento virtual. En el interior de la escena se muestra la misma interfaz que en el caso del profesor, con la diferencia de que este no podrá grabar movimientos para su posterior análisis.
+
+Considerando que al comenzar a formarse en un arte marcial se desconocen los nombres de los movimientos que se desean poner en práctica, se le ofrece al alumno la posibilidad de visualizar previamente los movimientos antes de empezar la práctica para poder seleccionar más fácilmente el que desea. Para iniciar el entrenamiento acorde a su experiencia, el alumno tendrá que seleccionar el nivel que le corresponda, ya sea principiante, aprendiz o avanzado. 
+
+Tras elegir el nivel, se pasará a la selección del movimiento que se quiere aprender o practicar, de este modo, el alumno podrá comenzar a entrenar acorde a su nivel. 
+
+Posteriormente a la selección del movimiento, el alumno deberá iniciar la comparación mediante el botón correspondiente. Al pulsar sobre el botón, el alumno deberá adoptar una pose inicial correspondiente al movimiento seleccionado previamente. Hasta que el alumno no tome esa misma pose, el sistema estará esperando la calibración. En el instante en que la pose del alumno sea la misma que la del entrenador virtual, el sistema estará calibrado y empezará una cuenta atrás de tres segundos, tras la cual se empezará a reproducir el movimiento seleccionado. 
+
+En el momento en que el entrenador virtual inicie una reproducción de un movimiento, el alumno deberá imitarlo lo más fielmente posible. Mientras se realizan las transiciones, el sistema comparará las posición de los 25 \textit{joints} que componen el esqueleto del entrenador virtual, con las posiciones de los 25 \textit{joints} correspondientes al alumno capturado por \texttt{Kinect}.
+
+Tras finalizar el movimiento, el asistente mostrará una animación de éxito en el caso de que el movimiento se haya realizado de forma correcta (ver Figura \ref{fig:win}), o una animación de fracaso en el caso de que se produzca algún error en la ejecución del movimiento. Posteriormente, se presenta un esqueleto  en el que se muestran de color rojo las partes del cuerpo cuya colocación debe ser corregida, y en color verde las que se han utilizado de manera correcta (ver Figura \ref{fig:analisis_recortada}). A demás, se visualizará una serie de indicaciones en forma de texto para que el alumno pueda corregir la posición errónea de una forma mas efectiva (ej. \textit{Gira el brazo izquierdo hacia atrás}).
+
+
+\section{Conclusiones del desarrollo del proyecto}
 A lo largo de este capitulo se ha logrado explicar los estudios y las implementaciones necesarias para este proyecto. La primera decisión fue elegir el paquete para \texttt{Unity} \texttt {Kinect v2 Examples with MS-SDK}, siendo este, un pilar importante para la compresión y entendiemiento del funcionamiento de \texttt{Kinect}. 
 
 Los datos obtenidos del sensor de \texttt{kinect}, son extraídos para interpretarlos y mostrarlos a través de los \textit{cubeman}. Gracias a ello, se consiguió guardar y catalogar los movimientos del \textit{cubeman} para realizar comparaciones. El funcionamiento de los gestos que reconoce \texttt{Kinect} fueron una inspiración para la implementación de la comparación de movimientos.
 
 Posteriormente, se diseñaron avatares con el programa \texttt{Fuse Character Creator} para sustituir a los \textit{cubeman} y dar una apariencia más realista a la aplicación. Con el objetivo de dar un toque más dinámico, se añadieron a los avatares unas animaciones de movimientos de capoeira, de modo que, se reproduzcan cuando no se detecte al usuario. Adicionalmente, para el \textit{feeback} de la comparación del movimiento, se añadieron también dos animaciones de victoria y derrota.
 
-Para separar a los avatares se lograron diseñar dos escenarios. El primero simula un gimnasio dando la sensación al usuario de que esta practicando, y el segundo escenario simula una isla tropical típica donde los expertos de capoeira practican, de esta forma, reproducir el movimiento que el usuario debe realizar.
+Para separar a los avatares se lograron diseñar dos escenarios. El primero simula un gimnasio dando la sensación al usuario de que está practicando, y el segundo escenario simula una isla tropical típica donde los expertos de capoeira practican. En el segundo escenario se mostrarán los movimiento que el usuario debe realizar.
 
 Con el objetivo de completar la comparación de los movimientos, se logró implementar un proceso que realiza un análisis de cada parte del cuerpo. De esta manera, se contrasta con el movimiento a realizar y mostrará las correcciones oportunas que el usuario debe ejecutar.
 
