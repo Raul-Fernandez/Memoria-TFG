@@ -202,21 +202,102 @@ Inicialmente, este medio de transmisión se empleó para el desarrollo de unos gua
 
 \subsection{Captura de movimiento mediante ultrasonidos}
 
-Estos sistemas utilizan emisores que generan pulsos ultrasónicos, capturados por uno o varios receptores situados en posiciones predefinidas, permitiendo averiguar la posición y orientación del emisor situado en el escenario. El inconveniente de esta tecnología se debe a que los emisores son demasiado voluminosos y además no son capaces de capturar de una forma correcta movimientos bruscos. Sin embargo, permite obtener un ahorro importante respecto a otros sistemas, rondando un precio de 2.500\euro.
+Este sistema utiliza emisores que generan pulsos ultrasónicos (imperceptible por el ser humano) capturados por uno o varios receptores (a modo de radar), permitiendo averiguar la posición del emisor en el escenario, incluso en algunos casos, su orientación. El inconveniente de esta tecnología se debe a que los emisores son demasiado voluminosos, siendo incapaces de capturar movimientos bruscos de una forma correcta. Aunque en comparación con otros sistema de captura de movimiento, el precio supone una gran ventaja, teniendo un coste de 2500 \euro.
 
 \subsection{Captura de movimiento mediante sistemas inerciales}
 
-\subsection{Seguimiento de ojos}
+
+Con el objetivo de capturar el movimiento, los sistemas inerciales emplean sensores, como giroscopios y acelerómetros, con el propósito de obtener información sobre la velocidad angular y la aceleración del sensor.  La información obtenida de los sensores se transmite a un ordenador, donde se puede observar el movimiento capturado sobre una figura ya animada. Este tipo de sistemas no utiliza mecanismos externos como cámaras; y como en el caso de los sistemas o?pticos, cuantos ma?s sensores se utilicen, más real será el movimiento capturado, teniendo unos grandes rangos de captura. 
+
+El sistema de Nintendo (Wiimote) utiliza esta técnica, no obstante, para la captura de movimientos se utilizan trajes especiales con otros sensores mas precisos, con un precio que varía entre 22.000 y 71.000 \euro.
+
+
+\subsection{Captura de movimiento ocular}
+
+Estos sistemas utilizan la combinación del seguimiento de los ojos con el de la cabeza, obtiniendo unas líneas exactas de la vista, mientras que el usuario es capaz de moverse libremente. De este modo, permite a los atletas, pacientes y otros usuarios desempeñar sus tareas de una forma correcta, sin ningún tipo de impedimento.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth, height=0.35\textheight]{Imagenes/Capitulos/2/ETG-2w}
+	\caption{Gafa ETG-2w usada para la captura de movimiento ocular}
+	\label{fig:etg-2w}
+\end{figure}
+
+
+Como ejemplo de investigación en esta tecnología, la empresa SMI (Senso Motoric Instruments) ha desarrollado una gafa\footnote{https://www.smivision.com/eye-tracking/product/eye-tracking-glasses/} que permite el seguimiento de los ojos y combinado con la ca?mara, detecta el? punto exacto donde está detenienda la mirada. Soportando el acceso de datos en tiempo real y el control de usuario a través de una conexión inalámbrica. 
+
+
 \section{Métodos de captura de movimiento en los videojuegos }
+
+En la actualidad, gracias a la necesidad de crear unos personajes con gestos y movimientos mas realistas, el sector de los videojuegos ha conseguido que la captura de movimiento se convierta en una herramienta esencial, ya que permite una mayor inmersión en los videojuegos. Llegando a ser interpretados en la mayoría de juegos deportivos, por jugadores profesionales.
+
+En consecuencia, las principales empresas de videojuegos como Nintendo, Sony y Microsoft, han desarrollado los siguientes sistemas capaces de capturar movimientos.
+
 \subsection{Nintendo, Wii Remote}
+
+En el año 2006, Nintendo lanzó Wii \citep{NintendoWii}, perteneciente a la séptima generación de videoconsolas, sucesora directa de Nintendo GameCube y compitió con la Xbox 360 de Microsoft y la PlayStation 3 de Sony. La compañia Nintendo afirmó que Wii estaba destinada a un abanico de consumidores mas amplico a diferencia de sus rivales. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/2/wii_remote}
+	\caption{Mando inalámbrico Wii Remote}
+	\label{fig:wiiremote}
+\end{figure}
+
+
+La característica más distintiva de la consola, es el mando inalámbrico Wii Remote. Se trata de un dispositivo inalambrico, capaz de detectar la aceleración en un plano tridimensional mediante la utilización de un acelerometro ofrece la posibilidad de apuntar y señalar, determinando los movimientos en un plano tridimensional mediante la utilización de un acelerometro. Además cuenta con un sensor óptico, lo que permite determinar el lugar donde el mando Wii Remote está apuntando. 
+
+A diferencia de un mando a distancia tradicional, este sistema detecta la luz led que emite la barra de sensores de la consola. Tiene un tamaño aproximado de 20 cm de longitud y cuanta con diez leds infrarrojos, cinco en cada extremo de la barra. Para un correcto funcionamiento, no es necesario señalar directamente a la barra sensor, pero en caso contrario, perturbaría la capacidad de detección debido al limitado ángulo de visión. La barra sensor emite desde cada uno de los extremos, unos puntos de luz que permite al Wii Remote ser localizado. A partir de estas dos distancias, el procesador de la videoconsola Wii determina la distancia entre el Wiimote y la barra de sensores utilizando la triangulacio?n. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/2/barra_sensor}
+	\caption{Barra sensor de la videoconsola Wii}
+	\label{fig:barrasensor}
+\end{figure}
+
+Los movimientos realizados con Wii Remote, permiten al jugador imitar las acciones reales de juego, como mover una espada, lanzar una bola de fuego, disparar una pistola, etc; en lugar de pulsar solo los botones.
+
+
 \subsection{Sony, PlayStation Move}
+
+Como consecuencia de los buenos resultados obtenidos por Nintendo, Sony sacó al mercado en 2010, PlayStation Move \citep{PlayStationMove}, un sistema de control de movimientos mediante marcadores activos, compatible con las videoconsolas PS3 y PS4. Este sistema incorpora un giroscopio, ya que ningúna tecnología de captura de movimientos mediante marcadores, puede determinar si se han producido giros sin realizar una triangulación.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/2/playstation-move}
+	\caption{Dispositivo PlayStation Move}
+	\label{fig:playstation-move}
+\end{figure}
+
+Estas videoconsolas utilizan una camara denominada PlayStation Eye \citep{PlayStationEye} que detecta el color que toma la esfera del dispositivo PlayStation Move, determinando de este modo su posición.
+Esta camara dispone de dos lente, una de ellas realiza la función de camara web y la otra activa la captura de movimientos. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.32\textheight]{Imagenes/Capitulos/2/playstation-eye}
+	\caption{Dispositivo PlayStation Eye}
+	\label{fig:playstation-eye}
+\end{figure}
+
+El principal inconveniente de este sistema, es la luz y los colores de fondo. Ya que, se vuelve inu?til teniendo una luz de fondo del mismo color que el dispositivo PlayStation Move, perdiendo por completo la posicio?n de los marcadores. En la actualidad, es el sistema con menor estabilidad en la captura de movimientos en los videojuegos.
+
+
 \subsection{Microsoft, Kinect}
 
-Captura de movimientos en vídeo o Markerless , LUZ ESTRUCTURADA de kinect
+Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect} para Xbox 360, en sus inicios conocido como \textit{Project Natal}. Después de unos años, Microsoft ofreció la posibilidad de conectar \texttt{Kinect v2} por medio de ordenadores, con el sistema operativo Windows 8 o superior mediante usb 3.0. Se trata de un perife?rico para videojuegos que prescinde de mandos gracias a un sensor de deteccio?n de movimientos. Este sistema reconoce el rostro, la voz, los movimientos y gestos de los jugadores, mediante una cámara conectada a la videoconsola. 
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.32\textheight]{Imagenes/Capitulos/2/kinectv2}
+	\caption{Dispositivo Kinect v2}
+	\label{fig:kinectv2}
+\end{figure}
 
-Captura de movimientos inercial
-\medskip
+El dispositivo \texttt{Kinect}, es una barra horizontal conectada a una plataforma diseñada para mantenerse en una posición horizontal. En su interior contiene un hardware compuesto por una cámara RGB, un sensor de profundidad, el proyector de luz infrarroja, un micrófono bidireccional, un firmware y un procesador que utiliza algoritmos para procesar las ima?genes tridimensionales. De forma conjunta capturan el movimiento, adema?s de ofrecer un reconocimiento facial y de voz. 
+
+\texttt{Kinect} tiene como dos funcionalidades principales, generar un mapa 3D de la imagen que capta la cámara y realizar un reconocimiento humano en movimiento a partir de diferentes segmentos del cuerpo, además de un esquema en escala de grises del rostro. El periférico, transmite una luz infrarroja a través del escenario, lo que permite conocer el tiempo que tarda la luz en ser reflejada por los objetos. El sistema actúa como un sonar, determinando el tiempo que tarda en reflejarse la luz, se establece la distancia a la que se encuentan los objetos en tiempo real. 
+
 
 %Y también ponemos el acrónimo \ac{CVS} para que no cruja.
 
