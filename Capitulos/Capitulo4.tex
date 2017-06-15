@@ -5,9 +5,8 @@
 %---------------------------------------------------------------------
 
 \chapter{Tecnologías empleadas}
-
-
 \label{cap4:sec:kinect}
+
 En este capítulo se expondrán las tecnología utilizados para el desarrollo del proyecto. A continuación se detallarán de forma técnica el software y los dispositivos utilizados para realizar el proyecto.
 
 
@@ -118,11 +117,11 @@ En un principio se pensó utilizar esta aplicación para el modelado de los person
 
 \subsection{Fuse Character Creator}
 
-Se trata de una aplicación desarrollada por Mixamo, la cual permite crear personajes únicos mediante una intuitiva interfaz que separa el avatar en diferentes partes, como son la cabeza, el torso, las piernas y los brazos. Posteriormente a la selección de las diferentes partes del cuerpo ya predefinidas por el sistema, se puede editar cada una de las partes del personaje, ya sean los rasgos de la cara, el tamaño de los brazos, la longitud de las piernas, etc. Al seleccionar la parte del cuerpo que se quiere modificar, simplemente será necesario pinchar y realizar un scrool o deslizamiento hacia la izquierda o derecha para aumentar su tamaño, y para seleccionar el punto exacto donde se ubicará por ejemplo el ombligo, los ojos, las rodillas, etc, se realizará un scrool o desplazamiento hacía arriba o abajo.
+Se trata de una aplicación desarrollada por Mixamo, la cual permite crear personajes únicos mediante una intuitiva interfaz que separa el avatar en diferentes partes, como son la cabeza, el torso, las piernas y los brazos. Posteriormente a la selección de las diferentes partes del cuerpo ya predefinidas por el sistema, se puede editar cada una de las partes del personaje, ya sean los rasgos de la cara, el tamaño de los brazos, la longitud de las piernas, etc. Al seleccionar la parte del cuerpo que se quiere modificar, simplemente será necesario pinchar y realizar un scrool o deslizamiento hacia la izquierda o derecha para aumentar su tamaño. Por otro lado, para seleccionar el punto exacto donde se ubicarán las diferentes parte del cuerpo como por ejemplo el ombligo, los ojos, las rodillas, etc, se realizará un scrool o desplazamiento hacía arriba o abajo.
 
 Al terminar de modelar el personaje, se pasará a la sección de vestuario. Donde existen prendas predefinidas, como camisas, pantalones, zapatos, etc. Al terminar de vestir al avatar, esta aplicación posee la peculiaridad de poder subir al servidor de Mixamo el modelado realizado y completar la configuración de los huesos además de incluir una posible animación.
 
-
+\comImpl{Terminar con alguna imagen}
 \subsection{Mixamo 3D Animation Online Services}
 
 Mixamo es una compañía tecnológica encargada del desarrollo y venta de servicios para la animación de personajes 3D.
@@ -139,12 +138,39 @@ Es una aplicación dedicada al modelado, renderizado, animación y creación de grá
 
 \section{Hardware empleado}
 
+El hardware principal usado en este proyecto es el dispositivo de captura de movimiento \textit{Kinect v2} \cite{Kinectv2} y el cable adaptador para Windows \citep{adaptadorKinect}.
+
+\subsection{Kinect versión 2}
+
+%
+Se trata de un periférico que permite a los usuarios interactuar con la aplicación, de modo que gracias a sus sensores, no tiene la necesidad de utilizar algún tipo de mando inalambrico. Este dispositivo se documenta en la sención \ref{Kinect} del proyecto.
+%
+
+%
+Pasados unos años tras la salida de Kinect, en 2014 Microsoft \textcolor{red}{se dió cuenta} que liberando el controlador, podría sacarle un mayor rendimiento a esta tecnología. De modo que facilitó su uso en multiples aplicaciones, como en el caso de la captura de movimientos. 
+
+Para poder utilizar este dispositivo en un ordenador, Microsoft liberó el SDK para entornos Windows, necesario ,
+
+de modo que se empezó a utilizar en multiples aplicaciones, como en el caso de la captura de movimientos. 
+
+
+%
+En cuanto al uso de este dispositivo en un ordenador, Microsoft libero? los drivers para facilitar su aplicacio?n en entornos Windows, popularizando asi? su uso en mu?ltiples aplicaciones, tales como la captura de movimiento.
+
+%
+
+%
+
+Para aquellas aplicaciones que usarán de forma habitual el seguimiento de cuerpo de Kinect para Windows v2, además del procesamiento de aplicaciones personalizadas te recomendamos que uses la siguiente configuración del equipo como referencia. Esto no solo te proporcionará un rendimiento extraordinario en los escenarios de seguimiento más difíciles, sino que también te permitirá procesar aplicaciones adicionales a la vez que mantienes una velocidad de fotogramas óptima.
 \comImpl{Enlaces sobre las caracteristicas de Kinect}
 
 \medskip
 https://msdn.microsoft.com/library/jj131033.aspx\\
 https://msdn.microsoft.com/library/dn782025.aspx\\
 https://developer.microsoft.com/es-es/windows/kinect/hardware
+
+
+
 %Y tambi?n ponemos el acr?nimo \ac{CVS} para que no cruja.
 
 %Ten en cuenta que si no quieres acr?nimos (o no quieres que te falle la compilaci?n en ``release'' mientras no tengas ninguno) basta con que no definas la constante \verb+\acronimosEnRelease+ (en \texttt{config.tex}).

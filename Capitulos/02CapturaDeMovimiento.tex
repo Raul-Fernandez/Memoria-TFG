@@ -280,12 +280,13 @@ Esta camara dispone de dos lente, una de ellas realiza la función de camara web 
 	\label{fig:playstation-eye}
 \end{figure}
 
-El principal inconveniente de este sistema, es la luz y los colores de fondo. Ya que, se vuelve inu?til teniendo una luz de fondo del mismo color que el dispositivo PlayStation Move, perdiendo por completo la posicio?n de los marcadores. En la actualidad, es el sistema con menor estabilidad en la captura de movimientos en los videojuegos.
+El principal inconveniente de este sistema, es la luz y los colores de fondo. Ya que, se vuelve inútil teniendo una luz de fondo del mismo color que el dispositivo PlayStation Move, perdiendo por completo la posición de los marcadores. En la actualidad, es el sistema con menor estabilidad en la captura de movimientos en los videojuegos.
 
 
 \subsection{Microsoft, Kinect}
+\label{Kinect}
 
-Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect} para Xbox 360, en sus inicios conocido como \textit{Project Natal}. Después de unos años, Microsoft ofreció la posibilidad de conectar \texttt{Kinect v2} por medio de ordenadores, con el sistema operativo Windows 8 o superior mediante usb 3.0. Se trata de un perife?rico para videojuegos que prescinde de mandos gracias a un sensor de deteccio?n de movimientos. Este sistema reconoce el rostro, la voz, los movimientos y gestos de los jugadores, mediante una cámara conectada a la videoconsola. 
+Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect}\cite{Kinectv2} para Xbox 360, en sus inicios conocido como \textit{Project Natal}. Después de unos años, Microsoft ofreció la posibilidad de conectar \texttt{Kinect} por medio de ordenadores, con el sistema operativo Windows 8 o superior, mediante usb 3.0. Se trata de un periférico para videojuegos que prescinde de mandos gracias a un sensor de detección de movimientos. Este sistema reconoce el rostro, la voz, los movimientos y gestos de los jugadores, mediante una cámara conectada a la videoconsola. 
 
 \begin{figure}[h!]
 	\centering
@@ -294,15 +295,64 @@ Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect} para Xbox 360, en s
 	\label{fig:kinectv2}
 \end{figure}
 
-El dispositivo \texttt{Kinect}, es una barra horizontal conectada a una plataforma diseñada para mantenerse en una posición horizontal. En su interior contiene un hardware compuesto por una cámara RGB, un sensor de profundidad, el proyector de luz infrarroja, un micrófono bidireccional, un firmware y un procesador que utiliza algoritmos para procesar las ima?genes tridimensionales. De forma conjunta capturan el movimiento, adema?s de ofrecer un reconocimiento facial y de voz. 
+El dispositivo \texttt{Kinect}, es una barra horizontal conectada a una plataforma diseñada para mantenerse en una posición horizontal. En su interior contiene un hardware compuesto por una cámara RGB, un sensor de profundidad, el proyector de luz infrarroja, un micrófono bidireccional, un firmware y un procesador que utiliza algoritmos para procesar las imágenes tridimensionales. De forma conjunta capturan el movimiento, además de ofrecer un reconocimiento facial y de voz. 
 
-\texttt{Kinect} tiene como dos funcionalidades principales, generar un mapa 3D de la imagen que capta la cámara y realizar un reconocimiento humano en movimiento a partir de diferentes segmentos del cuerpo, además de un esquema en escala de grises del rostro. El periférico, transmite una luz infrarroja a través del escenario, lo que permite conocer el tiempo que tarda la luz en ser reflejada por los objetos. El sistema actúa como un sonar, determinando el tiempo que tarda en reflejarse la luz, se establece la distancia a la que se encuentan los objetos en tiempo real. 
+En 2013, Microsoft anunció su próxima consola Xbox One y el sensor de Kinect 2.0 que incluia mejoras sustanciales respecto a la versión anterior. A continuación se destacan las más significativas a nivel de desarrollo.
+
+\begin{itemize}
+	\item \textbf{Mayor campo de visión}. 70º en horizontal y 60º  en vertical. La version inicial disponía de 57º y 43º respectivamente.
+	
+	\begin{itemize}
+		\item Esto permite detectar a más personas dentro de un mismo campo de visión. Con esta nueva versión, hasta 6 jugadores pueden ser detectados simultáneamente.
+		
+		\item Como desventaja, destacar la carencia de motor de inclinación en esta nueva versión de Kinect.
+	\end{itemize}
+	
+		\item  \textbf{Mayor resolución con mas detalle}. 1920 x 1080 ppp Full HD. La versión inicial disponía de 640 x 480 ppp.
+		
+		\begin{itemize}
+			\item Detecta de una manera más precisa el entorno.
+			
+			\item Capacidad de diferenciar la orientación del cuerpo incluyendo sus manos y dedos.
+			
+			\item El \textit{face tracking} tiene mucho más detalle,  permitiendo captar los gestos de la cara.
+			
+			\item Mayor calidad de imagen.
+		\end{itemize}
+	
+	
+	\item \textbf{Mejora el rango de profundidad del sensor}
+	
+	Se incrementa el rango de actuación, pasando de 0,5 a 4,5 metros.
+	
+	\item \textbf{Aumentto de la velocidad en el puerto USB 3.0}
+	
+	La velocidad de la comunicación con el ordenador fluye mas rápido y disminuyendo la latencia del sensor, pasando de 90 ms a 60 ms.
+		
+	\item \textbf{Mejora en la captación de sonidos}
+	
+	Esta nueva versión de Kinect incluye una gran mejora en cuanto al reconocimiento de voz y captación de sonidos. Eliminando los ruidos de ambiente, permitiendo captar instrucciones sonora con mayor detalle.
+	
+	\item \textbf{Captación de movimientos a oscuras}
+	
+	La nueva versión es capaz de reconocer y captar los movimientos aunque la sala este a oscuras.
+	
+	
+\end{itemize}
+
+\texttt{Kinect} tiene dos funcionalidades principales, generar un mapa 3D de la imagen que capta la cámara y realizar un reconocimiento humano en movimiento a partir de diferentes segmentos del cuerpo, además de un esquema en escala de grises del rostro. El periférico, transmite una luz infrarroja a través del escenario, lo que permite conocer el tiempo que tarda la luz en ser reflejada por los objetos. El sistema actúa como un sonar, determinando el tiempo que tarda en reflejarse la luz, se establece la distancia a la que se encuentan los objetos en tiempo real. 
+
+
+
+\vspace{0.7cm}
+Como base para el estudio de la captura de movimientos y las tecnologías disponibles en este ámbito, se han realizado diferentes consultas a los siguientes proyectos: \citep{aleman2014solucion} \citep{menendez2015protocolo} \citep{mejias2014rotoscopia}
+
+\comImpl{Meter mas enlaces}
 
 
 %Y también ponemos el acrónimo \ac{CVS} para que no cruja.
 
 %Ten en cuenta que si no quieres acrónimos (o no quieres que te falle la compilación en ``release'' mientras no tengas ninguno) basta con que no definas la constante \verb+\acronimosEnRelease+ (en \texttt{config.tex}).
-
 
 
 
