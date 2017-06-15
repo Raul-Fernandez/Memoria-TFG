@@ -21,9 +21,9 @@
 
 La captura de movimiento (abreviada \texttt{Mocap}, en inglés \textit{Motion Capture}) es el proceso por el cual el movimiento, ya sea de objetos, animales o mayormente personas, se traslada a un modelo digital 3D.
 
-En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes. De ese modo se obtiene una mayor sensación de realismo. \cite{captura} \citeauthor{wiki1}.
+En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes. De ese modo se obtiene una mayor sensación de realismo. \citep{wiki1}.
 
-
+\comImpl{Meter otras referencias}
 
 %-------------------------------------------------------------------
 \section{Historia de la captura de movimiento}
@@ -286,7 +286,9 @@ El principal inconveniente de este sistema, es la luz y los colores de fondo. Ya
 \subsection{Microsoft, Kinect}
 \label{Kinect}
 
-Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect}\cite{Kinectv2} para Xbox 360, en sus inicios conocido como \textit{Project Natal}. Después de unos años, Microsoft ofreció la posibilidad de conectar \texttt{Kinect} por medio de ordenadores, con el sistema operativo Windows 8 o superior, mediante usb 3.0. Se trata de un periférico para videojuegos que prescinde de mandos gracias a un sensor de detección de movimientos. Este sistema reconoce el rostro, la voz, los movimientos y gestos de los jugadores, mediante una cámara conectada a la videoconsola. 
+Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect}\citep{Kinectv2} para Xbox 360, en sus inicios conocido como \textit{Project Natal}. Después de unos años, Microsoft ofreció la posibilidad de conectar \texttt{Kinect} por medio de ordenadores o tabletas, con el sistema operativo Windows 8 o superior, mediante un adaptador \citep{adaptadorKinect} con una conexión usb 3.0. 
+
+El dispositivo \texttt{Kinect} es un periférico para videojuegos que prescinde de mandos gracias a un sensor de detección de movimientos. Este sistema reconoce el rostro, la voz, los movimientos y gestos de los jugadores, mediante una cámara conectada a la videoconsola, el ordenador o \textit{tablet}. 
 
 \begin{figure}[h!]
 	\centering
@@ -295,22 +297,28 @@ Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect}\cite{Kinectv2} para
 	\label{fig:kinectv2}
 \end{figure}
 
-El dispositivo \texttt{Kinect}, es una barra horizontal conectada a una plataforma diseñada para mantenerse en una posición horizontal. En su interior contiene un hardware compuesto por una cámara RGB, un sensor de profundidad, el proyector de luz infrarroja, un micrófono bidireccional, un firmware y un procesador que utiliza algoritmos para procesar las imágenes tridimensionales. De forma conjunta capturan el movimiento, además de ofrecer un reconocimiento facial y de voz. 
+Se trata de una barra horizontal conectada a una plataforma diseñada para mantenerse en una posición horizontal. En su interior contiene un hardware compuesto por una cámara RGB, un sensor de profundidad, el proyector de luz infrarroja, un micrófono bidireccional, un firmware y un procesador que utiliza algoritmos para procesar las imágenes tridimensionales. De forma conjunta capturan el movimiento, además de ofrecer un reconocimiento facial y de voz. 
 
-En 2013, Microsoft anunció su próxima consola Xbox One y el sensor de Kinect 2.0 que incluia mejoras sustanciales respecto a la versión anterior. A continuación se destacan las más significativas a nivel de desarrollo.
+En 2013, Microsoft anunció su próxima consola Xbox One y el nuevo sensor de \texttt{Kinect} que incluía mejoras sustanciales respecto a la versión anterior. A continuación se destacan las más significativas a nivel de desarrollo. \citep{HardwareKinect}
 
 \begin{itemize}
-	\item \textbf{Mayor campo de visión}. 70º en horizontal y 60º  en vertical. La version inicial disponía de 57º y 43º respectivamente.
+	\item \textbf{Mayor campo de visión y un seguimiento mejorado del cuerpo}
 	
 	\begin{itemize}
-		\item Esto permite detectar a más personas dentro de un mismo campo de visión. Con esta nueva versión, hasta 6 jugadores pueden ser detectados simultáneamente.
 		
-		\item Como desventaja, destacar la carencia de motor de inclinación en esta nueva versión de Kinect.
+		\item Con un campo de visión de 70º en horizontal y 60º en vertical. La versión inicial disponía de 57º y 43º respectivamente.
+		
+		\item Esta nueva versión, permite detectar hasta seis jugadores de forma simultanea con 25 articulaciones por persona dentro de un mismo campo de visión. La versión anterior solo podía detectar dos jugadores y 20 articulaciones.
+		
+		\item Como desventaja, destacar la carencia de motor de inclinación en esta nueva versión de \textit{Kinect}.
 	\end{itemize}
 	
-		\item  \textbf{Mayor resolución con mas detalle}. 1920 x 1080 ppp Full HD. La versión inicial disponía de 640 x 480 ppp.
+		\item  \textbf{Mayor resolución con mas detalle}
 		
 		\begin{itemize}
+			
+			\item Cámara a color capaz de realizar vídeos con una resolución Full HD de 1920 x 1080 ppp. La versión inicial disponía de 640 x 480 ppp.
+			
 			\item Detecta de una manera más precisa el entorno.
 			
 			\item Capacidad de diferenciar la orientación del cuerpo incluyendo sus manos y dedos.
@@ -325,22 +333,23 @@ En 2013, Microsoft anunció su próxima consola Xbox One y el sensor de Kinect 2.0
 	
 	Se incrementa el rango de actuación, pasando de 0,5 a 4,5 metros.
 	
-	\item \textbf{Aumentto de la velocidad en el puerto USB 3.0}
+	\item \textbf{Aumento de la velocidad en el puerto USB 3.0}
 	
-	La velocidad de la comunicación con el ordenador fluye mas rápido y disminuyendo la latencia del sensor, pasando de 90 ms a 60 ms.
+	La velocidad de la comunicación con el ordenador se transmite mas rápido, disminuyendo la latencia del sensor, pasando de 90 ms a 60 ms.
 		
 	\item \textbf{Mejora en la captación de sonidos}
 	
-	Esta nueva versión de Kinect incluye una gran mejora en cuanto al reconocimiento de voz y captación de sonidos. Eliminando los ruidos de ambiente, permitiendo captar instrucciones sonora con mayor detalle.
+	Esta nueva versión de \texttt{Kinect} incluye una gran mejora en cuanto al reconocimiento de voz. De modo que eliminando los ruidos de ambiente, permite captar instrucciones sonoras con mayor detalle.
 	
 	\item \textbf{Captación de movimientos a oscuras}
 	
-	La nueva versión es capaz de reconocer y captar los movimientos aunque la sala este a oscuras.
+	
+	Nuevas funciones de infrarrojos (IR), capaces de reconocer y captar los movimientos aunque la sala este a oscuras. Genera una vista independiente de la iluminación
 	
 	
 \end{itemize}
 
-\texttt{Kinect} tiene dos funcionalidades principales, generar un mapa 3D de la imagen que capta la cámara y realizar un reconocimiento humano en movimiento a partir de diferentes segmentos del cuerpo, además de un esquema en escala de grises del rostro. El periférico, transmite una luz infrarroja a través del escenario, lo que permite conocer el tiempo que tarda la luz en ser reflejada por los objetos. El sistema actúa como un sonar, determinando el tiempo que tarda en reflejarse la luz, se establece la distancia a la que se encuentan los objetos en tiempo real. 
+\texttt{Kinect} tiene dos funcionalidades principales, generar un mapa 3D de la imagen que capta la cámara y realizar un reconocimiento humano en movimiento a partir de diferentes segmentos del cuerpo, además de un esquema en escala de grises del rostro. El periférico, transmite una luz infrarroja a través del escenario, lo que permite conocer el tiempo que tarda la luz en ser reflejada por los objetos. El sistema actúa como un sonar, determinando el tiempo que tarda en reflejarse la luz, se establece la distancia a la que se encuentran los objetos en tiempo real. 
 
 
 
