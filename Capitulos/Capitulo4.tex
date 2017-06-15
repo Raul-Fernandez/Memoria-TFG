@@ -22,13 +22,14 @@ proyecto
 El software principal utilizado en este proyecto es Unity 5.5 \citep{Unity_Manual}, que es un motor de desarrollo de videojuegos.
 Para la edición , compilación y depuración de la programación de Unity se ha utilizado Visual Studio 2015 \citep{VSMS} con el lenguaje de programación C\#.
 
+%\comImp{nombrar todos los programas}
 
 \subsection{Entorno de desarrollo : Unity 3D}
 %-------------------------------------------------------------------
 \label{cap4:sec:Entorno de desarrollo : Unity 3D}
 El objetivo de este proyecto es la captura y el análisis de movimiento relacionados con el arte marcial afro-brasileño capoeira. Con esto en mente, se llega a la primera decisión de que plataforma escoger para el desarrollo de este proyecto.
 
-Los entornos a elegir fueron Visual Studio 2015 \cite{VSMS}, Unity 3D Engine \citep{Unity} y Unreal Engine \cite{Unreal}. El primero descartado fue Visual Studio 2015 porque se busca crear también un escenario 3D y, tanto Unity como Unreal ,ofrecen herramientas útiles para la creación de estos escenarios.\\\\
+Los entornos a elegir para la creación de escenarios 3D fueron: Visual Studio 2015 \cite{VSMS}, Unity 3D Engine \citep{Unity} y Unreal Engine \cite{Unreal}. El primero descartado fue Visual Studio 2015, ya que se busca el desarrollo de escenarios 3D de una manera mas intuitiva y, tanto Unity como Unreal ,ofrecen herramientas mas útiles para la creación de estos escenarios.\\\\
 En cuanto a la decisión de elegir entre Unity o Unreal Engine fue basada en la comunidad que hay detrás de cada uno de ellos, y sobre todo, en lo que se quiere abarcar con este proyecto. Unreal suele ser utilizado por las empresas para juegos grandes y mas profesionales , mientras que Unity se puede aplicar, tanto a pequeñas como a grandes aplicaciones, siendo su aprendizaje de este mas intuitivo que Unreal.\\
 
 Un motor de juegos se especifica como la rutina de programación que permiten el diseño, la creación y la representación de un videojuego. En este caso, se adecua correctamente ya que se pretende realizar un entorno 3D donde los usuarios se perciban y aprendan movimientos controlando un avatar.
@@ -80,11 +81,9 @@ Se optó por la decisión de utilizar C\# porque se acomoda mejor a la aplicación,
 
 Para controlar los eventos de un objeto o los eventos de las entradas de los usuario, Unity utiliza scripts.De forma básica los scripts tienen implementado un método \textit{Start} para inicializar las variables del objeto y un método \textit{Update} encargado de actualizar los parámetros a partir del tratamiento de eventos.\\
 
-Se utilizó Visual Studio 2015 \citep{VSMS} para la depuración de scripts, ya que proporciona visualización de las variables utilizadas en tiempo de ejecución, y además, da la posibilidad de ejecutar el script paso a paso. También otro factor clave fue que este entorno de programación se tenía experiencia previa de uso.
+Se utilizó Visual Studio 2015 \citep{VSMS} para la depuración de scripts, ya que proporciona visualización de las variables utilizadas en tiempo de ejecución, y además, da la posibilidad de ejecutar el script paso a paso. También otro factor clave fue que con este entorno de programación se tenía experiencia previa de uso.
 
-
-
-
+El otro programa utilizado para la depuración de scripts en Unity fue MonoDevelop, ya que proporciona un entorno de desarrollo libre y gratuito, diseñado primordialmente para C\#.
 
 \subsection{MakeHuman}
 
@@ -123,41 +122,30 @@ Para la utilización de esta aplicación es necesario el uso del servidor Steam\fo
 
 \subsection{Mixamo 3D Animation Online Services}
 
-Mixamo\footnote{https://www.mixamo.com/} es una compañía tecnológica encargada del desarrollo y venta de servicios para la animación de personajes 3D. Este Proporciona un servicio \textit{online} que permite buscar entre una amplia gama de movimientos, que van desde el combate, pasando por deportes, hasta poder tocar un instrumento. Los movimientos pueden crearse en tiempo real, obteniendo el resultado deseado. Los productos y características de Mixamo son compatibles con todos los paquetes de software 3D, pudiendo realizar una exportación eligiendo entre varias aplicaciones 3D como: Unity3d, UDK, 3ds Max, Maya, Motionbuilder, zBrush, Houdini entre otros.
+Mixamo\footnote{https://www.mixamo.com/} es una compañía tecnológica encargada del desarrollo y venta de servicios para la animación de personajes 3D. Proporcionanando un servicio \textit{online} que permite buscar entre una amplia gama de movimientos, que van desde el combate, pasando por deportes, hasta poder tocar un instrumento. 
+
+Los productos y características de Mixamo son compatibles con todos los paquetes de software 3D, pudiendo realizar una exportación eligiendo entre varias aplicaciones 3D como: Unity3d, UDK, 3ds Max, Maya, Motionbuilder, zBrush, Houdini entre otros.
 
 
 Una de las características más sorprendentes de Mixamo es el \textit{Auto-Rigger}. Ya que ahorras horas de trabajo modelando el personaje y con este sistema el proceso sucede en cuestión de minutos. Todo lo que se necesita hacer es subir al servidor de Mixamo el personaje 3D (soporta .fbx, .bvh, .zip, obj), seleccionar el numero de huesos que mejor se adapte al esqueleto del personaje (véase Figura \ref{fig:mixamo-rig}) y esperar que termine el proceso de \textit{rigger}.
-%
 
-Tenemos decenas de miles de modelos de movimiento que permiten a los usuarios a Mixamo no sólo se aplican a cualquier animación de sus personajes, sino también personalizarlos.
+Tras completar la fase de modelado, Mixamo ofrece la posibilidad de animar al personaje con movimientos, que permiten, no sólo aplicar cualquier animación, sino también personalizarlas, ya que se pueden modificar en tiempo real con el personaje obteniendo el resultado deseado. Por último descargarlos en cualquier formato que necesita (.fbx, .bvh, .dae) y fácilmente combinar de nuevo en sus escenas en 3D
 
-¿Quiere que su carácter boxeador para lanzar su golpe un poco más alto? Su carácter del viejo hombre en caminar un poco más lento? Su modelo de soldado que agacharse un poco más bajo? Sólo tiene que ajustar un par de deslizadores para obtener la animación exacto que desea antes de descargarlos en cualquier formato que necesita (.fbx, .bvh, .dae) y fácilmente combinar de nuevo en sus escenas en 3D.
-
-
-
-%
 
 Estas animaciones utilizan una base matemática, lo que facilita su uso para los diferentes personajes que se deseen animar. Tradicionalmente era extremadamente lento, costoso y complicado, lograr modelar personajes 3D con resultados de alta calidad. En cambio mediante esta técnica, Mixamo intenta reducir los tiempos de desarrollo, pudiendo obtener unas animaciones de calidad, sin la necesidad de contar con altos recursos. 
-
-
-
-
-
-
 
 
 \subsection{Marvelous Designer}
 
 Maneja un software  encargado en la simulación de telas, el cual permite a los artistas y diseñadores de moda modelar ropa en 3D.
 
-
-
+\comImpl{terminar}
 
 \subsection{Blender}
 
 Es una aplicación dedicada al modelado, renderizado, animación y creación de gráficos 3D.
 
-\subsection{MonoDevelop}
+\comImpl{terminar si se mete el logo}
 
 \section{Hardware empleado}
 \label{cap4:sec:hardware empleado}
@@ -178,14 +166,21 @@ Por lo tanto, para el uso de \texttt{Kinect} en un equipo o \textit{tablet} con 
 \begin{itemize}
 	\item{Procesador de 64 bits (x64).}
 	\item{Doble núcleo físico de 3,1 GHz.}
-	\item{Controlador USB 3.0 }
+	\item{Controlador USB 3.0  (versión 2.2.1610.17001 o superior)}
 	\item{Adaptador de \texttt{Kinect} para conectar el sensor al sistema operativo Windows.}
 	\item{4 GB de RAM.}
 	\item{Tarjeta gráfica que admita DirectX 11.}
 	\item{Windows 8 u 8.1, Windows Embedded 8 o Windows 10.}
 \end{itemize} 
 
-Microsoft aporta una herramienta\footnote{http://go.microsoft.com/fwlink/p/?LinkID=513889} para verificar que el PC o la \textit{tablet} cumplen con los requisitos de compatibilidad y para comprobar el sistema en busca de cualquier problema conocido. Además, asegurándose de estar utilizando el controlador mas reciente para la GPU.
+Microsoft aporta una herramienta\footnote{http://go.microsoft.com/fwlink/p/?LinkID=513889} para verificar que el PC o la \textit{tablet} cumplen con los requisitos de compatibilidad y para comprobar el sistema en busca de cualquier problema conocido. Además, asegurándose de estar utilizando el controlador mas reciente para la GPU. (véase Figura \ref{fig:verificador_kinect})
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.5\textheight]{Imagenes/Capitulos/4/verificador_kinect}
+	\caption{Herramienta verificadora de \texttt{Kinect} }
+	\label{fig:verificador_kinect}
+\end{figure}
 
 \vspace{0.3cm}
 
@@ -205,14 +200,8 @@ Debido a los problemas ocasionados con algunos equipos utilizados, se deberá com
 
 \subsection{Adaptador de Kinect para Windows}
 
-Conecta el sensor \texttt{Kinect} para Xbox One al ordenador o tableta mediante el adaptador \texttt{Kinect} para Windows (véase Figura \ref{fig:adaptadorkinect}) y de ese modo, poder desarrollar soluciones personalizadas para diferentes aplicaciones. 
+Conecta el sensor \texttt{Kinect} para Xbox One al ordenador o tableta mediante el adaptador \texttt{Kinect} para Windows (véase Figura \ref{fig:adaptadorkinect2}) y de ese modo, poder desarrollar soluciones personalizadas para diferentes aplicaciones. 
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.9\linewidth, height=0.3\textheight]{Imagenes/Capitulos/4/adaptador_kinect}
-	\caption{Adaptador de \texttt{Kinect} para Windows}
-	\label{fig:adaptadorkinect}
-\end{figure}
 
 \begin{figure}[h!]
 	\centering
@@ -229,7 +218,12 @@ Este equipo no posee una características muy especiales, mas allá de utilizar el
 Teniendo las siguientes especificaciones técnicas:
 
 \begin{itemize}
-	\item 
+	\item Procesador: Intel® Core i5-4210U (1.7 GHz)
+	\item Memoria RAM: 8GB DDR3L SODIMM PC3-12800 1600Mhz
+	\item Disco duro: 500GB (5400 rpm S-ATA)
+	\item Display: 15.6" LED Full HD (1920x1080) 
+	\item Controlador gráfico: Nvidia GeForce 820M 2GB DDR3
+	\item Conexiones: 1 USB 3.0 (versión 2.2.1610.17001) , 2 x USB 2.0, 1 HDMI
 \end{itemize}
 
 %Y tambi?n ponemos el acr?nimo \ac{CVS} para que no cruja.
