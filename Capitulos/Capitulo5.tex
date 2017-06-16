@@ -212,14 +212,20 @@ Una vez comprendida la generación de avatares. El avatar elegido que mejor se ad
 
 Con el propósito de utilizar las animaciones que suministra \texttt{Mixamo} se observó el ejemplo \texttt{AvataresDemo}, el cual utiliza un script \texttt{AvatarController} que realiza una conexión entre los \textit{joints} y los huesos incorporados en el avatar. 
 
-Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota para obtener un feedback mas ilustrado de la comparación de movimiento.
+Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota, obteniendo así, un \textit{feedback} más ilustrado de la comparación del movimiento.
 \comImpl{tres fotos ginga victoria y derrota}
 
-Para incorporar las animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity}, encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar que animación se ejecuta en cada momento. El estado inicial será la \textit{ginga}, y se realizará una transición a la animación de victoria o derrota que dependerá de la comparación del movimiento del usuario con el del profesor. Una vez determinado el estado, este volverá a la animación de \textit{ginga} para continuar con el siguiente movimiento.
+Para incorporar las animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity}, encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar la animación que se ejecuta en cada momento. El estado inicial será la \textit{ginga} y se realizará una transición a la animación de victoria o derrota, que dependerá en todo caso, de la comparación del movimiento por parte del usuario con el del profesor. Una vez determinado el estado, este volverá a la animación de \textit{ginga} para continuar con el siguiente movimiento (ver Figura \ref{fig:animator}).
 
-\comImpl{imagen Grafo animator}\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/animator}
+	\caption{Diagrama de estados de animator}
+	\label{fig:animator}
+\end{figure}
 
-Se constató que existía un conflicto entre el \texttt{Animator Controller} y el sensor de movimiento por quien tiene el control del avatar, por ello, se implementó un script que desactiva el componente \texttt{Animator Controller} cuando el sensor de \textit{kinect} detecta al usuario y se vuelve a activar cuando el usuario se sale de la escena.
+
+Se constató que existía un conflicto entre el \texttt{Animator Controller} y el \texttt{AvatarController} dando lugar a un lucha por quien tiene el control del avatar. Por ello, se implementó un \textit{script} que desactiva el componente \texttt{Animator Controller} cuando el sensor de \textit{kinect} detecta al usuario y se vuelve a activar cuando el usuario se sale de la escena.
 
 
 \section{Análisis de los movimientos de Usuario}
@@ -233,14 +239,20 @@ Para este apartado se observó el desarrollo de la comparación de movimiento impl
 El planteamiento del análisis comienza reproduciendo el movimiento del avatar del usuario junto al avatar de la grabación, deteniéndose ,si llegara el caso,  en el \textit{frame} donde el usuario cometió el error. En ese instante cambiará los huesos del avatar controlado por el usuario a un color rojo, en consecuencia de una colocación incorrecta del hueso. Adicionalmente mostrará un panel con un texto describiendo las correcciones que se deben aplicar. Esta información se compondrá de la parte de cuerpo que se está analizando , añadiendo seguidamente, la dirección y la altura que servirán de pautas para que el usuario corrija su posición.
 
 \subsection{Implementación del análisis del movimiento}
-Una vez planteada las especificaciones del análisis se empieza con  su implementación. Primero se creó un \textit{script} llamado \texttt{Registrar\_movimientos}, el cual, guarda toda la información del movimiento hasta donde el usuario comete el error. Esta información contiene el estado\footnote{Corresponde al frame que se esta comparando.} donde se produce el error y los datos de los \texttt{Joints} de los avatares.
-Posteriormente se necesita hacer una modificación funcional en el gesto \textit{Move} de \texttt{\texttt{Kinect}Gesture}, para conseguir así, rellenar esa información. Esta modificación consiste en enviar la información del estado y los \textit{joints} de los avatares al \texttt{Registrar\_movimientos}, una vez superada la comparación de ese \textit{frame}. Con esta lógica se quedará registrado el movimiento hasta que el usuario cometa el error.
+Una vez planteada las especificaciones del análisis se empieza con  su implementación. Primero se creó un \textit{script} llamado \texttt{Registrar\_movimientos}, el cual, guarda toda la información del movimiento hasta donde el usuario comete el error. Esta información contiene el estado\footnote{Corresponde al frame que se esta comparando.} donde se produce la equivocación y los datos de los \texttt{Joints} pertenecientes a los avatares.
+Posteriormente se necesitó hacer una modificación funcional en el gesto \textit{Move} de \texttt{\texttt{Kinect}Gesture}, para conseguir así, rellenar esa información en cada comparación. Esta modificación consiste en enviar la información del estado y los \textit{joints} de los avatares al \texttt{Registrar\_movimientos}, una vez superada la comparación de ese \textit{frame}. Con esta lógica se quedará registrado la traza del movimiento hasta que el usuario se equivoque.
 
-A partir de este momento, para poder mostrar la información recogida se implementó una funcionalidad nueva en el \textit{script} \texttt{Registrar\_movimientos}, que consiste en desplazar los avatares a primera escena, modificando los materiales para que se vean transparentes ,y crear así un esqueleto verde parecido a los \textit{cubeman} del principio. Estos avatares simularán el movimiento hasta el \textit{frame} donde se equivocó el usuario y realizará una comprobación de cada \texttt{Joint} para cambiar el hueso de color de verde a rojo. A la vez, se va generando un \textit{string} con una corrección de posicionamiento compuesto por tres partes. Para la primera parte se crea un diccionario que, a partir del número del \texttt{Joint}, devuelve la parte del cuerpo correspondiente. En la implementación de este diccionario se han agrupado \texttt{Joints}, ya que varios forman una misma parte del cuerpo, como por ejemplo, las manos que lo forman tres \texttt{Joints} diferentes. La segunda parte del \textit{string} esta formada por la elección de la dirección, que  se comprueba, realizando la diferencia de la coordenadas X del \texttt{Joint} del usuario con la del \texttt{Joint} de la grabación. Si la diferencia es positiva la dirección será hacia la derecha, en caso contrario, será hacia la izquierda. Y para la tercera parte del \textit{string} se realiza la diferencia con la coordenada Y definiendo así la altura. Si la diferencia es positiva la altura será hacia abajo , en caso contrario hacia arriba. 
-Esta lista de correcciones se mostrará en un panel una vez completada evitando los \textit{strings} repetidos. 
+A partir de este momento para poder mostrar la información recogida, se implementó una funcionalidad nueva en el \textit{script} \texttt{Registrar\_movimientos}, que consiste en desplazar los avatares a primera escena, modificando los materiales para que se vean transparentes ,y crear así, un esqueleto verde parecido a los \textit{cubeman} del principio. Estos avatares simulan el movimiento hasta el \textit{frame} donde se equivocó el usuario, y en este último estado, realiza una comprobación de cada \texttt{Joint} para cambiar el hueso de color de verde a rojo. A la vez, se va generando un \textit{string} con una corrección de posicionamiento compuesto por cuatro partes. Para la primera pieza se creó un diccionario que, basándose en el número del \texttt{Joint}, devuelve en palabras la parte del cuerpo correspondiente. En la implementación de este diccionario se han agrupado \texttt{Joints} dispares, ya que siendo diferentes forman una misma parte del cuerpo, como por ejemplo las manos que la forman tres \texttt{Joints}. La segunda pieza del \textit{string} está formada por la elección de la dirección,  y esta se comprueba, realizando la diferencia de la coordenadas X del \texttt{Joint} perteneciente al usuario con la del \texttt{Joint} de la grabación. Si la diferencia es positiva la dirección será hacia la derecha, en caso contrario será hacia la izquierda. Seguidamente para la tercera pieza del \textit{string}, se realiza la diferencia con la coordenada Z definiendo así la profundidad. Si la diferencia es positiva la profundidad será hacia atrás , en caso contrario hacia delante. Y por último para la cuarta pieza del \textit{string}, se efectúa la distinción con la coordenada Y, definiendo así la altura. Si la diferencia es positiva la altura será definida de forma descendente, en caso contrario ascendente.
+Esta lista de correcciones se mostrará en un panel una vez completada evitando los \textit{strings} repetidos, a su vez, se añaden colores a cada una de las piezas del \textit{string}, ofreciendo de esta manera un texto menos plano y mas legible (ver Figura \ref{fig:analisis_movimiento}) 
 
-\comImpl{Añadir eje Z y revisar de no poner tantas veces "parte"}
-\comImpl{Imagen completa de análisis con panel}
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.34\textheight]{Imagenes/Capitulos/capitulo5/analisis_movimiento}
+	\caption{Análisis de movimiento}
+	\label{fig:analisis_movimiento}
+\end{figure}
 
 
 \section{Creación de los escenarios 3D}
@@ -295,7 +307,13 @@ Este proceso consistía en grabar una batería de movimientos de capoeira \cite{ca
 	\item \textit{Esquiva de frente}, es un técnica para esquivar un ataque elevado y consiste en desplazar el cuerpo hacia abajo.
 	\item \textit{Negativa}, es una posición defensiva utilizado para esquivar o para desplazarse por el suelo.
 
-\comImpl{Foto de alguien grabandole}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.7\textheight]{Imagenes/Capitulos/capitulo5/grabacion_movimiento}
+	\caption{Realizando las grabaciones de movimiento}
+	\label{fig:grabación_movimiento}
+\end{figure}
 	
 \end{itemize}
 
