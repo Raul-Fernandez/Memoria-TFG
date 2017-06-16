@@ -13,7 +13,8 @@
 %-------------------------------------------------------------------
 \section{Discusión}
 
-Como se mencionó en la introducción, uno de los objetivos al desarrollar este sistema era que pudiese funcionar con tecnología de uso doméstico, lo cual restringe notablemente el abanico de posibilidades a considerar. La configuración elegida para el sistema utiliza una única cámara para la captación del movimiento del usuario, proporcionada por \texttt{Kinect}. Esto limita mucho la capacidad del sistema de percibir los movimientos en toda su complejidad, sobre todo en aquellos casos en que hay rotación del torso, lo cual puede generar confusiones entre distintos miembros del avatar que tengan simetría axial (tras el giro, el sistema confunde un brazo con otro, y piensa que el usuario sigue de frente cuando en realidad está de espaldas). Lo mismo sucede a la hora de analizar la profundidad de algunos de los movimientos realizados. Se espera en el futuro poder ampliar este trabajo con la utilización de mayor número de cámaras.
+Como se mencionó en la introducción, uno de los objetivos al desarrollar este sistema era que pudiese funcionar con tecnología de uso doméstico, lo cual restringe notablemente el abanico de posibilidades a considerar. La configuración elegida para el sistema utiliza una única cámara para la captación del movimiento del usuario, proporcionada por \texttt{Kinect}. Esto limita la capacidad del sistema de percibir los movimientos más complejos, como aquellos casos en que hay rotación del torso, lo cual puede generar confusiones entre distintos miembros del avatar que tengan simetría axial (tras el giro, el sistema confunde un brazo con otro, y piensa que el usuario sigue de frente cuando en realidad está de espaldas). Lo mismo sucede a la hora de analizar la profundidad de algunos de los movimientos realizados. Se espera en el futuro poder ampliar este trabajo con la utilización de mayor número de cámaras.
+
 
 Por otro lado, en algunos de los trabajos estudiados (e.g. \cite{Keerthy:Thesis:2012,Kyan:2015:ABD:2753829.2735951}) se utilizan técnicas más sofisticadas para analizar los movimientos de los usuarios que las usadas en este trabajo. Si bien tales técnicas pueden ser útiles en niveles de aprendizaje avanzados, cuando se trata de principiantes en capoeira, no existen grandes diferencias respecto a técnicas más sencillas. Esto es así porque los movimientos de un aprendiz son más simples y, por tanto, la comparación con el entrenador también lo es. Por ello, un método más sencillo de comparación de movimientos se traduce en dos claras ventajas: primero, es menos complejo y más rápido de calcular; y, segundo, el resultado de la comparación es más fácilmente traducible a texto para proporcionar al aprendiz explicaciones útiles acerca de cómo mejorar la realización de las técnicas.
 
@@ -21,9 +22,12 @@ Por otro lado, en algunos de los trabajos estudiados (e.g. \cite{Keerthy:Thesis:
 
 A lo largo del presente trabajo se ha descrito el proceso por el cual se ha desarrollado un entrenador virtual de capoeira a partir de la grabación previa de los movimientos de un experto realizada con el dispositivo \texttt{Kinect}. Por otro lado, el usuario, haciendo uso del mismo dispositivo, hará una captura de sus movimientos que servirán para su posterior comparación con el entrenador virtual. Una vez comparados, se ofrece la explicación oportuna para conseguir realizar correctamente los movimientos que fueron ejecutados de manera errónea. En este proceso se debe enfatizar la capacidad del dispositivo \texttt{Kinect} para capturar los movimientos de forma correcta, un hecho relevante si además tenemos en cuenta su bajo precio de mercado.
 
+
 Hay que destacar los beneficios que puede conllevar utilizar un entrenador virtual, que engloba, desde la comodidad de trabajar desde casa, hasta tener un \textit{feedback} dedicado, personal e inmediato. Del mismo modo, se trata de un sistema de entrenamiento mediante juego, lo cual potencia el aprendizaje y la motivación, como se aprecia en la escena de alumno, en la que se debe de realizar el movimiento correctamente. Permite establecer la dificultad deseada para comparar los movimientos, lo cual hace que se pueda adaptar a las necesidades y capacidades de los distintos alumnos. Se trata de un entorno intuitivo tanto para el profesor como para el alumno, pudiéndose complementar con la sección de ayuda que ofrece la aplicación. Además, su uso doméstico a bajo coste posibilita un mayor alcance entre el público.
 
+
 Aunque aún no se ha realizado una evaluación extensa con usuarios novatos y expertos en capoeira, sí se han llevado a cabo pruebas preliminares para comprobar el correcto funcionamiento de la aplicación y la fiabilidad de los comentarios para corregir sus defectos. Dichas pruebas se han realizado con una pequeña muestra de usuarios de distintos niveles y los resultados preliminares muestran que, al nivel al que se han realizado las pruebas y con movimientos no excesivamente complejos de cuerpo entero, el funcionamiento de la aplicación es rápido y los resultados de los análisis y las explicaciones de los errores se acercan bastante a la realidad.
+
 
 
 
@@ -32,22 +36,16 @@ Aunque aún no se ha realizado una evaluación extensa con usuarios novatos y expe
 
 Este proyecto tiene potencial en el campo de entrenamiento de actividades físicas, ya que comparando el movimiento del usuario con el de un experto se ofrece un feedback visual. De este modo, el usuario podrá corregir su técnica en caso de que cometa algún tipo de error. 
 
-Una funcionalidad que se puede implementar en un futuro sería la gestión de diferentes usuarios para, así, tener un registro de la progresión de los movimientos. Cuando el usuario acceda con su cuenta, se mostrará  el porcentaje con el avance conseguido de cada movimiento.
+Una funcionalidad que se puede implementar en un futuro sería la gestión de más usuarios y el registro de la progresión. Cuando el usuario acceda con su cuenta, se mostrará  el porcentaje con el avance conseguido de cada movimiento.
 
 Otra futura ampliación trata de añadir más funcionalidad al experto que graba los movimientos. Con ello, tendrá la posibilidad de manejar y modificar los movimientos grabados de una forma sencilla.
 
 Por otro lado, se plantea la necesidad de incluir métodos más sofisticados para el análisis de los movimientos, similares a los usados en \cite{Keerthy:Thesis:2012,Kyan:2015:ABD:2753829.2735951} para permitir un análisis más fino de los movimientos que proporcione resultados de mayor utilidad para practicantes avanzados de capoeira.
 
-Este procedimiento de análisis de movimiento se puede aplicar también en el ámbito de la medicina para realizar diferente tipos de rehabilitación. En este caso serviría para comunicarle a un paciente que tenga una lesión en un brazo si el movimiento que realiza para su rehabilitación lo está ejecutando de forma correcta o incorrecta. 
+
+Este procedimiento de análisis de movimiento se puede aplicar también en el ámbito de la medicina para realizar diferente tipos de rehabilitación. En este caso serviría para comunicarle a un paciente que tenga, por ejemplo, una lesión en un brazo si el movimiento que realiza para su rehabilitación lo está ejecutando de forma correcta o incorrecta. 
 
 Otro factor para mejorar la captura de movimiento sería añadir otra Kinect para lograr reconocer los movimientos que impliquen giros. Una solución similar se plantea en \cite{gao2015leveraging} donde utilizan dos \texttt{Kinect} para solucionar este problema, aunque esta opción aleja la solución de su uso doméstico.
 
+
 Finalmente, también se contempla el análisis de los movimientos de más de un usuario de manera simultánea. De esta manera, se podrían reproducir situaciones similares al trabajo por parejas que tiene lugar en una \textit{roda} de capoeira, donde se ponen en práctica técnicas de combate cuerpo a cuerpo.
-
-
-\section{Conclusions}
-
-The current project has described the development of a virtual capoeira trainer from the previous recording of an expert's movement done with the device \texttt{Kinect}. On the other hand, the user, with the same mentioned device, will make a motion capture which will be used to be compared with that of the virtual trainer. Once both versions are compared, an adequate explanation is offered so as to make correctly those movements that were made inaccurately. 
-Possible benefits of using a virtual trainer must be highlighted, ranging from the comfort of working at home to obtaining a detailed, personal and immediate feedback. Likewise, it is a training system based on playing, which fosters learning and motivation, as can be observed in the student's scene, where the movement must be made correctly. It allows setting the difficulty of the movement comparison, which makes possible to adapt it to the different students\lq  ~needs and capacities. It is an intuitive environment, both for the teacher and the student, which can be complemented with the help section offered by the application.
-The device \texttt{Kinect} has been proven to capture movement optimally considering the price-quality ration in relation to their competitors. Moreover, its low price makes it accessible to a broader public.
-A detailed evaluation with learners and capoeira experts has not been made yet. Nonetheless, preliminary tests have actually been done with a small group of users of different levels to check the correct functioning of the application as well as the reliability of the comments made in order to correct its mistakes. These tests have been developed and the initial results show that, considering the level at which they have been done and with not too complex whole-body movements, the application functioning is quick and the results of the mistakes analysis and explanations are fairly close to reality.
