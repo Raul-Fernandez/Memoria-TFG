@@ -29,14 +29,15 @@ Para la edición , compilación y depuración de la programación de Unity se ha uti
 \label{cap4:sec:Entorno de desarrollo : Unity 3D}
 El objetivo de este proyecto es la captura y el análisis de movimiento relacionados con el arte marcial afro-brasileño capoeira. Con esto en mente, se llega a la primera decisión de que plataforma escoger para el desarrollo de este proyecto.
 
-Los entornos a elegir para la creación de escenarios 3D fueron: Visual Studio 2015 \cite{VSMS}, Unity 3D Engine \citep{Unity} y Unreal Engine \cite{Unreal}. El primero descartado fue Visual Studio 2015, ya que se busca el desarrollo de escenarios 3D de una manera mas intuitiva y, tanto Unity como Unreal ,ofrecen herramientas mas útiles para la creación de estos escenarios.\\\\
-En cuanto a la decisión de elegir entre Unity o Unreal Engine fue basada en la comunidad que hay detrás de cada uno de ellos, y sobre todo, en lo que se quiere abarcar con este proyecto. Unreal suele ser utilizado por las empresas para juegos grandes y mas profesionales , mientras que Unity se puede aplicar, tanto a pequeñas como a grandes aplicaciones, siendo su aprendizaje de este mas intuitivo que Unreal.\\
+Los entornos a elegir para la creación de escenarios 3D fueron: \texttt{Visual Studio 2015} \citep{VSMS}, \texttt{Unity 3D Engine} \citep{Unity} y \texttt{Unreal Engine} \citep{Unreal}. El primero descartado fue \texttt{Visual Studio 2015}, ya que se busca el desarrollo de escenarios 3D de una manera mas intuitiva y, tanto \texttt{Unity} como \texttt{Unreal}, ofrecen herramientas mas útiles para la creación de estos escenarios.
+
+En cuanto a la decisión de elegir entre \texttt{Unity} o \texttt{Unreal Engine} fue basada en la comunidad que hay detrás de cada uno de ellos, y sobre todo, en lo que se quiere abarcar con este proyecto. \texttt{Unreal} suele ser utilizado por las empresas para juegos grandes y mas profesionales, mientras que \texttt{Unity} se puede aplicar, tanto a pequeñas como a grandes aplicaciones, siendo su aprendizaje de este mas intuitivo que \texttt{Unreal}.
 
 Un motor de juegos se especifica como la rutina de programación que permiten el diseño, la creación y la representación de un videojuego. En este caso, se adecua correctamente ya que se pretende realizar un entorno 3D donde los usuarios se perciban y aprendan movimientos controlando un avatar.
 
 La funcionalidad de un motor de juegos consiste en proveer al juego de un motor de renderizado para los gráficos 2D y 3D,  motor físico, sonidos, scripting, animación, un escenario gráfico, etc..\\
 
-Unity es un motor de juegos desarrollado por la  compañía \texttt{Unity Technologies} y utiliza los lenguajes de programación C ,C++ , C\# y javascript.
+\texttt{Unity} es un motor de juegos desarrollado por la  compañía \texttt{Unity Technologies} y utiliza los lenguajes de programación C ,C++ , C\# y javascript.
 
 
 \begin{figure}[h!]
@@ -47,13 +48,13 @@ Unity es un motor de juegos desarrollado por la  compañía \texttt{Unity Technolo
 \end{figure}
 
 
-En un primer momento Unity salió al mercado ofreciendo un software de calidad y barato añadiendo el objetivo de que pequeñas y grandes empresas pudieran utilizarlo por igual, dando además, la posibilidad de que su contenido sea compatible con prácticamente cualquier medio o dispositivo\citep{Unity-relations}. Gracias a ello, Unity creció exponencialmente en el mercado, generando así, una gran comunidad que puede servir de pilar de ayuda para los nuevos desarrolladores.
+En un primer momento \texttt{Unity} salió al mercado ofreciendo un software de calidad y barato añadiendo el objetivo de que pequeñas y grandes empresas pudieran utilizarlo por igual, dando además, la posibilidad de que su contenido sea compatible con prácticamente cualquier medio o dispositivo\citep{Unity-relations}. Gracias a ello, \texttt{Unity} creció exponencialmente en el mercado, generando así, una gran comunidad que puede servir de pilar de ayuda para los nuevos desarrolladores.
 
-Unity ofrece diferentes tipos de versiones como la personal, que es gratuita y la profesional, que es de pago. En la versión personal es necesario promocionar el logotipo de Unity y carece de funcionalidades adicionales de renderizado del motor que la profesional si contiene.
+\texttt{Unity} ofrece diferentes tipos de versiones como la personal, que es gratuita y la profesional, que es de pago. En la versión personal es necesario promocionar el logotipo de \texttt{Unity} y también carece de funcionalidades adicionales de renderizado del motor que la profesional si contiene.
 
-Otro aspecto importante de Unity es el Asset Store. Es una biblioteca del editor que contiene una multitud de paquetes o \textit{Assets} comerciales y gratuitos creados, de forma continua, por la comunidad o por \texttt{Unity Technologies}. Estos paquetes pueden contener modelados 3D, texturas, animaciones y demás de contenido que servirá de ayuda al proyecto al no poder contar con un experto diseñador. 
+Otro aspecto importante de \texttt{Unity} es el \texttt{Asset Store}. Es una biblioteca del editor que contiene una multitud de paquetes o \textit{Assets} comerciales y gratuitos creados, de forma continua, por la comunidad o por \texttt{Unity Technologies}. Estos paquetes pueden contener modelados 3D, texturas, animaciones y demás de contenido que servirá de ayuda al proyecto al no poder contar con un experto diseñador. 
 
-La apariencia del editor de Unity se observa en la figura \ref{fig:editor_Unity}
+La apariencia del editor de \texttt{Unity} se observa en la figura \ref{fig:editor_Unity}
 
 \begin{figure}[h!]
 	\centering
@@ -62,28 +63,28 @@ La apariencia del editor de Unity se observa en la figura \ref{fig:editor_Unity}
 	\label{fig:editor_Unity}
 \end{figure}
 
-Como se observa en la imagen, el editor de Unity esta formado por varios paneles. La estructuración básica de un juego de Unity se realiza mediante escenas, para tener una previsualizanción de los elementos que aparecen en una escena se utiliza el panel uno denominado \textit{scene}. Este panel representa una dimensión 3D donde se podrá rotar y desplazar en los tres ejes ,para poder así, modificar todos los elementos de la escena en cualquier ángulo.\\
+Como se observa en la imagen, el editor de \texttt{Unity} esta formado por varios paneles. Cabe destacar que la estructuración básica de un juego de \texttt{Unity} se realiza mediante escenas y para poder tener una previsualizanción de los elementos que aparecen en una escena se utiliza el panel uno denominado \textit{scene}. Este panel representa una dimensión 3D donde se podrá rotar y desplazar en los tres ejes ,para conseguir de esta manera, modificar todos los elementos de la escena en cualquier ángulo.
 
-El segundo panel denominado \textit{Game} muestra la vista generada por la cámara, es decir, la imagen que se verá en el juego.\\
+El segundo panel denominado \textit{Game} muestra la vista generada por la cámara, es decir, la imagen que se verá en el juego.
 
-Los elementos incorporados a la escena se archivan en el panel tercero con el nombre \textit{Hierarchy}. Estos pueden ser  objetos 3D, cámara, sonidos, luces,e incluso objetos de tipo GUI para la implemetación de interfaces. Los elementos se muestran de una forma jerárquica y al seleccionar uno se expondrán sus características y componentes en el panel cuarto denominado \textit{Inspector}. Por ejemplo, al seleccionar la cámara en el \textit{Hierarchy} muestra su componente \textit{transform}, este muestra la información de su posición y rotación, pudiendo ser modificable.\\
+Los elementos incorporados a la escena se archivan en el panel tercero con el nombre \textit{Hierarchy}. Estos pueden ser  objetos 3D, cámara, sonidos, luces, e incluso objetos de tipo GUI(Interfaz gráfica de usuario) para la implemetación de interfaces. Los elementos se muestran de una forma jerárquica y al seleccionar uno se expondrán sus características y componentes en el panel cuarto denominado \textit{Inspector}. Por ejemplo, al seleccionar la cámara en el \textit{Hierarchy} muestra su componente \textit{transform}, este muestra la información de su posición y rotación, pudiendo ser modificable.
 
-El panel quinto llamado \textit{Project} agrupa ,en forma de directorio, todos los scripts , paquetes , imágenes y archivos relacionados con el proyecto.\\
+El panel quinto llamado \textit{Project} agrupa ,en forma de directorio, todos los \textit{scripts} , paquetes , imágenes y archivos relacionados con el proyecto.
 
-La ejecución de pruebas del juego se realiza por medio del \textit{Play mode} situado en el panel sexto. Esta funcionalidad permite poner en funcionamiento el juego , pararlo y detener su ejecución, siendo esto, fundamental para comprobar y depurar un juego \citep{Unity_Manual}.\\
+La ejecución de pruebas del juego se realiza por medio del \textit{Play mode} situado en el panel sexto. Esta funcionalidad permite poner en funcionamiento el juego , pararlo y detener su ejecución, siendo esto, fundamental para comprobar y depurar un juego \citep{Unity_Manual}.
 
-Una vez estudiado el editor de Unity se toma la decisión de que lenguaje de programación utilizar. Unity soporta dos lenguajes:
+Una vez estudiado el editor de \texttt{Unity} se toma la decisión de que lenguaje de programación utilizar. \texttt{Unity }soporta dos lenguajes:
 \begin{itemize}
-	\item C\#: lenguaje estandar similar a C++ y Java.
- 	\item \textit{UnityScript} : lenguaje basado en javascript propio de Unity.  
+	\item C\#: lenguaje estandar similar a C++ y \texttt{Java}.
+ 	\item \textit{UnityScript} : lenguaje basado en \texttt{javascript} propio de \texttt{Unity}.  
 \end{itemize} 
-Se optó por la decisión de utilizar C\# porque se acomoda mejor a la aplicación, puesto que no está orientada a web, y además ofrece unas características mejores que el \textit{UnityScript}.\\
+Se optó por la decisión de utilizar C\# porque se acomoda mejor a la aplicación, puesto que no está orientada a web, y además ofrece unas características mejores que el \textit{UnityScript}.
 
-Para controlar los eventos de un objeto o los eventos de las entradas de los usuario, Unity utiliza scripts.De forma básica los scripts tienen implementado un método \textit{Start} para inicializar las variables del objeto y un método \textit{Update} encargado de actualizar los parámetros a partir del tratamiento de eventos.\\
+Para controlar los eventos de un objeto o los eventos de las entradas de los usuario, \texttt{Unity} utiliza \textit{scripts}. De forma básica los \textit{scripts} tienen implementado un método \textit{Start} para inicializar las variables del objeto y un método \textit{Update} encargado de actualizar los parámetros a partir del tratamiento de eventos.
 
-Se utilizó Visual Studio 2015 \citep{VSMS} para la depuración de scripts, ya que proporciona visualización de las variables utilizadas en tiempo de ejecución, y además, da la posibilidad de ejecutar el script paso a paso. También otro factor clave fue que con este entorno de programación se tenía experiencia previa de uso.
+Se utilizó \texttt{Visual Studio 2015} \citep{VSMS} para la depuración de \textit{scripts}, ya que proporciona visualización de las variables utilizadas en tiempo de ejecución, y además, da la posibilidad de ejecutar el \textit{script} paso a paso. También otro factor clave fue que con este entorno de programación se tenía experiencia previa de uso.
 
-El otro programa utilizado para la depuración de scripts en Unity fue MonoDevelop, ya que proporciona un entorno de desarrollo libre y gratuito, diseñado primordialmente para C\#.
+El otro programa utilizado para la depuración de \textit{scripts} en \texttt{Unity} fue \texttt{MonoDevelop}, ya que proporciona un entorno de desarrollo libre y gratuito, diseñado primordialmente para C\#.
 
 \subsection{MakeHuman}
 
