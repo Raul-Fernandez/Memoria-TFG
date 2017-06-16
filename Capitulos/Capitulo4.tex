@@ -7,28 +7,20 @@
 \chapter{Tecnologías empleadas}
 \label{cap4:sec:kinect}
 
-En este capítulo se presentan las tecnologías y dispositivos empleadas para el desarrollo del proyecto. Detallando de forma técnica el \textit{software} y \textit{hardware} utilizado para realizar.
-
-En este capítulo se presenta la metodología empleada y los materiales necesarios para realizar
-este proyecto. A continuación se detallan a nivel técnico los dispositivos y tecnologías
-empleadas para, posteriormente, pasar a explicar la metodología seguida en el desarrollo del
-proyecto
+En este capítulo se presentan las tecnologías y dispositivos empleadas para el desarrollo del proyecto. Detallando de forma técnica el \textit{software} y \textit{hardware} utilizado para realizarlo.
 
 
 %-------------------------------------------------------------------
 \section{Software empleado}
 %-------------------------------------------------------------------
 \label{cap4:sec:Software empleados}
-El software principal utilizado en este proyecto es Unity 5.5 \citep{Unity_Manual}, que es un motor de desarrollo de videojuegos.
-Para la edición , compilación y depuración de la programación de Unity se ha utilizado Visual Studio 2015 \citep{VSMS} con el lenguaje de programación C\#.
-
-%\comImp{nombrar todos los programas}
+El software principal utilizado en este proyecto es \texttt{Unity 5.5} \citep{Unity_Manual}, ya que se trata de un motor para el desarrollo de videojuegos muy versátil. Con el fin de elaborar, compilar y depurar el proyecto de \texttt{Unity} se ha utilizado \texttt{Visual Studio 2015} \citep{VSMS}  y \texttt{MonoDevelop} \citep{Monodevelop} con el lenguaje de programación C\#, ya que mantienen una sola base de código para todas las plataformas. Respecto a la creación de los personajes, previamente se utilizó la aplicación \texttt{MakeHuman} \citep{MakeHuman}, pero se observó que \texttt{Fuse Character Creator de Mixamo} \citep{FuseCharCreaMixamo} ofrecía una  creación de modelos humanos mas estéticos. En cuanto a las animaciones, se hizo uso de \texttt{Mixamo 3D Animation Online Services} \citep{Mixamo3DAnimation}, ya que es una compañía tecnológica encargada del desarrollo y venta de servicios para la animación de personajes 3D. A través de \texttt{Marvelous Designer} \citep{MarvelousDesigner} se probó la confección de la ropa que utilizarían los avatares, pero se opto por utilizar los diseños predefinidos de \texttt{Fuse Character Creator de Mixamo} debido a la alta calidad de las texturas.
 
 \subsection{Entorno de desarrollo : Unity 3D}
 %-------------------------------------------------------------------
 \label{cap4:sec:Entorno de desarrollo : Unity 3D}
 El objetivo de este proyecto es la captura y el análisis de movimiento relacionados con el arte marcial afro-brasileño capoeira. Con esto en mente, se llega a la primera decisión de que plataforma escoger para el desarrollo de este proyecto.
-
+\vspace{0.4cm}
 Los entornos a elegir para la creación de escenarios 3D fueron: \texttt{Visual Studio 2015} \citep{VSMS}, \texttt{Unity 3D Engine} \citep{Unity} y \texttt{Unreal Engine} \citep{Unreal}. El primero descartado fue \texttt{Visual Studio 2015}, ya que se busca el desarrollo de escenarios 3D de una manera mas intuitiva y, tanto \texttt{Unity} como \texttt{Unreal}, ofrecen herramientas mas útiles para la creación de estos escenarios.
 
 En cuanto a la decisión de elegir entre \texttt{Unity} o \texttt{Unreal Engine} fue basada en la comunidad que hay detrás de cada uno de ellos, y sobre todo, en lo que se quiere abarcar con este proyecto. \texttt{Unreal} suele ser utilizado por las empresas para juegos grandes y mas profesionales, mientras que \texttt{Unity} se puede aplicar, tanto a pequeñas como a grandes aplicaciones, siendo su aprendizaje de este mas intuitivo que \texttt{Unreal}.
@@ -58,7 +50,7 @@ La apariencia del editor de \texttt{Unity} se observa en la figura \ref{fig:edit
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/4/editor-unity}
+	\includegraphics[width=0.92\linewidth]{Imagenes/Capitulos/4/editor-unity}
 	\caption{Apariencia de editor Unity}
 	\label{fig:editor_Unity}
 \end{figure}
@@ -70,6 +62,7 @@ El segundo panel denominado \textit{Game} muestra la vista generada por la cámar
 Los elementos incorporados a la escena se archivan en el panel tercero con el nombre \textit{Hierarchy}. Estos pueden ser  objetos 3D, cámara, sonidos, luces, e incluso objetos de tipo GUI(Interfaz gráfica de usuario) para la implemetación de interfaces. Los elementos se muestran de una forma jerárquica y al seleccionar uno se expondrán sus características y componentes en el panel cuarto denominado \textit{Inspector}. Por ejemplo, al seleccionar la cámara en el \textit{Hierarchy} muestra su componente \textit{transform}, este muestra la información de su posición y rotación, pudiendo ser modificable.
 
 El panel quinto llamado \textit{Project} agrupa ,en forma de directorio, todos los \textit{scripts} , paquetes , imágenes y archivos relacionados con el proyecto.
+\vspace{0.7cm}
 
 La ejecución de pruebas del juego se realiza por medio del \textit{Play mode} situado en el panel sexto. Esta funcionalidad permite poner en funcionamiento el juego , pararlo y detener su ejecución, siendo esto, fundamental para comprobar y depurar un juego \citep{Unity_Manual}.
 
@@ -90,15 +83,15 @@ El otro programa utilizado para la depuración de \textit{scripts} en \texttt{Uni
 
 La aplicación MakeHuman sirve para crear modelos humanos que pueden ser utilizados en diferentes plataformas 3D, como animaciones, videojuegos, etc. Promueve el arte digital y artistas digitales, proporcionando una herramienta de alta calidad liberada al dominio público con la licencia CCO, mientras que la base de datos y el código se publicaron mediante una licencia AGPL3.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.8\linewidth, height=0.3\textheight]{Imagenes/Capitulos/4/logo_makehuman}
-	\caption{Logo MakeHuman}
-	\label{fig:logo_makehuman}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=0.8\linewidth, height=0.3\textheight]{Imagenes/Capitulos/4/logo_makehuman}
+%	\caption{Logo MakeHuman}
+%	\label{fig:logo_makehuman}
+%\end{figure}
 
 
-MakeHuman utiliza un humano estándar y mediante varios deslizadores o scrolls se podrán alterar los parámetros de la estatura, anchura, sexo, edad, etc. 
+MakeHuman utiliza un humano estándar y mediante varios deslizadores o scrolls se podrán alterar los parámetros de la estatura, anchura, sexo, edad, etc. (véase Figura \ref{fig:makehuman_estandar})
 
 
 \begin{figure}[h!]
@@ -112,14 +105,20 @@ En un principio se pensó utilizar esta aplicación para el modelado de los person
 
 \subsection{Fuse Character Creator}
 
-Se trata de una aplicación desarrollada por Mixamo, la cual permite crear personajes 3D únicos mediante una intuitiva interfaz que separa el avatar en diferentes partes, como son la cabeza, el torso, las piernas y los brazos. Posteriormente a la selección de las diferentes partes del cuerpo ya predefinidas por el sistema, se puede editar cada una de las partes del personaje, ya sean los rasgos de la cara, el tamaño de los brazos, la longitud de las piernas, etc. Al seleccionar la parte del cuerpo que se quiere modificar, simplemente será necesario pinchar y realizar un \textit{scrool} o deslizamiento hacia la izquierda o derecha para aumentar su tamaño. Por otro lado, para seleccionar el punto exacto donde se ubicarán las diferentes parte del cuerpo como por ejemplo el ombligo, los ojos, las rodillas, etc, se realizará un \textit{scrool} o desplazamiento hacía arriba o abajo.
+Se trata de una aplicación desarrollada por Mixamo, la cual permite crear personajes 3D únicos mediante una intuitiva interfaz que separa el avatar en diferentes partes, como son la cabeza, el torso, las piernas y los brazos (véase Figura \ref{fig:fuse}). Posteriormente a la selección de las diferentes partes del cuerpo ya predefinidas por el sistema, se puede editar cada una de las partes del personaje, ya sean los rasgos de la cara, el tamaño de los brazos, la longitud de las piernas, etc. Al seleccionar la parte del cuerpo que se quiere modificar, simplemente será necesario pinchar y realizar un \textit{scrool} o deslizamiento hacia la izquierda o derecha para aumentar su tamaño. Por otro lado, para seleccionar el punto exacto donde se ubicarán las diferentes parte del cuerpo como por ejemplo el ombligo, los ojos, las rodillas, etc, se realizará un \textit{scrool} o desplazamiento hacía arriba o abajo.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.92\linewidth, height=0.36\textheight]{Imagenes/Capitulos/4/Fuse}
+	\caption{Humano básico de Fuse Character Creator}
+	\label{fig:fuse}
+\end{figure}
+
 
 Al terminar de modelar el personaje, se pasará a la sección de vestuario. Donde existen prendas predefinidas, como camisas, pantalones, zapatos, etc. Al terminar de vestir al avatar, esta aplicación posee la peculiaridad de poder subir al servidor de Mixamo el modelado realizado. Pudiendo completar la configuración de los huesos (\textit{rigger}), con la posibilidad de crear varios esqueletos para un mismo personaje y además incluir las animación deseadas.
 
 Para la utilización de esta aplicación es necesario el uso del servidor Steam\footnote{http://store.steampowered.com/?l=spanish}, ya que se trata de una plataforma de distribución digital, comunicaciones y servicios multijugador, donde está alojado \textit{Fuse Character Creator}.
 
-
-\comImpl{Terminar con alguna imagen y meter enlaces a los programas}
 
 \subsection{Mixamo 3D Animation Online Services}
 
@@ -130,23 +129,18 @@ Los productos y características de Mixamo son compatibles con todos los paquetes
 
 Una de las características más sorprendentes de Mixamo es el \textit{Auto-Rigger}. Ya que ahorras horas de trabajo modelando el personaje y con este sistema el proceso sucede en cuestión de minutos. Todo lo que se necesita hacer es subir al servidor de Mixamo el personaje 3D (soporta .fbx, .bvh, .zip, obj), seleccionar el numero de huesos que mejor se adapte al esqueleto del personaje (véase Figura \ref{fig:mixamo-rig}) y esperar que termine el proceso de \textit{rigger}.
 
-Tras completar la fase de modelado, Mixamo ofrece la posibilidad de animar al personaje con movimientos, que permiten, no sólo aplicar cualquier animación, sino también personalizarlas, ya que se pueden modificar en tiempo real con el personaje obteniendo el resultado deseado. Por último descargarlos en cualquier formato que necesita (.fbx, .bvh, .dae) y fácilmente combinar de nuevo en sus escenas en 3D
-
+Tras completar la fase de modelado, Mixamo ofrece la posibilidad de animar al personaje con movimientos, que permiten, no sólo aplicar cualquier animación, sino también personalizarlas, ya que se pueden modificar en tiempo real con el personaje obteniendo el resultado deseado. (véase Figura \ref{fig:mixamo}) Por último descargarlos en cualquier formato que necesita (.fbx, .bvh, .dae) y fácilmente combinar de nuevo en sus escenas en 3D
+\vspace{0.4cm}
 
 Estas animaciones utilizan una base matemática, lo que facilita su uso para los diferentes personajes que se deseen animar. Tradicionalmente era extremadamente lento, costoso y complicado, lograr modelar personajes 3D con resultados de alta calidad. En cambio mediante esta técnica, Mixamo intenta reducir los tiempos de desarrollo, pudiendo obtener unas animaciones de calidad, sin la necesidad de contar con altos recursos. 
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.98\linewidth, height=0.4\textheight]{Imagenes/Capitulos/4/Mixamo}
+	\caption{Servicio \textit{online} con animaciones de Mixamo}
+	\label{fig:mixamo}
+\end{figure}
 
-\subsection{Marvelous Designer}
-
-Maneja un software  encargado en la simulación de telas, el cual permite a los artistas y diseñadores de moda modelar ropa en 3D.
-
-\comImpl{terminar}
-
-\subsection{Blender}
-
-Es una aplicación dedicada al modelado, renderizado, animación y creación de gráficos 3D.
-
-\comImpl{terminar si se mete el logo}
 
 \section{Hardware empleado}
 \label{cap4:sec:hardware empleado}
@@ -215,6 +209,7 @@ Conecta el sensor \texttt{Kinect} para Xbox One al ordenador o tableta mediante 
 \subsection{Equipo para el uso de Kinect}
 
 Este equipo no posee una características muy especiales, mas allá de utilizar el sistema operativo Windows. De modo que será el PC utilizado para conectar \texttt{Kinect}, obteniendo un correcto funcionamiento.
+\vspace{0.3cm}
 
 Teniendo las siguientes especificaciones técnicas:
 

@@ -32,7 +32,7 @@ El primer paquete que se prueba es el que nos ofrece \texttt{Microsoft} \footnot
 En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de Unity para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la cámara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
 Debatiendo e intentando comprender si estos errores se producían por conexión de kinect o por funcionamiento incorrecto de la librería que nos ofrecía microsoft se opto por la opción de descartar este paquete para evitar futuras fustraciones.
 
-Después de descartar el paquete que nos ofrecía Microsoft decidimos buscar en el Assets Store de Unity(Explicacion o referencia).Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/18708} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con kinect v2.
+Después de descartar el paquete que nos ofrecía Microsoft decidimos buscar en el Assets Store de Unity. Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/18708} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con kinect v2.
 
 Este paquete tiene todo lo necesario para reconocer que la kinect está conectada y para poder utilizar los datos que se obtienen del sensor. En una primera toma, el paquete nos ofrece una serie de ejemplos sencillos para poder comprender mejor el funcionamiento de kinect. Para que este paquete funcione es necesario tener instalado Kinect SDK 2.0 que son los drivers de la kinect v2 .
 
@@ -54,9 +54,9 @@ Los ejemplos que tiene implementado el paquete de Kinect v2 Examples with MS-SDK
 	\item \textit{RecorderDemo}, ejemplo que muestra como grabar y reproducir un movimiento captado por kinect.
 	\item \textit{SpeechRecognitionDemo}, ejemplo que sirve para realizar acciones por comandos por voz, aunque se producen errores cuando se probó este ejemplo.
 	\item \textit{VariousDemos}, implementa dos ejemplos, como pintar en el aire moviendo los brazos y el otro dibuja bolas verdes que se colocan en tus articulaciones simulado un esqueleto.
-	\item \textit{VisualizerDemo}, este ejemplo convierte la escena, según lo ve el sensor, en una malla y la superpone sobre la imagen de la cámara.\\\\	
+	\item \textit{VisualizerDemo}, este ejemplo convierte la escena, según lo ve el sensor, en una malla y la superpone sobre la imagen de la cámara.\\	
 \end{itemize}
-Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para aprovechar su funcionalidad y tener un apoyo base para el desarrollo del proyecto. Los ejemplos seleccionados serían el \texttt {AvatarsDemo, GestureDemo y RecorderDemo}. Más adelante se explica con mas detalle que se utiliza de estos ejemplos.\\\\
+Una vez explicado los ejemplos, elegimos cual de ellos podríamos utilizar para aprovechar su funcionalidad y tener un apoyo base para el desarrollo del proyecto. Los ejemplos seleccionados serían el \texttt {AvatarsDemo, GestureDemo y RecorderDemo}. Más adelante se explica con mas detalle que se utiliza de estos ejemplos.\\
 
 \section{Grabar y reproducir movimientos de Usuario}
 
@@ -74,12 +74,12 @@ Los 25 \texttt{Joints} serían : cadera central y laterales , pecho, clavícula, c
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/capitulo5/Avatar-controller-joints}
+	\includegraphics[width=0.94\linewidth]{Imagenes/Capitulos/capitulo5/Avatar-controller-joints}
 	\caption{Cubeman con la lista de todos los Joints}
 	\label{fig:doscamarasbase}
 \end{figure}
 
-
+\vspace{5cm}
 Para hacer una representación correcta del esqueleto y que se mueva como una entidad, el \textit{script} \texttt{Cubeman Controller} pone la posición del \texttt{Joint} de la cadera base como la posición y rotación del objeto padre y todos los demás joint serán hijos de este \texttt{GameObjects}. Para calcular la posición relativa  de todos los \texttt{Joints} se resta la posición del padre con la posición de cada \texttt{Joint} dada por el \texttt{\texttt{Kinect} Manager}.
 
 El \textit{script} \texttt{\texttt{Kinect} Manager} es un \texttt{Singleton}\footnote{Es un patrón que consiste en que existe una única instancia y es la propia clase la responsable de crear la única instancia. Permite el acceso global a dicha instancia mediante un método de clase} encargado de la comunicación entre el sensor de \texttt{Kinect} y las aplicaciones de Unity.
@@ -92,12 +92,12 @@ El \textit{script} \texttt{\texttt{Kinect} Manager} es un \texttt{Singleton}\foo
 \end{figure}
 
 Este \textit{script}, al ser común a todos los ejemplos nombrados anteriormente, implementa todas las funciones y comunicaciones necesarias para su funcionamiento, pero en este caso, se investiga como obtiene la información que le envía al \texttt{cubeman Controller}.
-\texttt{\texttt{Kinect} Manager} se encarga de analizar la información del \texttt{SensorData}, siendo este, una estructura de datos ofrecida por el \textit{script} \texttt{\texttt{Kinect}Interop}\footnote{\textit{script} encargado de tener comunicación directa con el sensor de la \texttt{Kinect}} donde aparece la información de la imagen, pronfundidad, color y datos de los usuarios captado con el sensor. Los datos de los usuarios captados se encapsulan en el \texttt{BodyDataFrame}. Esta estructura, a vez, contiene la información del número de usuarios captados, su identificador, la información de los \texttt{BodyData}\footnote{Información de los joint de un cuerpo especifico}, etc.\\
+\texttt{\texttt{Kinect} Manager} se encarga de analizar la información del \texttt{SensorData}, siendo este, una estructura de datos ofrecida por el \textit{script} \texttt{\texttt{Kinect}Interop}\footnote{\textit{script} encargado de tener comunicación directa con el sensor de la \texttt{Kinect}} donde aparece la información de la imagen, pronfundidad, color y datos de los usuarios captado con el sensor. Los datos de los usuarios captados se encapsulan en el \texttt{BodyDataFrame}. Esta estructura, a vez, contiene la información del número de usuarios captados, su identificador, la información de los \texttt{BodyData}\footnote{Información de los joint de un cuerpo especifico}, etc.
 
 Una vez comprendido el \texttt{SensorData}, se observa como el \texttt{\texttt{Kinect} Manager} analizando el \texttt{BodyDataFrame}, va actualizando y asignando a cada usuario el identificador correspondiente
-de un  \texttt{BodyData} en todo momento, y este, a su vez, va pasando al \texttt{Cubeman Controller} esta información para que reproduzca el movimiento.\\
+de un  \texttt{BodyData} en todo momento, y este, a su vez, va pasando al \texttt{Cubeman Controller} esta información para que reproduzca el movimiento.
 
-Otro \textit{script} que se debe mencionar es el \texttt{\texttt{Kinect}RecorderPlayer}, que es el encargado de guardar y reproducir un movimiento a partir de un fichero de texto. La información se le pide  al \texttt{\texttt{Kinect} Manager}, y este a su vez, al \texttt{\texttt{Kinect}Interop} devolviéndola en una cadena de caracteres. Esta cadena hace referencia a un \textit{frame}\footnote{Es un fotograma, \texttt{Unity} por defecto reproduce a 60 \textit{frames} por segundo } que tiene la información del instante de tiempo, los \textit{BodyData} captados y las coordenadas (x,y,z) respecto al mundo de todos sus \texttt{Joints}. Los \textit{BodyData} captados aparece primero su identificador y después sus 25 \texttt{Joints}, los \textit{BodyData} no captados aparecerá un cero (Figura \ref{fig:ejemplo_txt}).
+Otro \textit{script} que se debe mencionar es el \texttt{\texttt{Kinect}RecorderPlayer}, que es el encargado de guardar y reproducir un movimiento a partir de un fichero de texto. La información se le pide  al \texttt{\texttt{Kinect} Manager}, y este a su vez, al \texttt{\texttt{Kinect}Interop} devolviéndola en una cadena de caracteres. Esta cadena hace referencia a un \textit{frame}\footnote{Es un fotograma, \texttt{Unity} por defecto reproduce a 60 \textit{frames} por segundo } que tiene la información del instante de tiempo, los \textit{BodyData} captados y las coordenadas (X,Y,Z) respecto al mundo de todos sus \texttt{Joints}. Los \textit{BodyData} captados aparece primero su identificador y después sus 25 \texttt{Joints}, los \textit{BodyData} no captados aparecerá un cero (Figura \ref{fig:ejemplo_txt}).
 \texttt{KinecRecorderPlayer} también discierne entre grabación y reproducción activando solo una de la dos a la vez.
 
 \begin{figure}[th!]
@@ -119,7 +119,7 @@ Con todas estas mejoras implementadas, se empieza a modificar el escenario de \t
 
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/capitulo5/doscamarasbase}
+	\includegraphics[width=0.92\linewidth]{Imagenes/Capitulos/capitulo5/doscamarasbase}
 	\caption{Escena con los dos cubeman}
 	\label{fig:dos_camaras}
 \end{figure}
@@ -145,7 +145,7 @@ Después de este inciso se define el siguiente estado como el estado por defecto 
 
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width=1\linewidth]{Imagenes/Capitulos/capitulo5/diagrama_movimiento}
+	\includegraphics[width=0.92\linewidth]{Imagenes/Capitulos/capitulo5/diagrama_movimiento}
 	\caption{Grafo de comparación de movimiento}
 	\label{fig:grafo_movimiento}
 \end{figure}
@@ -156,14 +156,13 @@ En esta etapa del proyecto, se han desarrollado los diferentes avatares con una 
 
 \subsection{Investigación base} 
 
-\comImpl{Foto de la configuración de rig en unity}
 
 La primera aplicación que se utilizó para crear los personajes que darían vida al proyecto fue \texttt{MakeHuman}, ya que mostraba una interfaz amigable e intuitiva (ver Figura \ref{fig:makehuman_avatar} ). El primer avatar utilizado fue simple, ya que al principio interesaba ver el resultado que proporcionaba el personaje junto con el \textit{cubeman} y de esta forma determinar la configuración de los huesos que mas se ajustaba a las necesidades dadas. Para comprobar que esqueleto se debía emplear,se tuvieron que crear cuatro avatares diferentes, con 31, 163, 137 (ver Figura \ref{fig:makehuman_avatar_huesos3} )  y 53 huesos respectivamente.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar}
-	\caption{Avatar inicial}
+	\includegraphics[width=0.92\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar}
+	\caption{Avatar inicial de MakeHuman}
 	\label{fig:makehuman_avatar}
 \end{figure}
 
@@ -171,7 +170,7 @@ Después de realizar varias pruebas, se determinó que el avatar que mejor se adap
 
 \begin{figure}[p!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.37\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar_huesos3}
+	\includegraphics[width=0.92\linewidth, height=0.37\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar_huesos3}
 	\caption{Avatar con 137 huesos}
 	\label{fig:makehuman_avatar_huesos3}
 \end{figure}
@@ -182,7 +181,7 @@ Para comprobar como se visualizaban los movimientos de un avatar con ropa, se ut
 
 \begin{figure}[p!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar2}
+	\includegraphics[width=0.92\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/makehuman_avatar2}
 	\caption{Avatar inicial con ropa}
 	\label{fig:makehuman_avatar2}
 \end{figure}
@@ -191,7 +190,6 @@ En la búsqueda se encontraron aplicaciones dedicadas al modelado de personajes 3
 
 \subsection{Implementación de los avatares y animaciones}
 
-\comImpl{Cambiar a cuatro avatares si se crea otro}
 
 A fin de realizar un entorno mas realista, se crearon tres avatares diferentes, cada uno con una estética propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizan los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trata de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
 
@@ -213,7 +211,6 @@ Una vez comprendida la generación de avatares. El avatar elegido que mejor se ad
 Con el propósito de utilizar las animaciones que suministra \texttt{Mixamo} se observó el ejemplo \texttt{AvataresDemo}, el cual utiliza un script \texttt{AvatarController} que realiza una conexión entre los \textit{joints} y los huesos incorporados en el avatar. 
 
 Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota, obteniendo así, un \textit{feedback} más ilustrado de la comparación del movimiento.
-\comImpl{tres fotos ginga victoria y derrota}
 
 Para incorporar las animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity}, encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar la animación que se ejecuta en cada momento. El estado inicial será la \textit{ginga} y se realizará una transición a la animación de victoria o derrota, que dependerá en todo caso, de la comparación del movimiento por parte del usuario con el del profesor. Una vez determinado el estado, este volverá a la animación de \textit{ginga} para continuar con el siguiente movimiento (ver Figura \ref{fig:animator}).
 
@@ -259,7 +256,6 @@ Esta lista de correcciones se mostrará en un panel una vez completada evitando l
 
 Con el objetivo de conseguir un ambiente más realista y dinámico, se elaboraron dos escenarios diferentes, ambientados cada uno de ellos según su propósito. El primero de ellos escenifica un entorno para el alumno donde realizará el entrenamiento, como es el caso de un gimnasio. El segundo, está orientado hacia el profesor y los animadores, representando una playa Brasileña.
 
-\comImpl{Meter foto escenario alumno y profesor}
 
 \subsection{Escenario del gimnasio}
 
@@ -279,7 +275,7 @@ obtenido en el \texttt{Asset} \texttt{Store} de \texttt{Unity}, de modo que junt
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\linewidth, height=0.28\textheight]{Imagenes/Capitulos/4/escenario_isla}
+	\includegraphics[width=0.99\linewidth, height=0.32\textheight]{Imagenes/Capitulos/4/escenario_isla}
 	\caption{Escenario para el profesor y los animadores}
 	\label{fig:escenario_isla}
 \end{figure}
@@ -337,13 +333,14 @@ En \texttt{Unity}, como se ha mencionado anteriormente, las escenas contienen lo
 
 Este entorno está pensado para ser utilizado por el alumno para que pueda aprender a realizar diferentes movimientos de capoeira sin la necesidad de que esté presente un profesor. El entrenamiento consiste en imitar una serie de movimientos, los cuales han sido previamente capturados por varios expertos en el arte marcial. El entrenamiento virtual se desarrolla acorde al nivel que posea el alumno, ya sea principiante, aprendiz o avanzado, de este modo, el alumno va aprendiendo a realizar los movimientos de forma progresiva.
 
+\vspace{0.6cm}
 Gracias a que el sistema compara \textit{frame} a \textit{frame} la posición del alumno con la del profesor virtual, este podrá realizar un análisis de las transiciones en las que está cometiendo algún error. 
 
 Tras realizar una abstracción del flujo de ejecución que realiza el entrenador virtual entre las diferentes escenas, se muestra el diagrama de la lógica del sistema en la figura \ref{fig:diagram} 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.7\textheight]{Imagenes/Capitulos/6/Diagram}
+	\includegraphics[width=1\linewidth, height=0.7\textheight]{Imagenes/Capitulos/6/Diagram}
 	\caption{Diagrama que ilustra la lógica del sistema}
 	\label{fig:diagram}
 \end{figure}
@@ -381,6 +378,8 @@ Esta escena muestra varios mensajes de ayuda en los que se explica detalladament
 	\caption{Interfaz de ayuda}
 	\label{fig:interfaz_ayuda}
 \end{figure}
+
+\vspace{2cm}
 
 \subsection{Escena de Créditos}
 

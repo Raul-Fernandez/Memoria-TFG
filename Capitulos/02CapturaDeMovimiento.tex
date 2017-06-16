@@ -21,9 +21,9 @@
 
 La captura de movimiento (abreviada \texttt{Mocap}, en inglés \textit{Motion Capture}) es el proceso por el cual el movimiento, ya sea de objetos, animales o mayormente personas, se traslada a un modelo digital 3D.
 
-En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes. De ese modo se obtiene una mayor sensación de realismo. \citep{wiki1}.
+En la actualidad, esta técnica llamada \texttt{fotogrametría}, se utiliza en la industria del cine y de los videojuegos, ya que facilita mucho la labor de los animadores al realizar un modelado mas realista. En el cine se utiliza como mecanismo para almacenar los movimientos realizados por los actores, y poder animar los modelos digitales de los diferentes personajes que tenga el film. En cambio, en el sector de los videojuegos se utiliza para naturalizar los movimientos de los personajes. De ese modo se obtiene una mayor sensación de realismo. \citep{aleman2014solucion} \citep{menendez2015protocolo} \citep{mejias2014rotoscopia} \citep{wiki1}.
 
-\comImpl{Meter otras referencias}
+
 
 %-------------------------------------------------------------------
 \section{Historia de la captura de movimiento}
@@ -36,9 +36,14 @@ Ya en la antigua Grecia, Aristoteles (384-322 AC) escribió el libro \textit{``De
 
 Aproximadamente dos mil años después, Leonardo da Vinci (1452-1519) trató de describir algunos mecanismos que utiliza el cuerpo humano para poder desplazarse, como un humano puede saltar, caminar, mantenerse de pie, etc.
 
-Como pionero en la edad moderna, Eadweard Muybridge (1830-1904) fué el primer fotógrafo capaz de diseccionar el movimiento humano y animal, a través de múltiples cámaras tomando varias fotografías para captar instantes seguidos en el tiempo. Este experimento llamado ``el caballo en movimiento'', mostrado en la figura "tal",  utilizó esta técnica de fotografía. 
+Como pionero en la edad moderna, Eadweard Muybridge (1830-1904) fué el primer fotógrafo capaz de diseccionar el movimiento humano y animal, a través de múltiples cámaras tomando varias fotografías para captar instantes seguidos en el tiempo. Este experimento llamado ``el caballo en movimiento'', (véase Figura \ref{fig:muybridgehorses}),  utilizó esta técnica de fotografía. 
 
-\comImpl{Meter foto con los caballos}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/MuybridgeHorses}
+	\caption{El caballo en movimiento de Muybridge}
+	\label{fig:muybridgehorses}
+\end{figure}
 
 \subsection{Nacimiento de la captura de movimiento}
 
@@ -47,30 +52,31 @@ Como pionero en la edad moderna, Eadweard Muybridge (1830-1904) fué el primer fo
 
 En la década de los 70, cuando empezaba a surgir la posibilidad de realizar animaciones de personajes por ordenador, se conseguía naturalizar los movimientos mediante técnicas clásicas de diseño, como la técnica de rotoscopia. Esta técnica consiste en reemplazar los frames de una grabación real por dibujos calcados en cada frame. Los estudios \textit{Walt Disney Pictures} utilizaron esta técnica en la película de 1937 ``Blancanieves y los siete enanitos'', para animar a los personajes del príncipe y Blancanieves. 
 
-\comImpl{Meter foto de Blancanieves}
-
 Mientras, los laboratorios de biomecánica empezaban a usar los ordenadores como medio para analizar el movimiento humano. En la década de los 80, \texttt{Tom Calvert}, un profesor de kinesiología y ciencias de la computación en la universidad Simon Fraser (Canadá), incorporó potenciómetros a un cuerpo y la salida la usó para generar personajes animados por ordenador, con el objetivo de ser utilizados por estudios coreográficos y asistencia clínica para ayudar a pacientes con problemas de locomoción. 
 
-\comImpl{Meter foto con los caballos}
 
-A principios de los años 80, centros como el MIT (Massachusetts Institute of Technology) empezaron a realizar experimentos con dispositivos de seguimiento visual aplicados en el cuerpo humano. Mas tarde, empiezan a cobrar importancia los primeros sistemas de seguimiento visual como el \texttt{Op-Eye} y el \texttt{SelSpot}. Estos sistemas normalmente usaban pequeños marcadores adheridos al cuerpo (Leds parpadeantes o pequeños puntos reflectantes) con una serie de cámaras alrededor del espacio donde se realizaba la actividad.
+A principios de los años 80, centros como el MIT (Massachusetts Institute of Technology) empezaron a realizar experimentos con dispositivos de seguimiento visual aplicados en el cuerpo humano. Mas tarde, empiezan a cobrar importancia los primeros sistemas de seguimiento visual como el \texttt{Op-Eye} y el \texttt{SelSpot}. Estos sistemas normalmente usaban pequeños marcadores adheridos al cuerpo (sección\ref{mocap_optica}) (Leds parpadeantes) con una serie de cámaras alrededor del espacio donde se realizaba la actividad.
 
-\comImpl{Referenciar relación con la tecnología de los marcadores}
 
 En 1985, Jim Henson Productions (Organización de entretenimiento norteamericana) intentó crear versiones virtuales de sus personajes, pero no obtuvieron el éxito deseado, debido principalmente a la limitación de las capacidades de la tecnología en ese instante. Con los equipos 4D de Silicon Graphics y la perspicacia de Pacific Data Images (Productora de animación por ordenador), en 1988 los miembros de la compañía encontraron una solución viable para controlar las animaciones. Fueron capaces de regular la posición y los movimientos de la boca de un personaje a baja resolución y en tiempo real a través de la captura de movimiento de las manos de un actor con un aparato llamado Waldo, para su posterior interpretación en un ordenador. De esta manera surgió la primera marioneta virtual conocida como Waldo C. Graphic. 
 
-\comImpl{Meter foto Waldo}
 
 En 1988, Brad deGraf y Wahrman desarrollaron \textit{Mike the Talking Head} de Silicon Graphics, capaz de mostrar las capacidades de sus nuevos equipos 4D en tiempo real. Mike estaba dirigido por un controlador que permitía controlar diferentes parámetros de la cara del personaje: como los ojos, boca, expresión y posición de la cabeza. El hardware de Silicon Graphics proporcionaba una interpolación en tiempo real entre las expresiones faciales y la geometría de la cabeza del personaje y del usuario. En el congreso de SIGGRAPH, Mike fue mostrado al público, donde se demostró que la tecnología \textit{mocap} estaba preparada para su explotación. 
 
 
-\comImpl{Imagen de Mike deGraf}
-
 Años mas tarde, en los 90, deGraf continuó investigando en solitario en el desarrollo de un sistema de animación en tiempo real conocido como ``Alive''. Para lograr animar un personaje interpretado con ``Alive'', deGraf desarrolló un dispositivo especial con cinco pistones, los cuales representaban los dedos de la mano de la persona que controlaba al personaje virtual a modo de titiritero.
 
-Con todo esto, deGraf pasó a formar parte de la compañía Colossal Pictures, donde animó a ``Moxy'':un perro generado por ordenador que presentaba un programa en Cartoon Network, mediante el sistema ``Alive''. ``Moxy'' es interpretado en tiempo real para publicidad, pero su uso en el programa era renderizado. Los movimientos del actor se capturaban mediante un sistema electromagnético con sensores en la cabeza, torso, manos y pies.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/moxy_hiya}
+	\caption{El perro generado por ordenador: Mozy}
+	\label{fig:moxy_hiya}
+\end{figure}
 
-\comImpl{Imagen de Moxy}
+Con todo esto, deGraf pasó a formar parte de la compañía Colossal Pictures, donde animó a ``Moxy'' (véase Figura \ref{fig:moxy_hiya}):un perro generado por ordenador que presentaba un programa en Cartoon Network, mediante el sistema ``Alive''. ``Moxy'' es interpretado en tiempo real para publicidad, pero su uso en el programa era renderizado. Los movimientos del actor se capturaban mediante un sistema electromagnético con sensores en la cabeza, torso, manos y pies.
+
+
+
 
 Tras estos avances, Pacific Data Images desarrolló un exoesqueleto de plástico, de modo que el actor se colocaría el traje con el objetivo de capturar los movimientos corporales: de la cabeza, pecho y brazos, a través de potenciómetros situados en la capa de plástico. De esta manera, los actores podían controlar los personajes virtuales mimetizando sus movimientos. Pese a que el traje se utilizó en varios proyectos, no se consiguieron los resultados esperados, ya que el ruido de los circuitos y el diseño inapropiado del traje no lo permitían. 
 
@@ -78,16 +84,12 @@ En torno a 1992, la empresa SimGraphics desarrolló un sistema de rastreo facial 
 
 Lo que produjo un éxito mayúsculo con este proyecto fue la interpretación en tiempo real de Mario, el personaje principal de la saga de videojuegos \textit{Mario Bros}. Estaba controlado por un actor mediante \textit{Face Waldo}, Mario conseguía dialogar con los miembros de una conferencia, respondiendo a sus preguntas. A partir de ese momento, SimGraphics se centró en la animación en directo, desarrollando personajes para televisión y otros eventos en directo, mejorando la fiabilidad del sistema para el rastreo facial. 
 
-\comImpl{Imagen de Mario}
-
 Poco después, en el congreso de SIGGRAPH en 1993, la empresa Acclaim\footnote{Empresa encargada del desarrollo, publicación, venta y distribución de videojuegos para diferentes compañias (Sega, Nintendo, Sony, Microsoft...)} asombró al público con animaciones realistas y complejas de dos personajes animados en su totalidad mediante captura de movimientos. En los años anteriores, habían desarrollado de forma encubierta un sistema de rastreo óptico de alta definición, muy superior a los citados anteriormente, capaz de seguir 100 marcadores de forma simultanea en tiempo real.
 
 De forma gradual, la técnica \textit{mocap} se fue expandiendo entre las empresas desarrolladoras de sistemas de captura de datos, con el objetivo de crear productos y métodos que albergasen nuevos sectores empresariales. Gracias al desarrollo previo, en 1995 hizo su aparición el primer videojuego en el que se aplicó esta técnica de forma extensa, se trataba de Highlander: The Last of the Macleods de la compañía Atari, el cual marcó el inicio del desarrollo tecnológico sobre videojuegos y productos audiovisuales. 
 
 A lo largo de los años, fueron apareciendo largometrajes que mostraban como la captura de movimientos ha evolucionando día tras día y con una gran proyección de futuro, ha pasando de ser algo que utilizaban de forma esporádica algunos personajes, a ser indispensable en cualquier producción. Como por ejemplo en los \textit{films}: Jar Jar Binks en la saga de \textit{Star Wars}, el personaje de La Momia, Gollum en la trilogía de El Señor de los Anillos y de El Hobbit, Final Fantasy: La fuerza interior, Avatar, etc. También existen videojuegos recientes que utilizan esta tecnología en su desarrollo: The Last os Us, Beyond: Two Souls, la saga Uncharted, Until Dawn, L.A. Noire, etc.
 
-
-\comImpl{Imagen de pelicula y videojuego con mocap}
 
 %----------OK----------
 
@@ -103,11 +105,11 @@ En la actualidad existen numerosos sistemas para la captura de movimientos. Depe
 
 \subsection{Captura de movimiento mecánica}
 
-En el proceso de captura de movimiento mecánica, el actor viste unos trajes especiales adaptables al cuerpo humano. En su mayoría, estos trajes están compuestos por estructuras rígidas con barras metálicas o plásticas, unidas mediante potenciómetros colocados en las principales articulaciones. Los potenciómetros se componen de un elemento deslizante acoplado a una resistencia, la cual produce una variación de tensión que puede medirse para conocer el grado de apertura de la articulación donde se encuentre acoplado. Los sensores que recogen la información pueden transmitirla mediante cables, pero normalmente lo hacen con radiofrecuencia.
+En el proceso de captura de movimiento mecánica (véase Figura \ref{fig:mocapmecanica}), el actor viste unos trajes especiales adaptables al cuerpo humano. En su mayoría, estos trajes están compuestos por estructuras rígidas con barras metálicas o plásticas, unidas mediante potenciómetros colocados en las principales articulaciones. Los potenciómetros se componen de un elemento deslizante acoplado a una resistencia, la cual produce una variación de tensión que puede medirse para conocer el grado de apertura de la articulación donde se encuentre acoplado. Los sensores que recogen la información pueden transmitirla mediante cables, pero normalmente lo hacen con radiofrecuencia.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/mocap_mecanica}
+	\includegraphics[width=0.7\linewidth, height=0.26\textheight]{Imagenes/Capitulos/2/mocap_mecanica}
 	\caption{Sistema de captura de movimiento mecánico}
 	\label{fig:mocapmecanica}
 \end{figure}
@@ -118,7 +120,7 @@ Estos sistemas tienen el problema de que son incapaces de medir translaciones gl
 \subsection{Captura de movimiento electromagnética}
 
 
-Los sistemas de captura de movimiento electromagnética, están formados por sensores creados por tres espirales ortogonales que miden el flujo magnético, determinando tanto la posición como la orientación del sensor. Un transmisor genera un campo electromagnético de baja frecuencia que los receptores detectan y transmiten a la unidad electrónica de control, donde se filtra y amplifica. A continuación, los datos se envían a un ordenador central, donde se deduce la orientación y posición de todos los sensores del escenario.
+Los sistemas de captura de movimiento electromagnética (véase Figura \ref{fig:mocapelectromagnetica}), están formados por sensores creados por tres espirales ortogonales que miden el flujo magnético, determinando tanto la posición como la orientación del sensor. Un transmisor genera un campo electromagnético de baja frecuencia que los receptores detectan y transmiten a la unidad electrónica de control, donde se filtra y amplifica. A continuación, los datos se envían a un ordenador central, donde se deduce la orientación y posición de todos los sensores del escenario.
 
 Un sistema magnético estándar consta de 18 sensores, una unidad de control electrónica y un software para el procesamiento. En cambio, un sistema de última generación puede tener hasta 90 sensores capaces de capturar hasta 144 muestras por segundo, teniendo un coste medio (en torno a 4.000 y 11.000 \euro).
 
@@ -128,7 +130,7 @@ Un sistema magnético estándar consta de 18 sensores, una unidad de control elect
 	\caption{Sistema de captura de movimiento electromagnético}
 	\label{fig:mocapelectromagnetica}
 \end{figure}
-
+\vspace{0.2cm}
 Existen dos tipos de rastreadores electromagnéticos:
 
 \begin{itemize}
@@ -140,6 +142,7 @@ Existen dos tipos de rastreadores electromagnéticos:
 Ambos sistemas tienen el inconveniente de producir interferencias con materiales metálicos debido a su conductividad, ya que se crean campos magnéticos que interfieren con el campo magnético del emisor. De ese modo, se trata de un sistema difícil de transportar a diferentes escenarios. El proceso de captura no es en tiempo real, aunque se aproxima bastante, pese a que tiene un número de capturas por segundo demasiado bajo. Como punto a favor, es mas fácil procesar los datos que en otros sistemas \textit{mocap}, ya que los datos obtenidos están en relación con la posición del actor.
 
 \subsection{Captura de movimiento óptica}
+\label{mocap_optica}
 
 Los sistemas ópticos emplean los datos recogidos por sensores de imagen para obtener la posición de un elemento en el espacio, utilizando indicadores (en inglés \textit{markers}) pegados al cuerpo del actor, aunque los sistemas modernos permiten recoger los datos rastreando la superficie de forma dinámica. 
 
@@ -151,7 +154,7 @@ Existen varios clases de sensores para este tipo de captura de movimiento:
 
 \subsubsection{Indicadores activos}
 
-Este sistema está compuesto por leds que emiten su propia luz determinando la posición del actor, de esta manera se consigue aumentar la distancia a la que se puede desplazar el artista. La posición de los marcadores se determina iluminando uno o varios indicadores, de manera sincrónica a las cámaras en cada instante de tiempo, a una frecuencia de muestreo muy alta. De modo que los indicadores deben estar sincronizados con todas la cámaras para realizar una sola captura en cada iluminación.
+Este sistema está compuesto por leds que emiten su propia luz determinando la posición del actor, de esta manera se consigue aumentar la distancia a la que se puede desplazar el artista (véase Figura \ref{fig:mocapindicadoresactivos}). La posición de los marcadores se determina iluminando uno o varios indicadores, de manera sincrónica a las cámaras en cada instante de tiempo, a una frecuencia de muestreo muy alta. De modo que los indicadores deben estar sincronizados con todas la cámaras para realizar una sola captura en cada iluminación.
 
 \begin{figure}[h!]
 	\centering
@@ -162,9 +165,8 @@ Este sistema está compuesto por leds que emiten su propia luz determinando la po
 
 \subsubsection{Indicadores pasivos}
 
-Estos indicadores, se tratan de bolas de goma recubiertas de un material reflectante que se adhieren al traje del actor en puntos estratégicos. De esta forma, la luz que reflejan se origina cerca de las cámaras, siendo recogida por estas. 
+Estos indicadores véase Figura \ref{fig:mocapindicadorespasivos}), se tratan de bolas de goma recubiertas de un material reflectante que se adhieren al traje del actor en puntos estratégicos. De esta forma, la luz que reflejan se origina cerca de las cámaras, siendo recogida por estas. 
 
-\comImpl{Coger una imagen}
 
 \begin{figure}[h!]
 	\centering
@@ -218,13 +220,13 @@ Estos sistemas utilizan la combinación del seguimiento de los ojos con el de la 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\linewidth, height=0.35\textheight]{Imagenes/Capitulos/2/ETG-2w}
+	\includegraphics[width=0.9\linewidth, height=0.32\textheight]{Imagenes/Capitulos/2/ETG-2w}
 	\caption{Gafa ETG-2w usada para la captura de movimiento ocular}
 	\label{fig:etg-2w}
 \end{figure}
 
 
-Como ejemplo de investigación en esta tecnología, la empresa SMI (Senso Motoric Instruments) ha desarrollado una gafa\footnote{https://www.smivision.com/eye-tracking/product/eye-tracking-glasses/} que permite el seguimiento de los ojos y combinado con la ca?mara, detecta el? punto exacto donde está detenienda la mirada. Soportando el acceso de datos en tiempo real y el control de usuario a través de una conexión inalámbrica. 
+Como ejemplo de investigación en esta tecnología, la empresa SMI (Senso Motoric Instruments)\footnote{https://www.smivision.com/eye-tracking/product/eye-tracking-glasses/} ha desarrollado una gafa (véase Figura \ref{fig:etg-2w}) que permite el seguimiento de los ojos y combinado con la ca?mara, detecta el? punto exacto donde está detenienda la mirada. Soportando el acceso de datos en tiempo real y el control de usuario a través de una conexión inalámbrica. 
 
 
 \section{Métodos de captura de movimiento en los videojuegos }
@@ -235,47 +237,50 @@ En consecuencia, las principales empresas de videojuegos como Nintendo, Sony y M
 
 \subsection{Nintendo, Wii Remote}
 
-En el año 2006, Nintendo lanzó Wii \citep{NintendoWii}, perteneciente a la séptima generación de videoconsolas, sucesora directa de Nintendo GameCube y compitió con la Xbox 360 de Microsoft y la PlayStation 3 de Sony. La compañia Nintendo afirmó que Wii estaba destinada a un abanico de consumidores mas amplico a diferencia de sus rivales. 
+En el año 2006, Nintendo lanzó Wii \citep{NintendoWii}, perteneciente a la séptima generación de videoconsolas, sucesora directa de Nintendo GameCube y compitió con la Xbox 360 de Microsoft y la PlayStation 3 de Sony. La compañia Nintendo afirmó que Wii (véase Figura \ref{fig:wiiremote}) estaba destinada a un abanico de consumidores mas amplico a diferencia de sus rivales. 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/2/wii_remote}
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/2/wii_remote}
 	\caption{Mando inalámbrico Wii Remote}
 	\label{fig:wiiremote}
 \end{figure}
 
 
+
 La característica más distintiva de la consola, es el mando inalámbrico Wii Remote. Se trata de un dispositivo inalambrico, capaz de detectar la aceleración en un plano tridimensional mediante la utilización de un acelerometro ofrece la posibilidad de apuntar y señalar, determinando los movimientos en un plano tridimensional mediante la utilización de un acelerometro. Además cuenta con un sensor óptico, lo que permite determinar el lugar donde el mando Wii Remote está apuntando. 
 
-A diferencia de un mando a distancia tradicional, este sistema detecta la luz led que emite la barra de sensores de la consola. Tiene un tamaño aproximado de 20 cm de longitud y cuanta con diez leds infrarrojos, cinco en cada extremo de la barra. Para un correcto funcionamiento, no es necesario señalar directamente a la barra sensor, pero en caso contrario, perturbaría la capacidad de detección debido al limitado ángulo de visión. La barra sensor emite desde cada uno de los extremos, unos puntos de luz que permite al Wii Remote ser localizado. A partir de estas dos distancias, el procesador de la videoconsola Wii determina la distancia entre el Wiimote y la barra de sensores utilizando la triangulacio?n. 
+A diferencia de un mando a distancia tradicional, este sistema detecta la luz led que emite la barra de sensores de la consola (véase Figura \ref{fig:barrasensor}). Tiene un tamaño aproximado de 20 cm de longitud y cuanta con diez leds infrarrojos, cinco en cada extremo de la barra. Para un correcto funcionamiento, no es necesario señalar directamente a la barra sensor, pero en caso contrario, perturbaría la capacidad de detección debido al limitado ángulo de visión. La barra sensor emite desde cada uno de los extremos, unos puntos de luz que permite al Wii Remote ser localizado. A partir de estas dos distancias, el procesador de la videoconsola Wii determina la distancia entre el Wiimote y la barra de sensores utilizando la triangulación. 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/2/barra_sensor}
+	\includegraphics[width=0.7\linewidth, height=0.25\textheight]{Imagenes/Capitulos/2/barra_sensor}
 	\caption{Barra sensor de la videoconsola Wii}
 	\label{fig:barrasensor}
 \end{figure}
+
+
 
 Los movimientos realizados con Wii Remote, permiten al jugador imitar las acciones reales de juego, como mover una espada, lanzar una bola de fuego, disparar una pistola, etc; en lugar de pulsar solo los botones.
 
 
 \subsection{Sony, PlayStation Move}
 
-Como consecuencia de los buenos resultados obtenidos por Nintendo, Sony sacó al mercado en 2010, PlayStation Move \citep{PlayStationMove}, un sistema de control de movimientos mediante marcadores activos, compatible con las videoconsolas PS3 y PS4. Este sistema incorpora un giroscopio, ya que ningúna tecnología de captura de movimientos mediante marcadores, puede determinar si se han producido giros sin realizar una triangulación.
+Como consecuencia de los buenos resultados obtenidos por Nintendo, Sony sacó al mercado en 2010, PlayStation Move \citep{PlayStationMove}, un sistema de control de movimientos mediante marcadores activos, compatible con las videoconsolas PS3 y PS4 (véase Figura \ref{fig:playstation-move}). Este sistema incorpora un giroscopio, ya que ningúna tecnología de captura de movimientos mediante marcadores, puede determinar si se han producido giros sin realizar una triangulación.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/2/playstation-move}
+	\includegraphics[width=0.7\linewidth, height=0.28\textheight]{Imagenes/Capitulos/2/playstation-move}
 	\caption{Dispositivo PlayStation Move}
 	\label{fig:playstation-move}
 \end{figure}
 
 Estas videoconsolas utilizan una camara denominada PlayStation Eye \citep{PlayStationEye} que detecta el color que toma la esfera del dispositivo PlayStation Move, determinando de este modo su posición.
-Esta camara dispone de dos lente, una de ellas realiza la función de camara web y la otra activa la captura de movimientos. 
+Esta camara dispone de dos lente, una de ellas realiza la función de camara web y la otra activa la captura de movimientos. (véase Figura \ref{fig:playstation-eye}) 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.32\textheight]{Imagenes/Capitulos/2/playstation-eye}
+	\includegraphics[width=0.7\linewidth, height=0.28\textheight]{Imagenes/Capitulos/2/playstation-eye}
 	\caption{Dispositivo PlayStation Eye}
 	\label{fig:playstation-eye}
 \end{figure}
@@ -286,18 +291,21 @@ El principal inconveniente de este sistema, es la luz y los colores de fondo. Ya
 \subsection{Microsoft, Kinect}
 \label{Kinect}
 
-Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect}\citep{Kinectv2} para Xbox 360, en sus inicios conocido como \textit{Project Natal}. Después de unos años, Microsoft ofreció la posibilidad de conectar \texttt{Kinect} por medio de ordenadores o tabletas, con el sistema operativo Windows 8 o superior, mediante un adaptador \citep{adaptadorKinect} con una conexión usb 3.0. 
+Por otra parte, en 2010 Microsoft desarrolló \texttt{Kinect}\citep{Kinectv2} para Xbox 360, en sus inicios conocido como \textit{Project Natal} (véase Figura fig:kinectv2). Después de unos años, Microsoft ofreció la posibilidad de conectar \texttt{Kinect} por medio de ordenadores o tabletas, con el sistema operativo Windows 8 o superior, mediante un adaptador \citep{adaptadorKinect} con una conexión usb 3.0. 
 
 El dispositivo \texttt{Kinect} es un periférico para videojuegos que prescinde de mandos gracias a un sensor de detección de movimientos. Este sistema reconoce el rostro, la voz, los movimientos y gestos de los jugadores, mediante una cámara conectada a la videoconsola, el ordenador o \textit{tablet}. 
 
+
+Se trata de una barra horizontal conectada a una plataforma diseñada para mantenerse en una posición horizontal. En su interior contiene un hardware compuesto por una cámara RGB, un sensor de profundidad, el proyector de luz infrarroja, un micrófono bidireccional, un firmware y un procesador que utiliza algoritmos para procesar las imágenes tridimensionales. De forma conjunta capturan el movimiento, además de ofrecer un reconocimiento facial y de voz. 
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.32\textheight]{Imagenes/Capitulos/2/kinectv2}
+	\includegraphics[width=0.7\linewidth, height=0.28\textheight]{Imagenes/Capitulos/2/kinectv2}
 	\caption{Dispositivo Kinect v2}
 	\label{fig:kinectv2}
 \end{figure}
 
-Se trata de una barra horizontal conectada a una plataforma diseñada para mantenerse en una posición horizontal. En su interior contiene un hardware compuesto por una cámara RGB, un sensor de profundidad, el proyector de luz infrarroja, un micrófono bidireccional, un firmware y un procesador que utiliza algoritmos para procesar las imágenes tridimensionales. De forma conjunta capturan el movimiento, además de ofrecer un reconocimiento facial y de voz. 
+\vspace{0.8cm}
 
 En 2013, Microsoft anunció su próxima consola Xbox One y el nuevo sensor de \texttt{Kinect} que incluía mejoras sustanciales respecto a la versión anterior. A continuación se destacan las más significativas a nivel de desarrollo. \citep{HardwareKinect}
 
@@ -355,8 +363,6 @@ En 2013, Microsoft anunció su próxima consola Xbox One y el nuevo sensor de \tex
 
 \vspace{0.7cm}
 Como base para el estudio de la captura de movimientos y las tecnologías disponibles en este ámbito, se han realizado diferentes consultas a los siguientes proyectos: \citep{aleman2014solucion} \citep{menendez2015protocolo} \citep{mejias2014rotoscopia}
-
-\comImpl{Meter mas enlaces}
 
 
 %Y también ponemos el acrónimo \ac{CVS} para que no cruja.
