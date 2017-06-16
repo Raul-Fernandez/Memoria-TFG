@@ -27,17 +27,17 @@ Y por último, una vez acabada la funcionalidad de la aplicación, se realizan la 
 \section{Paquetes para Unity}
 
 \label{cap5:sec:Paquetes para Unity}
-El primer paquete que se prueba es el que nos ofrece \texttt{Microsoft} \footnote{https://developer.microsoft.com/es-es/windows/kinect/tools},que es un paquete destinado principalmente para \texttt{UnityPro}.\footnote{Unity profesional de pago con mas funcionalidad que Unity personal.} Al añadir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts. Esto es debido a la incongruencia de versiones de Unity. El proyecto se desarrolla en Unity Personal, que es una versión gratuita de Unity , mientras que el paquete que ofrece Microsoft esta especificado para Unity Pro. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete.
+El primer paquete que se prueba es el que nos ofrece \texttt{Microsoft}\footnote{https://developer.microsoft.com/es-es/windows/kinect/tools},que es un paquete destinado principalmente para \texttt{UnityPro}.\footnote{Unity profesional de pago con mas funcionalidad que \texttt{Unity} personal.} Al añadir este primer paquete al proyecto se empieza a manifestar una serie de errores de scripts. Esto es debido a la incongruencia de versiones de \texttt{Unity}. El proyecto se desarrolla en \texttt{Unity Personal}, que es una versión gratuita de \texttt{Unity} , mientras que el paquete que ofrece Microsoft esta especificado para \texttt{Unity Pro}. Aun así, se corrigen errores de comandos y llamadas a funciones obsoletas para ver si se puede aprovechar este paquete.
 
-En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de Unity para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la cámara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
+En una primera instancia se ejecuta la escena que viene como ejemplo en el paquete de \texttt{Unity} para ver su funcionamiento y se observa que tiene un comportamiento intermitente, es decir, cuando nos colocamos enfrente de la cámara de kinect a veces mostraba un esqueleto verde que emulaba la persona captada y otras veces dejaba de funcionar sin saber el error producido.
 Debatiendo e intentando comprender si estos errores se producían por conexión de kinect o por funcionamiento incorrecto de la librería que nos ofrecía microsoft se opto por la opción de descartar este paquete para evitar futuras fustraciones.
 
-Después de descartar el paquete que nos ofrecía Microsoft decidimos buscar en el Assets Store de Unity. Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/18708} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con kinect v2.
+Después de descartar el paquete que nos ofrecía Microsoft decidimos buscar en el \texttt{Assets Store de Unity}. Encontramos el paquete \texttt {Kinect v2 Examples with MS-SDK}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/18708} que lo elegimos por su valoración positiva y también porque hay poca variedad de paquetes relacionados con \texttt{Kinect v2}.
 
-Este paquete tiene todo lo necesario para reconocer que la kinect está conectada y para poder utilizar los datos que se obtienen del sensor. En una primera toma, el paquete nos ofrece una serie de ejemplos sencillos para poder comprender mejor el funcionamiento de kinect. Para que este paquete funcione es necesario tener instalado Kinect SDK 2.0 que son los drivers de la kinect v2 .
+Este paquete tiene todo lo necesario para reconocer que la \texttt{Kinect} está conectada y para poder utilizar los datos que se obtienen del sensor. En una primera toma, el paquete nos ofrece una serie de ejemplos sencillos para poder comprender mejor el funcionamiento de \texttt{kinect} . Para que este paquete funcione es necesario tener instalado \texttt{Kinect SDK 2.0} que son los drivers de la \texttt{Kinect v2}.
 
 
-Los ejemplos que tiene implementado el paquete de Kinect v2 Examples with MS-SDK  son variados:
+Los ejemplos que tiene implementado el paquete de \texttt{kinect  v2 Examples with MS-SDK} son variados:
 \begin{itemize}
 	\item \textit{AvatarsDemo}, simulador que muestra un avatar en tercera persona que correspondería a la persona captada y se puede controlar sobre el escenario 3D.
 	\item \textit{BackgroundRemovalDemo}, son ejemplos que cambian el fondo que se encuentra detrás del usuario captado.
@@ -82,7 +82,7 @@ Los 25 \texttt{Joints} serían : cadera central y laterales , pecho, clavícula, c
 \vspace{5cm}
 Para hacer una representación correcta del esqueleto y que se mueva como una entidad, el \textit{script} \texttt{Cubeman Controller} pone la posición del \texttt{Joint} de la cadera base como la posición y rotación del objeto padre y todos los demás joint serán hijos de este \texttt{GameObjects}. Para calcular la posición relativa  de todos los \texttt{Joints} se resta la posición del padre con la posición de cada \texttt{Joint} dada por el \texttt{\texttt{Kinect} Manager}.
 
-El \textit{script} \texttt{\texttt{Kinect} Manager} es un \texttt{Singleton}\footnote{Es un patrón que consiste en que existe una única instancia y es la propia clase la responsable de crear la única instancia. Permite el acceso global a dicha instancia mediante un método de clase} encargado de la comunicación entre el sensor de \texttt{Kinect} y las aplicaciones de Unity.
+El \textit{script} \texttt{\texttt{Kinect} Manager} es un \texttt{Singleton}\footnote{Es un patrón que consiste en que existe una única instancia y es la propia clase la responsable de crear la única instancia. Permite el acceso global a dicha instancia mediante un método de clase} encargado de la comunicación entre el sensor de \texttt{Kinect} y las aplicaciones de Unity.(véase Figura \ref{singleton})
 
 \begin{figure}[th!]
 	\centering
