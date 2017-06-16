@@ -18,7 +18,7 @@ De forma sucesiva, se describe el diseño de los escenarios 3D para ubicar a los 
 
 En el apartado posterior, se describe una manera de acabar la comparación del movimiento de forma más completa. Ofreciendo así, un análisis de cada parte del cuerpo describiendo el modo de corregir el movimiento.
 
-Posteriormente se elaboran una serie de escenas en \texttt{Unity} que servirán de interfaz para la aplicación. En las diferentes escenas encuentran la escena de inicio, el menú principal, escena de ayuda, escena de créditos, etc. En cada escena se ha creado un entorno diferenciado para cada una de las necesidades dadas.
+Posteriormente se elaboran una serie de escenas en \texttt{Unity} que servirán de interfaz para la aplicación. En las diferentes escenas se encuentran la de inicio, el menú principal, ayuda, créditos, etc. En cada una de ellas se ha creado un entorno diferenciado para cada una de las necesidades dadas.
  
 Y por último, una vez acabada la funcionalidad de la aplicación, se realizan la grabaciones de los movimientos con los profesionales de la escuela \texttt{Abadá-Capoeira}. Elaborando así, una batería de pruebas para seleccionar y ajustar el movimiento más preciso. 
 
@@ -152,7 +152,7 @@ Después de este inciso se define el siguiente estado como el estado por defecto 
 
 \section{Creación de avatares y animaciones}
 
-En esta etapa del proyecto, se han desarrollado los diferentes avatares con una fisionomía humana. Con el objetivo de dar una sensación mas realista a los \textit{cubeman} y de este modo, proporcionar una perspectiva mas amena al usuario.
+En esta etapa del proyecto, se han desarrollado los diferentes avatares con una estética humana. Con el objetivo de dar una sensación mas realista a los \textit{cubeman} y de este modo, proporcionar una perspectiva mas amena al usuario.
 
 \subsection{Investigación base} 
 
@@ -193,7 +193,7 @@ En la búsqueda se encontraron aplicaciones dedicadas al modelado de personajes 3
 
 \comImpl{Cambiar a cuatro avatares si se crea otro}
 
-A fin de realizar un entorno mas realista se crearon tres avatares diferentes, cada uno con una fisionomía propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizan los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trata de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
+A fin de realizar un entorno mas realista, se crearon tres avatares diferentes, cada uno con una estética propia. A la hora de elaborar el vestuario de los personajes, se observó la ropa que utilizan los integrantes de la escuela \texttt{Abadá-Capoeira} para tener un modelo a seguir. Se trata de un pantalón largo y una camiseta de tirantes en color blanco con el logo de la escuela. 
 
 Con el propósito de crear una ropa muy similar a la utilizada por la escuela  \texttt{Abadá-Capoeira}, se usaron prendas prediseñadas en la aplicación \texttt{Fuse Character Creator} como los pantalones, camisetas y el top que utilizarían los avatares del sistema con los retoques apropiados para darle ese color blanco característico.
 
@@ -262,12 +262,19 @@ La creación del escenario del gimnasio se diseñó a partir de diferentes componen
 
 \subsection{Escenario de la isla}
 
-Para la creación de este escenario, y con la misión de realizar un entorno ambientado en las playas Brasileñas, de modo que el profesor y los animadores se realizó una investigación sobre los paquetes gratuitos . 
+Para la creación de este escenario, y con la misión de realizar un entorno ambientado en las playas brasileñas, se realizó una investigación previa sobre los paquetes existentes que cumplian estas características. Se descartaron varias opciones de pago, ya que algunos no cumplian con las particularidades buscadas y otros tenían un coste demasiado elevado. Por lo tanto, tras esta decisión, se optó por usar el paquete gratuito \texttt{Island Assets}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/56989}
+obtenido en el \texttt{Asset} \texttt{Store} de \texttt{Unity}, de modo que junto al profesor y los animadores, este escenario simulase la sensación de estar en una playa brasileña. 
 
-profesor y los animadores, representando una playa Brasileña.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth, height=0.28\textheight]{Imagenes/Capitulos/4/escenario_isla}
+	\caption{Escenario para el profesor y los animadores}
+	\label{fig:escenario_isla}
+\end{figure}
 
-a partir del paquete \texttt{Island Assets} \footnote{https://www.assetstore.unity3d.com/en/\#!/content/56989}
-obtenido en el \texttt{Asset} \texttt{Store} de \texttt{Unity}
+
+Posteriormente, se hicieron una serie de modificaciones para que el paquete \texttt{Island Assets} tuviera un aspecto acorde con el proyecto a desarrollar. Lo primero que se hizo fue quitar el componente \textit{Treasure chest}(cofre) ya que desentonaba demasiado con la temática del entorno deseado. En segundo lugar se desactivó el componente \textit{Dock}(Embarcadero) puesto que no sería necesaria su utilización debido a la falta de barcos navegando. Por último, el paquete de \texttt{Unity} venía predefinido con tres palmeras, dando una sensación de isla desierta. De modo que, se añadieron como componente del terreno, más de una decena de palmeras en tamaños aleatorios, intentando dar un efecto de isla habitada (véase Figura \ref{fig:escenario_isla}). Con todo ello, el paquete \texttt{Island Assets} de \texttt{Unity} ha servido como escenario para simular una playa brasileña.
+
 
 \section{Grabacion de movimientos con gente experta}
 
