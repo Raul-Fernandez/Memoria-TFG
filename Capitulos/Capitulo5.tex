@@ -136,7 +136,7 @@ Con esta idea en mente ,se estudió el ejemplo de \texttt{GestureDemo} que recono
 En cuanto a la funcionalidad del gesto, se realiza por estados y progresión,  permaneciendo en el primer estado hasta que identifique una posición especifica. Para completar el gesto se tendrá un tiempo determinado para llegar a la progresión final del movimiento, sino el gesto se cancelará.
 
 
-\subsection{Implementacione de la comparación del movimiento}
+\subsection{Implementación de la comparación de los movimientos}
 
 Una vez analizado la funcionalidad de los gestos de \texttt{Kinect}, se apoyó en esa idea para implemenentar la comparación del movimiento como un gesto de \texttt{Kinect}. Para empezar añadimos el gesto al \texttt{\texttt{Kinect}Gesture} con el nombre \textit{Move}, acto seguido, se implementa la funcionalidad en \textit{CheckForGesture} haciendo que tenga dos estados. El estado cero se encarga de calibrar la posición inicial ,dando al usuario, la oportunidad de colocarse en esa posición y ofreciéndole un margen de tres segundos para que se prepare. 
 
@@ -189,7 +189,7 @@ Para comprobar como se visualizaban los movimientos de un avatar con ropa, se ut
 
 En la búsqueda se encontraron aplicaciones dedicadas al modelado de personajes 3D como \texttt{Blender}, pero con una curva de aprendizaje demasiado larga para las necesidades dadas. También se examino una aplicación llamada \texttt{MarvelousDesigner} la cual se emplea para desarrollar prendas de vestir. El problema surgía cuando se intentaba importar el avatar creado con \texttt{MakeHuman}, ya que no eran compatibles los formatos de las dos aplicaciones y por lo tanto se descartó seguir por esa vía. En el camino se observó que existía una compañía llamada \texttt{Mixamo} que ofrecía una aplicación para el desarrollo de avatares y a su vez, un entorno dedicado a la animación de los personajes creados. Por este motivo, se tomó la decisión de cambiar a \texttt{Fuse Character Creator de Mixamo} como aplicación para el desarrollo de los personajes, ya que se amoldaba perfectamente a las necesidades de este proyecto.
 
-\subsection{Implementación de avatares y escenarios}
+\subsection{Implementación de los avatares y animaciones}
 
 \comImpl{Cambiar a cuatro avatares si se crea otro}
 
@@ -228,7 +228,7 @@ Para incorporar las animaciones al avatar, se crea el componente \texttt{Animato
 Se constató que existía un conflicto entre el \texttt{Animator Controller} y el \texttt{AvatarController} dando lugar a un lucha por quien tiene el control del avatar. Por ello, se implementó un \textit{script} que desactiva el componente \texttt{Animator Controller} cuando el sensor de \textit{kinect} detecta al usuario y se vuelve a activar cuando el usuario se sale de la escena.
 
 
-\section{Análisis de los movimientos de Usuario}
+\section{Análisis de los movimientos del Usuario}
 
 Una parte importante de este proyecto consiste en dar una corrección del movimiento, el cual, el usuario esta imitando en tiempo real. En esta sección se explicará como se implementó este análisis.
 
@@ -238,7 +238,7 @@ Para este apartado se observó el desarrollo de la comparación de movimiento impl
 
 El planteamiento del análisis comienza reproduciendo el movimiento del avatar del usuario junto al avatar de la grabación, deteniéndose ,si llegara el caso,  en el \textit{frame} donde el usuario cometió el error. En ese instante cambiará los huesos del avatar controlado por el usuario a un color rojo, en consecuencia de una colocación incorrecta del hueso. Adicionalmente mostrará un panel con un texto describiendo las correcciones que se deben aplicar. Esta información se compondrá de la parte de cuerpo que se está analizando , añadiendo seguidamente, la dirección y la altura que servirán de pautas para que el usuario corrija su posición.
 
-\subsection{Implementación del análisis del movimiento}
+\subsection{Implementación del análisis de los movimientos}
 Una vez planteada las especificaciones del análisis se empieza con  su implementación. Primero se creó un \textit{script} llamado \texttt{Registrar\_movimientos}, el cual, guarda toda la información del movimiento hasta donde el usuario comete el error. Esta información contiene el estado\footnote{Corresponde al frame que se esta comparando.} donde se produce la equivocación y los datos de los \texttt{Joints} pertenecientes a los avatares.
 Posteriormente se necesitó hacer una modificación funcional en el gesto \textit{Move} de \texttt{\texttt{Kinect}Gesture}, para conseguir así, rellenar esa información en cada comparación. Esta modificación consiste en enviar la información del estado y los \textit{joints} de los avatares al \texttt{Registrar\_movimientos}, una vez superada la comparación de ese \textit{frame}. Con esta lógica se quedará registrado la traza del movimiento hasta que el usuario se equivoque.
 
@@ -325,7 +325,7 @@ Este proceso consistía en grabar una batería de movimientos de capoeira \cite{ca
 \end{itemize}
 
 
-\subsection{Elección y ajuste de movimientos}
+\subsection{Elección y ajuste de los movimientos}
 Después del proceso de grabación ,se tuvieron que seleccionar los movimientos que mejor se asemejaban al real, recortando el intervalo de \textit{frames} más adecuado para incluirlo en la aplicación.
 De los 20 movimientos grabados los seleccionados fueron :Bênção, Ginga, Joehjada, Escada, Galopante, Meia Lua de Frente, Chapa-Pisào y Punteira.
 Estos 8 movimientos fueron factibles para su uso porque el resto, al incluir giros, presentaron problemas en la grabación. Esto se debe a que \texttt{Kinect} sólo posee una cámara frontal, de modo que al rotar alrededor del eje vertical se acaba perdiendo la referencia de cuáles son las extremidades izquierda y derecha. Como resultado, al darse la vuelta, la captura vuelve a mostrar al usuario de frente, pero con los brazos y las piernas cruzadas.
