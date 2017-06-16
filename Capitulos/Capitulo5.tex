@@ -351,20 +351,47 @@ Tras realizar una abstracción del flujo de ejecución que realiza el entrenador v
 
 \subsection{Escena de Inicio}
 
-Se trata de la escena inicial del juego. Presenta una interfaz de tipo UI, la cual contiene el nombre de la aplicación y una breve descripción. Además se muestran los tres emblemas de las diferentes organizaciones presentes, como son la UCM, FDI y Abadá-Capoeira.
+Se trata de la escena inicial del juego. Presenta una interfaz de tipo UI, la cual contiene el nombre de la aplicación y una breve descripción. Además se muestran los tres emblemas de las diferentes organizaciones presentes, como son la UCM, FDI y Abadá-Capoeira. (ver Figura \ref{fig:menu_inicio})
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_inicio}
+	\caption{Interfaz menu inicio}
+	\label{fig:menu_inicio}
+\end{figure}
 
 \subsection{Escena de Menú Principal}
 
-Tras pulsar el botón de inicio en la anterior escena, pasamos al menú principal, en el cual se puede decidir si se quiere empezar a entrenar, visualizar una ayuda sobre como utilizar la aplicación, los créditos o volver a la escena de inicio.
+Tras pulsar el botón de inicio en la anterior escena, pasamos al menú principal, en el cual se puede decidir si se quiere empezar a entrenar, visualizar una ayuda sobre como utilizar la aplicación, los créditos o volver a la escena de inicio.(ver Figura \ref{fig:menu_principal})
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Interfaz_menu_principal}
+	\caption{Interfaz menu principal}
+	\label{fig:menu_principal}
+\end{figure}
 \subsection{Escena de Ayuda}
 
-Esta escena muestra varios mensajes de ayuda en los que se explica detalladamente el funcionamiento de la aplicación, además de como obtener un mayor rendimiento, ya que serán necesarias una pequeñas pautas para su utilización. También se resolverán las diferentes dudas que le puedan surgir al alumno.
+Esta escena muestra varios mensajes de ayuda en los que se explica detalladamente el funcionamiento de la aplicación, además de como obtener un mayor rendimiento, ya que serán necesarias una pequeñas pautas para su utilización. También se resolverán las diferentes dudas que le puedan surgir al alumno.(ver Figura \ref{fig:interfaz_ayuda})
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Interfaz_ayuda}
+	\caption{Interfaz de ayuda}
+	\label{fig:interfaz_ayuda}
+\end{figure}
 
 \subsection{Escena de Créditos}
 
-Al igual que en la escena de ayuda, solo se podrá acceder desde el menú principal. Se muestran los créditos sobre los desarrolladores, organismos implicados, agradecimientos y las licencias utilizadas en el proyecto.
+Al igual que en la escena de ayuda, solo se podrá acceder desde el menú principal. Se muestran los créditos sobre los desarrolladores, organismos implicados, agradecimientos y las licencias utilizadas en el proyecto.(ver Figura \ref{fig:creditos})
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_creditos}
+	\caption{Interfaz de créditos}
+	\label{fig:creditos}
+\end{figure}
 
 \subsection{Escena de Profesor}
 
@@ -372,6 +399,12 @@ Cuando el usuario inicia el sistema como profesor, puede acceder a la funcionali
 
 El profesor también puede utilizar la funcionalidad del alumno, ya que será necesario revisar y reproducir el correcto funcionamiento de los nuevos movimientos capturados con \texttt{Kinect}. Inicialmente, la aplicación incluye ocho movimientos capturados a instructores de la escuela \texttt{Abadá-Capoeira}.\footnote{http://www.abadacapoeira.com.br/}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_acesso}
+	\caption{Interfaz para seleccionar tipo de usuario}
+	\label{fig:tipo_usuario}
+\end{figure}
 
 \subsection{Escena de Alumno}
 
@@ -385,7 +418,7 @@ Posteriormente a la selección del movimiento, el alumno deberá iniciar la compar
 
 En el momento en que el entrenador virtual inicie una reproducción de un movimiento, el alumno deberá imitarlo lo más fielmente posible. Mientras se realizan las transiciones, el sistema comparará las posición de los 25 \textit{joints} que componen el esqueleto del entrenador virtual, con las posiciones de los 25 \textit{joints} correspondientes al alumno capturado por \texttt{Kinect}.
 
-Tras finalizar el movimiento, el asistente mostrará una animación de éxito en el caso de que el movimiento se haya realizado de forma correcta (ver Figura \ref{fig:win}), o una animación de fracaso en el caso de que se produzca algún error en la ejecución del movimiento. Posteriormente, se presenta un esqueleto  en el que se muestran de color rojo las partes del cuerpo cuya colocación debe ser corregida, y en color verde las que se han utilizado de manera correcta (ver Figura \ref{fig:analisis_recortada}). A demás, se visualizará una serie de indicaciones en forma de texto para que el alumno pueda corregir la posición errónea de una forma mas efectiva (ej. \textit{Gira el brazo izquierdo hacia atrás}).
+Tras finalizar el movimiento, el asistente mostrará una animación de éxito en el caso de que el movimiento se haya realizado de forma correcta (ver Figura \ref{fig:win}), o una animación de fracaso en el caso de que se produzca algún error en la ejecución del movimiento. Posteriormente, se presenta un esqueleto  en el que se muestran de color rojo las partes del cuerpo cuya colocación debe ser corregida, y en color verde las que se han utilizado de manera correcta (ver Figura \ref{fig:analisis_movimiento}). A demás, se visualizará una serie de indicaciones en forma de texto para que el alumno pueda corregir la posición errónea de una forma mas efectiva (ej. \textit{Gira el brazo izquierdo hacia atrás}).
 
 
 \section{Conclusiones del desarrollo del proyecto}
