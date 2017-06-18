@@ -225,6 +225,12 @@ Para incorporar las animaciones al avatar, se crea el componente \texttt{Animato
 
 Se constató que existía un conflicto entre el \texttt{Animator Controller} y el \texttt{AvatarController} dando lugar a un lucha por quien tiene el control del avatar. Por ello, se implementó un \textit{script} que desactiva el componente \texttt{Animator Controller} cuando el sensor de \textit{Kinect} detecta al usuario y se vuelve a activar cuando el usuario se sale de la escena.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.3\textheight]{Imagenes/Capitulos/4/win}
+	\caption{Animación de victoria}
+	\label{fig:win}
+\end{figure}
 
 \section{Análisis de los movimientos del Usuario}
 
@@ -418,21 +424,21 @@ Posteriormente a la selección del movimiento, el alumno deberá iniciar la compar
 
 En el momento en que el entrenador virtual inicie una reproducción de un movimiento, el alumno deberá imitarlo lo más fielmente posible. Mientras se realizan las transiciones, el sistema comparará las posición de los 25 \textit{joints} que componen el esqueleto del entrenador virtual, con las posiciones de los 25 \textit{joints} correspondientes al alumno capturado por \texttt{Kinect}.
 
-Tras finalizar el movimiento, el asistente mostrará una animación de éxito en el caso de que el movimiento se haya realizado de forma correcta (ver Figura \ref{fig:win}), o una animación de fracaso, en el caso de que se produzca algún error en la ejecución del movimiento. Posteriormente, se presenta un esqueleto en el que se muestran de color rojo las partes del cuerpo cuya colocación debe ser corregida, y en color verde las que se han utilizado de manera correcta (ver Figura \ref{fig:analisis_movimiento}). A demás, se visualizará una serie de indicaciones en forma de texto, para que el alumno pueda corregir la posición errónea de una forma mas efectiva (ej. \textit{Mueve el brazo izquierdo hacia la derecha y adelante, acompañado de un movimiento descendente}).
+Tras finalizar el movimiento, el asistente mostrará una animación de éxito en el caso de que el movimiento se haya realizado de forma correcta (véase Figura \ref{fig:win}), o una animación de fracaso, en el caso de que se produzca algún error en la ejecución del movimiento. Posteriormente, se presenta un esqueleto en el que se muestran de color rojo las partes del cuerpo cuya colocación debe ser corregida, y en color verde las que se han utilizado de manera correcta (ver Figura \ref{fig:analisis_movimiento}). A demás, se visualizará una serie de indicaciones en forma de texto, para que el alumno pueda corregir la posición errónea de una forma mas efectiva (ej. \textit{Mueve el brazo izquierdo hacia la derecha y adelante, acompañado de un movimiento descendente}).
 
 
 \section{Conclusiones del desarrollo del proyecto}
-A lo largo de este capitulo se ha logrado explicar los estudios y las implementaciones necesarias para este proyecto. La primera decisión fue elegir el paquete para \texttt{Unity} \texttt {Kinect v2 Examples with MS-SDK}, siendo este, un pilar importante para la compresión y entendiemiento del funcionamiento de \texttt{Kinect}. 
+A lo largo de este capitulo, se han logrado explicar los estudios y las implementaciones necesarias para este proyecto. La primera decisión fue elegir el paquete para \texttt{Unity} \texttt {Kinect v2 Examples with MS-SDK}, siendo este, un pilar importante para la compresión y entendiemiento del funcionamiento de \texttt{Kinect}. 
 
-Los datos obtenidos del sensor de \texttt{Kinect}, son extraídos para interpretarlos y mostrarlos a través de los \textit{cubeman}. Gracias a ello, se consiguió guardar y catalogar los movimientos del \textit{cubeman} para realizar comparaciones. El funcionamiento de los gestos que reconoce \texttt{Kinect} fueron una inspiración para la implementación de la comparación de movimientos.
+Los datos obtenidos del sensor de \texttt{Kinect}, son extraídos para interpretarlos y mostrarlos a través de los \textit{cubeman}. Gracias a ello, se consiguieron guardar y catalogar los movimientos del \textit{cubeman} para realizar comparaciones. El funcionamiento de los gestos que reconoce \texttt{Kinect}, fue una inspiración para la implementación de la comparación de movimientos.
 
-Posteriormente, se diseñaron avatares con el programa \texttt{Fuse Character Creator} para sustituir a los \textit{cubeman} y dar una apariencia más realista a la aplicación. Con el objetivo de dar un toque más dinámico, se añadieron a los avatares unas animaciones de movimientos de capoeira, de modo que, se reproduzcan cuando no se detecte al usuario. Adicionalmente, para el \textit{feeback} de la comparación del movimiento, se añadieron también dos animaciones de victoria y derrota.
+Posteriormente, se diseñaron avatares con el programa \texttt{Fuse Character Creator} (véase Figura \ref{fig:fuse}), para sustituir a los \textit{cubeman} y dar una apariencia más realista a la aplicación. Con el objetivo de dar un toque más dinámico, se añadieron a los avatares unas animaciones de movimientos de capoeira (véase Figura \ref{fig:mixamo}), de modo que, se reproduzcan cuando no se detecte al usuario. Adicionalmente, para el \textit{feeback} de la comparación del movimiento, se añadieron también dos animaciones de victoria y derrota (véase Figura \ref{fig:win}).
 
-Para separar a los avatares se lograron diseñar dos escenarios. El primero simula un gimnasio dando la sensación al usuario de que está practicando, y el segundo escenario simula una isla tropical típica donde los expertos de capoeira practican. En el segundo escenario se mostrarán los movimiento que el usuario debe realizar.
+Con el objetivo de conseguir un ambiente más realista y dinámico, se elaboraron dos escenarios diferentes. El primero, simula un gimnasio dando la sensación al usuario de que está entrenando (véase Figura \ref{fig:primer-escenario}). El segundo escenario, simula una isla tropical típica donde los expertos de capoeira practican (véase Figura \ref{fig:escenario_isla}). Además, en el segundo escenario se mostrarán los movimiento que el usuario deberá realizar.
 
-Con el objetivo de completar la comparación de los movimientos, se logró implementar un proceso que realiza un análisis de cada parte del cuerpo. De esta manera, se contrasta con el movimiento a realizar y mostrará las correcciones oportunas que el usuario debe ejecutar.
+Con el objetivo de completar la comparación de los movimientos, se logró implementar un proceso que realiza un análisis de cada parte del cuerpo. De esta manera, se contrasta con el movimiento a realizar y se mostrarán las correcciones oportunas que el usuario debe ejecutar (véase Figura \ref{fig:analisis_movimiento}). 
 
-Y por último, se consiguieron grabar movimientos de gente experta en capoeira, con el fin de catalogarlos y prepararlos para incorporarlos al proyecto.
+Y por último, se consiguieron grabar movimientos de gente experta en capoeira (véase Figura \ref{fig:grabación_movimiento}), con el fin de catalogarlos y prepararlos para incorporarlos al proyecto.
 
 %-------------------------------------------------------------------
 %-------------------------------------------------------------------
