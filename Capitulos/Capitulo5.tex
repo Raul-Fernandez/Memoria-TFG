@@ -260,37 +260,37 @@ Con el objetivo de conseguir un ambiente más realista y dinámico, se elaboraron 
 
 \subsection{Escenario del gimnasio}
 
-La creación del escenario del gimnasio se diseñó a partir de diferentes componentes,  distribuidos en distintos paquetes y obtenidos en el \texttt{Asset} \texttt{Store} de \texttt{Unity}. En el diseño de suelo se creó un \texttt{Gameobject} de tipo panel y  se le incrustó un material, dispuesto por el paquete \texttt{Yughues Free Wooden Floor Materials}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/13213}, para simular un suelo de madera. En la construcción de las paredes del escenario se crearon tres paneles, colocándoles de forma vertical formando un cubo abierto, y además se añadió a todos los paneles, un material del paquete \texttt{18 High Resolution Wall  Textures}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/12567} que se asemejan a una textura tipo piedra. Se colocan unos bancos y un casillero para dar una sensación de sala de entrenamiento, estos objetos son modelos del paquete \texttt{Locker Room Props}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/3355}. Para no dar una impresión de una habitación cerrada se añadieron dos ventanas y un ventilador , estos objetos vienen implementados en el paquete \texttt{Props for the Classroom}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/5977},a su vez, se observó también que en el mismo paquete venía implementado un objeto con la forma de una pizarra de clase, entonces para agregar una huella educativa se añadió este elemento a escena.
+La creación del escenario del gimnasio (véase Figura \ref{fig:primer-escenario}) se diseñó a partir de diferentes componentes,  distribuidos en distintos paquetes y obtenidos en el \texttt{Asset} \texttt{Store} de \texttt{Unity}. En el diseño del suelo se creó un \texttt{Gameobject} de tipo panel y  se le incrustó un material, dispuesto por el paquete \texttt{Yughues Free Wooden Floor Materials}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/13213}, para simular un suelo de madera. En la construcción de las paredes del escenario, se crearon tres paneles, colocándolos de forma vertical formando un cubo abierto, y además se añadió a todos los paneles, un material del paquete \texttt{18 High Resolution Wall  Textures}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/12567} que se asemejan a una textura tipo piedra. Se colocaron unos bancos y un casillero para dar una sensación de sala de entrenamiento, estos objetos son modelos del paquete \texttt{Locker Room Props}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/3355}. Para no dar una impresión de una habitación cerrada se añadieron dos ventanas y un ventilador , estos objetos vienen implementados en el paquete \texttt{Props for the Classroom}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/5977}. A su vez, se observó que en el mismo paquete venía implementado un objeto con la forma de una pizarra, de modo que para agregar una huella educativa, se añadió este elemento a la escena.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/escenario1}
-	\caption{Escenario de gimnasio}
+	\caption{Escenario del gimnasio para el alumno}
 	\label{fig:primer-escenario}
 \end{figure}
 
 \subsection{Escenario de la isla}
 
-Para la creación de este escenario, y con la misión de realizar un entorno ambientado en las playas brasileñas, se realizó una investigación previa sobre los paquetes existentes que cumplian estas características. Se descartaron varias opciones de pago, ya que algunos no cumplian con las particularidades buscadas y otros tenían un coste demasiado elevado. Por lo tanto, tras esta decisión, se optó por usar el paquete gratuito \texttt{Island Assets}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/56989}
+Para la creación de este escenario, y con la misión de realizar un entorno ambientado en las playas brasileñas, se realizó una investigación previa sobre los paquetes existentes que cumplían estas características. Se descartaron varias opciones de pago, ya que algunos no cumplían con las particularidades buscadas y otros tenían un coste demasiado elevado. Por lo tanto, tras esta decisión, se optó por usar el paquete gratuito \texttt{Island Assets}\footnote{https://www.assetstore.unity3d.com/en/\#!/content/56989}
 obtenido en el \texttt{Asset} \texttt{Store} de \texttt{Unity}, de modo que junto al profesor y los animadores, este escenario simulase la sensación de estar en una playa brasileña. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.99\linewidth, height=0.32\textheight]{Imagenes/Capitulos/4/escenario_isla}
-	\caption{Escenario para el profesor y los animadores}
+	\caption{Escenario de la isla para el profesor y los animadores}
 	\label{fig:escenario_isla}
 \end{figure}
 
 
-Posteriormente, se hicieron una serie de modificaciones para que el paquete \texttt{Island Assets} tuviera un aspecto acorde con el proyecto a desarrollar. Lo primero que se hizo fue quitar el componente \textit{Treasure chest}(cofre) ya que desentonaba demasiado con la temática del entorno deseado. En segundo lugar se desactivó el componente \textit{Dock}(Embarcadero) puesto que no sería necesaria su utilización debido a la falta de barcos navegando. Por último, el paquete de \texttt{Unity} venía predefinido con tres palmeras, dando una sensación de isla desierta. De modo que, se añadieron como componente del terreno, más de una decena de palmeras en tamaños aleatorios, intentando dar un efecto de isla habitada (véase Figura \ref{fig:escenario_isla}). Con todo ello, el paquete \texttt{Island Assets} de \texttt{Unity} ha servido como escenario para simular una playa brasileña.
+Posteriormente, se hicieron una serie de modificaciones para que el paquete \texttt{Island Assets} tuviera un aspecto acorde con el proyecto a desarrollar. Lo primero que se hizo, fue quitar el componente \textit{Treasure chest}(cofre) ya que desentonaba demasiado con la temática del entorno deseado. En segundo lugar, se desactivó el componente \textit{Dock}(Embarcadero) puesto que no sería necesaria su utilización debido a la falta de barcos navegando. Por último, el paquete de \texttt{Unity} venía predefinido con tres palmeras, dando una sensación de isla desierta. De modo que, se añadieron como componente del terreno, más de una decena de palmeras en tamaños aleatorios, intentando dar un efecto de isla habitada (véase Figura \ref{fig:escenario_isla}). Con todo ello, el paquete \texttt{Island Assets} de \texttt{Unity} ha servido como escenario para simular una playa brasileña.
 
 
 \section{Grabacion de movimientos con gente experta}
 
-En esta etapa del proyecto se visitó la Asociación Cultural Deportiva Rio\footnote{https://www.asociacionrio.com/}, donde se reúnen los practicantes expertos en capoeira, para realizar una serie de grabaciones y pruebas.
+En esta etapa del proyecto, se visitó la Asociación Cultural Deportiva Rio\footnote{https://www.asociacionrio.com/}, donde se reúnen los practicantes expertos en capoeira, para realizar una serie de grabaciones y pruebas.
 
 \subsection{Movimientos grabados}
-Este proceso consistía en grabar una batería de movimientos de capoeira \cite{capoeira2007little} para seleccionar los captados correctamente por \texttt{Kinect}. Para facilitar la grabación al profesor de capoeira, se optó por capturar varias repeticiones del mismo movimiento en la misma grabación. De este modo, y con la supervisión del profesor, se registraron 20 técnicas de capoeira:
+Este proceso consistía en grabar una batería de movimientos de capoeira \citep{capoeira2007little} y a continuación, seleccionar los captados correctamente por \texttt{Kinect}. Para facilitar la grabación al profesor de capoeira, se optó por capturar varias repeticiones del mismo movimiento en la misma grabación. De este modo, y con la supervisión del profesor, se registraron 20 técnicas de capoeira:
 \begin{itemize}
 	\item \textit{Ginga}, es la técnica fundamental de la capoeira, consiste en realizar un movimiento constante que prepara al usuario para acciones como evadir, fintar o atacar, así como conservar el impulso. La forma general de la ginga es un continuo paso triangular, retrocediendo un pie y luego con el otro en diagonal mientras se mantiene las piernas separadas. Para este movimiento se realizaron tres grabaciones diferentes porque es un movimiento que puede tener diversas variantes.
 	\item \textit{Aú}, movimiento que consiste en dar una voltereta lateral.
@@ -324,17 +324,17 @@ Este proceso consistía en grabar una batería de movimientos de capoeira \cite{ca
 
 \subsection{Elección y ajuste de los movimientos}
 Después del proceso de grabación ,se tuvieron que seleccionar los movimientos que mejor se asemejaban al real, recortando el intervalo de \textit{frames} más adecuado para incluirlo en la aplicación.
-De los 20 movimientos grabados los seleccionados fueron :Bênção, Ginga, Joehjada, Escada, Galopante, Meia Lua de Frente, Chapa-Pisào y Punteira.
-Estos 8 movimientos fueron factibles para su uso porque el resto, al incluir giros, presentaron problemas en la grabación. Esto se debe a que \texttt{Kinect} sólo posee una cámara frontal, de modo que al rotar alrededor del eje vertical se acaba perdiendo la referencia de cuáles son las extremidades izquierda y derecha. Como resultado, al darse la vuelta, la captura vuelve a mostrar al usuario de frente, pero con los brazos y las piernas cruzadas.
+De los 20 movimientos grabados, ocho fueron los seleccionados: Bênção, Ginga, Joehjada, Escada, Galopante, Meia Lua de Frente, Chapa-Pisào y Punteira.
+Estos ocho movimientos fueron factibles para su uso, ya que el resto, al incluir giros, presentaron problemas en la grabación. Esto se debe a que \texttt{Kinect} sólo posee una cámara frontal, de modo que al rotar alrededor del eje vertical, se acaba perdiendo la referencia de cuáles son las extremidades izquierdas y derechas. Como resultado, al darse la vuelta, la captura vuelve a mostrar al usuario de frente, pero con los brazos y las piernas cruzadas.
 
 \section{Transición de las escenas}
 
 
-En \texttt{Unity}, como se ha mencionado anteriormente, las escenas contienen los objetos del juego. Se pueden usar para crear un menú principal, animaciones, niveles, etc. En cada escena se ha creado un entorno diferenciado para cada una de las necesidades dadas.
+En \texttt{Unity}, como se ha mencionado anteriormente, las escenas contienen los objetos del juego. Se pueden usar para crear un menú principal, animaciones, niveles, etc. En cada escena, se ha creado un entorno diferenciado para cada una de las necesidades dadas.
 
-Este entorno está pensado para ser utilizado por el alumno para que pueda aprender a realizar diferentes movimientos de capoeira sin la necesidad de que esté presente un profesor. El entrenamiento consiste en imitar una serie de movimientos, los cuales han sido previamente capturados por varios expertos en el arte marcial. El entrenamiento virtual se desarrolla acorde al nivel que posea el alumno, ya sea principiante, aprendiz o avanzado, de este modo, el alumno va aprendiendo a realizar los movimientos de forma progresiva.
+Este entorno, está pensado para ser utilizado por el alumno, de modo que pueda, aprender a realizar diferentes movimientos de capoeira sin la necesidad de que esté presente un profesor. El entrenamiento consiste en imitar una serie de movimientos, los cuales han sido previamente capturados por varios expertos en el arte marcial. El entrenamiento virtual se desarrolla acorde al nivel que posea el alumno, ya sea principiante, aprendiz o avanzado, de este modo, el alumno va aprendiendo a realizar los movimientos de forma progresiva.
 
-\vspace{0.6cm}
+%\vspace{0.6cm}
 Gracias a que el sistema compara \textit{frame} a \textit{frame} la posición del alumno con la del profesor virtual, este podrá realizar un análisis de las transiciones en las que está cometiendo algún error. 
 
 Tras realizar una abstracción del flujo de ejecución que realiza el entrenador virtual entre las diferentes escenas, se muestra el diagrama de la lógica del sistema en la figura \ref{fig:diagram} 
