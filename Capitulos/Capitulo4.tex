@@ -14,13 +14,13 @@ En este capítulo se presentan las tecnologías y dispositivos empleadas para el d
 \section{Software empleado}
 %-------------------------------------------------------------------
 \label{cap4:sec:Software empleados}
-El software principal utilizado en este proyecto es \texttt{Unity 5.5} \citep{Unity_Manual}, ya que se trata de un motor para el desarrollo de videojuegos muy versátil. Con el fin de elaborar, compilar y depurar el proyecto de \texttt{Unity} se ha utilizado \texttt{Visual Studio 2015} \citep{VSMS}  y \texttt{MonoDevelop} \citep{Monodevelop} con el lenguaje de programación C\#, ya que mantienen una sola base de código para todas las plataformas. Respecto a la creación de los personajes, previamente se utilizó la aplicación \texttt{MakeHuman} \citep{MakeHuman}, pero se observó que \texttt{Fuse Character Creator de Mixamo} \citep{FuseCharCreaMixamo} ofrecía una  creación de modelos humanos mas estéticos. En cuanto a las animaciones, se hizo uso de \texttt{Mixamo 3D Animation Online Services} \citep{Mixamo3DAnimation}, ya que es una compañía tecnológica encargada del desarrollo y venta de servicios para la animación de personajes 3D. A través de \texttt{Marvelous Designer} \citep{MarvelousDesigner} se probó la confección de la ropa que utilizarían los avatares, pero se opto por utilizar los diseños predefinidos de \texttt{Fuse Character Creator de Mixamo} debido a la alta calidad de las texturas.
+El software principal utilizado en este proyecto es \texttt{Unity 5.5} \citep{Unity_Manual}, ya que se trata de un motor para el desarrollo de videojuegos muy versátil. Con el fin de elaborar, compilar y depurar el proyecto de \texttt{Unity} se ha utilizado \texttt{Visual Studio 2015} \citep{VSMS}  y \texttt{MonoDevelop} \citep{Monodevelop} con el lenguaje de programación C\#, ya que mantienen una sola base de código para todas las plataformas. Respecto a la creación de los personajes, previamente se utilizó la aplicación \texttt{MakeHuman} \citep{MakeHuman}, pero se observó que \texttt{Fuse Character Creator de Mixamo} \citep{FuseCharCreaMixamo} ofrecía una  creación de modelos humanos mas estéticos. En cuanto a las animaciones, se hizo uso de \texttt{Mixamo 3D Animation Online Services} \citep{Mixamo3DAnimation}, ya que es una compañía tecnológica encargada del desarrollo y venta de servicios para la animación de personajes 3D. A través de \texttt{Marvelous Designer} \citep{MarvelousDesigner} se probó la confección de la ropa que utilizarían los avatares, pero se opto por utilizar los diseños predefinidos de \texttt{Fuse Character Creator de Mixamo} debido a la alta calidad de las texturas. Como plataforma para el desarrollo colaborativo del proyecto se usó GitHub, utilizando el sistema de control de versiones Git.
 
 \subsection{Entorno de desarrollo : Unity 3D}
 %-------------------------------------------------------------------
 \label{cap4:sec:Entorno de desarrollo : Unity 3D}
 El objetivo de este proyecto es la captura y el análisis de movimientos relacionados con el arte marcial afro-brasileño capoeira. Con esto en mente, se llega a la primera decisión de que plataforma escoger para el desarrollo de este proyecto.
-\vspace{1cm}
+%\vspace{1cm}
 Los entornos a elegir para la creación de escenarios 3D fueron: \texttt{Visual Studio 2015} \citep{VSMS}, \texttt{Unity 3D Engine} \citep{Unity} y \texttt{Unreal Engine} \citep{Unreal}. El primero descartado fue \texttt{Visual Studio 2015}, ya que se busca el desarrollo de escenarios 3D de una manera mas intuitiva y, tanto \texttt{Unity} como \texttt{Unreal}, ofrecen herramientas mas útiles para la creación de estos escenarios.
 
 En cuanto a la decisión de elegir entre \texttt{Unity} o \texttt{Unreal Engine} fue basada en la comunidad que hay detrás de cada uno de ellos, y sobre todo, en lo que se quiere abarcar con este proyecto. \texttt{Unreal} suele ser utilizado por las empresas para juegos grandes y mas profesionales, mientras que \texttt{Unity} se puede aplicar, tanto a pequeñas como a grandes aplicaciones, siendo su aprendizaje mas intuitivo que con \texttt{Unreal}.
@@ -34,7 +34,7 @@ La funcionalidad de un motor de videojuegos consiste en, proveer al desarrollado
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Imagenes/Capitulos/4/logo_unity}
+	\includegraphics[width=0.75\linewidth,height=0.17\textheight]{Imagenes/Capitulos/4/logo_unity}
 	\caption{Logo Unity}
 	\label{fig:logo_Unity}
 \end{figure}
@@ -44,7 +44,7 @@ En un primer momento, \texttt{Unity} salió al mercado ofreciendo un \textit{soft
 
 \texttt{Unity} ofrece diferentes tipos de versiones, como la personal de forma gratuita y la profesional, que es de pago. En la versión personal, es necesario promocionar el logotipo de \texttt{Unity} y además, carece de funcionalidades adicionales de renderizado del motor, que la profesional si contiene.
 
-\vspace{1cm}
+%\vspace{1cm}
 Otro aspecto importante de \texttt{Unity} es el \texttt{Asset Store}. Se trata de una biblioteca del editor, que contiene una multitud de paquetes o \textit{Assets} comerciales y gratuitos, creados de forma continua por la comunidad o por \texttt{Unity Technologies}. Estos paquetes pueden contener modelados 3D, texturas, animaciones y demás de contenido que servirá de ayuda al proyecto al no poder contar con un experto diseñador. 
 
 La apariencia del editor de \texttt{Unity} se observa en la figura \ref{fig:editor_Unity}
@@ -61,6 +61,7 @@ Como se observa en la imagen, el editor de \texttt{Unity} esta formado por vario
 El segundo panel denominado \textit{Game}, muestra la vista generada por la cámara, es decir, la imagen que se verá en el juego.
 
 Los elementos incorporados a la escena, se archivan en el tercer panel, con el nombre \textit{Hierarchy}. Estos pueden ser  objetos 3D, cámaras, sonidos, luces, e incluso objetos de tipo GUI(Interfaz gráfica de usuario) para la implementación de interfaces. Los elementos se muestran de una forma jerárquica, al seleccionar uno, se expondrán sus características y componentes en el panel cuarto, denominado \textit{Inspector}. Por ejemplo, al seleccionar la cámara en el \textit{Hierarchy}, se muestra su componente \textit{transform}, el cual muestra la información de su posición y rotación, pudiendo ser modificada.
+
 
 El quinto panel denominado \textit{Project}, agrupa en forma de directorio, todos los \textit{scripts}, paquetes, imágenes y archivos, relacionados con el proyecto.
 \vspace{0.7cm}
@@ -118,6 +119,7 @@ Se trata de una aplicación desarrollada por Mixamo, la cual permite crear person
 
 Al terminar de modelar el personaje, se pasará a la sección de vestuario. Donde existen prendas predefinidas, como camisas, pantalones, zapatos, etc. Al terminar de vestir al avatar, esta aplicación posee la peculiaridad de poder subir al servidor de Mixamo el modelado realizado. Pudiendo completar la configuración de los huesos (\textit{rigger}), con la posibilidad de crear varios esqueletos para un mismo personaje y además incluir las animación deseadas.
 
+\vspace{3cm}
 Para la utilización de esta aplicación es necesario el uso del servidor Steam\footnote{http://store.steampowered.com/?l=spanish}, ya que se trata de una plataforma de distribución digital, comunicaciones y servicios multijugador, donde está alojado \texttt{Fuse Character Creator}.
 
 
@@ -129,6 +131,7 @@ Los productos y características de Mixamo son compatibles con todos los paquetes
 
 
 Una de las características más sorprendentes de Mixamo, es el \textit{Auto-Rigger}. Ya que ahorras horas de trabajo modelando el personaje y con este sistema, el proceso sucede en cuestión de minutos. Todo lo que se necesita hacer es subir al servidor de Mixamo el personaje 3D (soporta .fbx, .bvh, .zip, obj), seleccionar el numero de huesos que mejor se adapte al esqueleto del personaje (véase Figura \ref{fig:mixamo-rig}) y esperar que termine el proceso de \textit{rigger}.
+\vspace{1cm}
 
 Tras completar la fase de modelado, Mixamo ofrece la posibilidad de animar al personaje con movimientos, que permiten, no sólo aplicar cualquier animación, sino también personalizarlas, ya que se pueden modificar en tiempo real con el personaje, obteniendo el resultado deseado. (véase Figura \ref{fig:mixamo}) Por último, descargarlos en cualquier formato que se necesite (.fbx, .bvh, .dae) y fácilmente se podrá combinar de nuevo en las escenas 3D.
 \vspace{0.4cm}
