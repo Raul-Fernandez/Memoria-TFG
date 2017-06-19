@@ -200,24 +200,25 @@ Los dos avatares principales, como son el alumno y el profesor se desarrollaron 
 
 Tras completar la estética de los personajes, \texttt{Fuse Character Creator de Mixamo} ofrece la posibilidad de configurar los huesos de los avatares para posteriormente utilizar las animaciones que suministra \texttt{Mixamo}. Para ello será necesario subir a los servidores de \texttt{Mixamo} dichos personajes y cuando se complete el proceso, la aplicación redirigirá su actividad al navegador web. Como ocurría con \texttt{MakeHuman}, \texttt{Mixamo} ofrece la posibilidad de crear varios esqueletos para un mismo personaje, en este caso se presentan cuatro casos con 25, 41 (ver Figura \ref{fig:mixamo-rig}), 49 y 65 huesos respectivamente.
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/mixamo-rig}
 	\caption{Auto-Rig de Mixamo}
 	\label{fig:mixamo-rig}
 \end{figure}
-
 Una vez comprendida la generación de avatares. El avatar elegido que mejor se adapta a \texttt{Kinect} es el que contiene 41 huesos, ya que demuestra una movilidad más semejante al \textit{cubeman} inicial.
 
 Con el propósito de utilizar las animaciones que suministra \texttt{Mixamo} se observó el ejemplo \texttt{AvataresDemo}, el cual utiliza un script \texttt{AvatarController} que realiza una conexión entre los \textit{joints} y los huesos incorporados en el avatar. 
 
 Posteriormente para que los avatares no se queden en una posición estática, se incorporaron las animaciones de la ginga, victoria y derrota, obteniendo así, un \textit{feedback} más ilustrado de la comparación del movimiento.
 
+
+
 Para incorporar las animaciones al avatar, se crea el componente \texttt{Animator Controller} de \textit{Unity}, encargado de añadir y gestionar animaciones. Este componente contiene una máquina de estados capaz de coordinar la animación que se ejecuta en cada momento. El estado inicial será la \textit{ginga} y se realizará una transición a la animación de victoria o derrota, que dependerá en todo caso, de la comparación del movimiento por parte del usuario con el del profesor. Una vez determinado el estado, este volverá a la animación de \textit{ginga} para continuar con el siguiente movimiento (ver Figura \ref{fig:animator}).
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/animator}
+	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/animator}
 	\caption{Diagrama de estados de animator}
 	\label{fig:animator}
 \end{figure}
@@ -227,7 +228,7 @@ Se constató que existía un conflicto entre el \texttt{Animator Controller} y el 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth, height=0.3\textheight]{Imagenes/Capitulos/4/win}
+	\includegraphics[width=0.7\linewidth, height=0.4\textheight]{Imagenes/Capitulos/4/win}
 	\caption{Animación de victoria}
 	\label{fig:win}
 \end{figure}
