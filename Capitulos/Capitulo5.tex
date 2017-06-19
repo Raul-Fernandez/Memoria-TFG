@@ -403,11 +403,11 @@ Al igual que en la escena de ayuda, solo se podrá acceder desde el menú principa
 
 
 
-\vspace{2cm}
+\vspace{1.5cm}
 \subsection{Escena para seleccionar el usuario}
 
 
-En esta escena, se seleccionará el tipo de usuario que utilizará la aplicación. Dependiendo de la selección, el usuario accederá como alumno para entrenar o como profesor para grabar algún movimiento nuevo.
+En esta escena, se seleccionará el tipo de usuario que utilizará la aplicación (véase Figura \ref{fig:tipo_usuario}). Dependiendo de la selección, el usuario accederá como alumno para entrenar o como profesor para grabar algún movimiento nuevo.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_acesso}
@@ -416,13 +416,13 @@ En esta escena, se seleccionará el tipo de usuario que utilizará la aplicación. 
 \end{figure}
 
 
-\subsection{Escena de Profesor}
+\subsection{Escena del Profesor}
 
-Cuando el usuario inicia el sistema como profesor, puede acceder a la funcionalidad de grabación de nuevos movimientos. Al comenzar a realizar la captura, es necesario introducir el nombre deseado para el nuevo movimiento y colocarse a unos tres metros de \texttt{Kinect} para ser capturado correctamente. A partir de ese momento, el sistema graba los movimientos realizados por el usuario y los guarda en ficheros de texto para poder utilizarlos tanto para mostrárselos a los alumnos como para compararlos con los movimientos de estos cuando se encuentren practicando. Con el fin de de obtener una mayor inmersión en la aplicación, se utiliza el modo espejo como efecto para reproducir los movimientos captados. 
+Cuando el usuario inicia el sistema como profesor (véase Figura \ref{fig:profesor}), puede acceder a la funcionalidad de grabación de nuevos movimientos. Al comenzar a realizar la captura, es necesario introducir el nombre deseado para el nuevo movimiento y colocarse a unos tres metros de \texttt{Kinect} para ser capturado correctamente. A partir de ese momento, el sistema graba los movimientos realizados por el usuario y los guarda en ficheros de texto para poder utilizarlos tanto para mostrárselos a los alumnos como para compararlos con los movimientos de estos cuando se encuentren practicando. Con el fin de de obtener una mayor inmersión en la aplicación, se utiliza el modo espejo como efecto para reproducir los movimientos captados. 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Profesor}
+	\includegraphics[width=0.95\linewidth, height=0.35\textheight]{Imagenes/Capitulos/capitulo5/Profesor}
 	\caption{Escena del profesor}
 	\label{fig:profesor}
 \end{figure}
@@ -431,7 +431,7 @@ Cuando el usuario inicia el sistema como profesor, puede acceder a la funcionali
 El profesor también puede utilizar la funcionalidad del alumno, ya que será necesario revisar y reproducir el correcto funcionamiento de los nuevos movimientos capturados con \texttt{Kinect}. Inicialmente, la aplicación incluye ocho movimientos capturados a instructores de la escuela \texttt{Abadá-Capoeira}.\footnote{http://www.abadacapoeira.com.br/}
 
 
-\subsection{Escena de Alumno}
+\subsection{Escena del Alumno}
 
 
 
@@ -441,7 +441,7 @@ Considerando que al comenzar a formarse en un arte marcial, se desconocen los no
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Alumno}
+	\includegraphics[width=0.95\linewidth, height=0.35\textheight]{Imagenes/Capitulos/capitulo5/Alumno}
 	\caption{Escena del alumno}
 	\label{fig:alumno}
 \end{figure}
@@ -454,7 +454,7 @@ En el momento en que el entrenador virtual inicie una reproducción de un movimie
 
 Tras finalizar el movimiento, el asistente mostrará una animación de éxito en el caso de que el movimiento se haya realizado de forma correcta (véase Figura \ref{fig:win}), o una animación de fracaso, en el caso de que se produzca algún error en la ejecución del movimiento. Posteriormente, se presenta un esqueleto en el que se muestran de color rojo las partes del cuerpo cuya colocación debe ser corregida, y en color verde las que se han utilizado de manera correcta (ver Figura \ref{fig:analisis_movimiento}). A demás, se visualizará una serie de indicaciones en forma de texto, para que el alumno pueda corregir la posición errónea de una forma mas efectiva (ej. \textit{Mueve el brazo izquierdo hacia la derecha y adelante, acompañado de un movimiento descendente}).
 
-\vspace{2cm}
+%\vspace{2cm}
 \section{Conclusiones del desarrollo del proyecto}
 A lo largo de este capitulo, se han logrado explicar los estudios y las implementaciones necesarias para este proyecto. La primera decisión fue elegir el paquete para \texttt{Unity} \texttt {Kinect v2 Examples with MS-SDK}, siendo este, un pilar importante para la compresión y entendiemiento del funcionamiento de \texttt{Kinect}. 
 
