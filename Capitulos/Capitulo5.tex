@@ -320,7 +320,7 @@ Este proceso consistía en grabar una batería de movimientos de capoeira \citep{c
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.7\textheight]{Imagenes/Capitulos/capitulo5/grabacion_movimiento}
+	\includegraphics[width=0.96\linewidth, height=0.7\textheight]{Imagenes/Capitulos/capitulo5/grabacion_movimiento}
 	\caption{Realizando las grabaciones de movimiento}
 	\label{fig:grabación_movimiento}
 \end{figure}
@@ -338,19 +338,19 @@ Estos ocho movimientos fueron factibles para su uso, ya que el resto, al incluir
 
 En \texttt{Unity}, como se ha mencionado anteriormente, las escenas contienen los objetos del juego. Se pueden usar para crear un menú principal, animaciones, niveles, etc. En cada escena, se ha creado un entorno diferenciado para cada una de las necesidades dadas.
 
-Este entorno, está pensado para ser utilizado por el alumno, de modo que pueda aprender a realizar diferentes movimientos de capoeira, sin la necesidad de que esté presente un profesor. El entrenamiento consiste en imitar una serie de movimientos, los cuales han sido previamente capturados por varios expertos en el arte marcial. El entrenamiento virtual se desarrolla acorde al nivel que posea el alumno, ya sea principiante, aprendiz o avanzado, de este modo, el alumno va aprendiendo a realizar los movimientos de forma progresiva.
-
-%\vspace{0.6cm}
-Gracias a que el sistema compara los \textit{frames} de la posición del alumno con la del profesor virtual, el aprendiz podrá realizar un análisis de las transiciones en las que está cometiendo algún error. 
-
-Tras realizar una abstracción del flujo de ejecución que realiza el entrenador virtual entre las diferentes escenas, se muestra el diagrama de la lógica del sistema en la figura \ref{fig:diagram} 
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth, height=0.7\textheight]{Imagenes/Capitulos/6/Diagram}
 	\caption{Diagrama que ilustra la lógica del sistema}
 	\label{fig:diagram}
 \end{figure}
+
+Este entorno, está pensado para ser utilizado por el alumno, de modo que pueda aprender a realizar diferentes movimientos de capoeira, sin la necesidad de que esté presente un profesor. El entrenamiento consiste en imitar una serie de movimientos, los cuales han sido previamente capturados por varios expertos en el arte marcial. El entrenamiento virtual se desarrolla acorde al nivel que posea el alumno, ya sea principiante, aprendiz o avanzado, de este modo, el alumno va aprendiendo a realizar los movimientos de forma progresiva.
+
+%\vspace{0.6cm}
+Gracias a que el sistema compara los \textit{frames} de la posición del alumno con la del profesor virtual, el aprendiz podrá realizar un análisis de las transiciones en las que está cometiendo algún error. 
+
+Tras realizar una abstracción del flujo de ejecución que realiza el entrenador virtual entre las diferentes escenas, se muestra el diagrama de la lógica del sistema en la figura \ref{fig:diagram} 
 
 
 \subsection{Escena de Inicio}
@@ -359,7 +359,7 @@ Se trata de la escena inicial del juego. Presenta una interfaz de tipo UI, la cu
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_inicio}
+	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_inicio}
 	\caption{Interfaz menu inicio}
 	\label{fig:menu_inicio}
 \end{figure}
@@ -370,14 +370,11 @@ Tras pulsar el botón de inicio en la anterior escena, pasamos al menú principal,
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Interfaz_menu_principal}
+	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Interfaz_menu_principal}
 	\caption{Interfaz menu principal}
 	\label{fig:menu_principal}
 \end{figure}
 \subsection{Escena de Ayuda}
-
-Esta escena muestra varios mensajes de ayuda, en los que se explica detalladamente el funcionamiento de la aplicación, además de como obtener un mayor rendimiento, ya que serán necesarias una pequeñas pautas para su utilización. También se resolverán las diferentes dudas que le puedan surgir al alumno o al profesor.(ver Figura \ref{fig:interfaz_ayuda})
-
 
 \begin{figure}[h!]
 	\centering
@@ -386,7 +383,12 @@ Esta escena muestra varios mensajes de ayuda, en los que se explica detalladamen
 	\label{fig:interfaz_ayuda}
 \end{figure}
 
-\vspace{2cm}
+Esta escena muestra varios mensajes de ayuda, en los que se explica detalladamente el funcionamiento de la aplicación, además de como obtener un mayor rendimiento, ya que serán necesarias una pequeñas pautas para su utilización. También se resolverán las diferentes dudas que le puedan surgir al alumno o al profesor.(ver Figura \ref{fig:interfaz_ayuda})
+
+
+
+
+%\vspace{2cm}
 
 \subsection{Escena de Créditos}
 
@@ -399,24 +401,50 @@ Al igual que en la escena de ayuda, solo se podrá acceder desde el menú principa
 	\label{fig:creditos}
 \end{figure}
 
-\subsection{Escena de Profesor}
 
-Cuando el usuario inicia el sistema como profesor, puede acceder a la funcionalidad de grabación de nuevos movimientos. Al comenzar a realizar la captura, es necesario introducir el nombre deseado para el nuevo movimiento y colocarse a unos tres metros de \texttt{Kinect} para ser capturado correctamente. A partir de ese momento, el sistema graba los movimientos realizados por el usuario y los guarda en ficheros de texto para poder utilizarlos tanto para mostrárselos a los alumnos como para compararlos con los movimientos de estos cuando se encuentren practicando. Con el fin de de obtener una mayor inmersión en la aplicación, se utiliza el modo espejo como efecto para reproducir los movimientos captados. 
 
-El profesor también puede utilizar la funcionalidad del alumno, ya que será necesario revisar y reproducir el correcto funcionamiento de los nuevos movimientos capturados con \texttt{Kinect}. Inicialmente, la aplicación incluye ocho movimientos capturados a instructores de la escuela \texttt{Abadá-Capoeira}.\footnote{http://www.abadacapoeira.com.br/}
+\vspace{2cm}
+\subsection{Escena para seleccionar el usuario}
 
+
+En esta escena, se seleccionará el tipo de usuario que utilizará la aplicación. Dependiendo de la selección, el usuario accederá como alumno para entrenar o como profesor para grabar algún movimiento nuevo.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_acesso}
+	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/interfaz_acesso}
 	\caption{Interfaz para seleccionar tipo de usuario}
 	\label{fig:tipo_usuario}
 \end{figure}
 
+
+\subsection{Escena de Profesor}
+
+Cuando el usuario inicia el sistema como profesor, puede acceder a la funcionalidad de grabación de nuevos movimientos. Al comenzar a realizar la captura, es necesario introducir el nombre deseado para el nuevo movimiento y colocarse a unos tres metros de \texttt{Kinect} para ser capturado correctamente. A partir de ese momento, el sistema graba los movimientos realizados por el usuario y los guarda en ficheros de texto para poder utilizarlos tanto para mostrárselos a los alumnos como para compararlos con los movimientos de estos cuando se encuentren practicando. Con el fin de de obtener una mayor inmersión en la aplicación, se utiliza el modo espejo como efecto para reproducir los movimientos captados. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Profesor}
+	\caption{Escena del profesor}
+	\label{fig:profesor}
+\end{figure}
+
+
+El profesor también puede utilizar la funcionalidad del alumno, ya que será necesario revisar y reproducir el correcto funcionamiento de los nuevos movimientos capturados con \texttt{Kinect}. Inicialmente, la aplicación incluye ocho movimientos capturados a instructores de la escuela \texttt{Abadá-Capoeira}.\footnote{http://www.abadacapoeira.com.br/}
+
+
 \subsection{Escena de Alumno}
+
+
 
 Si el usuario es un alumno, se entrará en la escena principal del proyecto, donde se desarrolla toda la funcionalidad del entrenamiento virtual. En el interior de la escena, se muestra la misma interfaz que en el caso del profesor, con la diferencia de que este no podrá grabar movimientos para su posterior análisis.
 
 Considerando que al comenzar a formarse en un arte marcial, se desconocen los nombres de los movimientos que se desean poner en práctica, se le ofrece al alumno la posibilidad de visualizar previamente los movimientos antes de empezar a practicar, de modo que, podrá seleccionar más fácilmente el que desea. Para iniciar el entrenamiento acorde a su experiencia, el alumno tendrá que seleccionar el nivel que le corresponda, ya sea principiante, aprendiz o avanzado. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth, height=0.4\textheight]{Imagenes/Capitulos/capitulo5/Alumno}
+	\caption{Escena del alumno}
+	\label{fig:alumno}
+\end{figure}
 
 Tras elegir el nivel, se pasará a la selección del movimiento que se quiere aprender o practicar, de este modo, el alumno podrá comenzar a entrenar acorde a su nivel. 
 
@@ -426,7 +454,7 @@ En el momento en que el entrenador virtual inicie una reproducción de un movimie
 
 Tras finalizar el movimiento, el asistente mostrará una animación de éxito en el caso de que el movimiento se haya realizado de forma correcta (véase Figura \ref{fig:win}), o una animación de fracaso, en el caso de que se produzca algún error en la ejecución del movimiento. Posteriormente, se presenta un esqueleto en el que se muestran de color rojo las partes del cuerpo cuya colocación debe ser corregida, y en color verde las que se han utilizado de manera correcta (ver Figura \ref{fig:analisis_movimiento}). A demás, se visualizará una serie de indicaciones en forma de texto, para que el alumno pueda corregir la posición errónea de una forma mas efectiva (ej. \textit{Mueve el brazo izquierdo hacia la derecha y adelante, acompañado de un movimiento descendente}).
 
-
+\vspace{2cm}
 \section{Conclusiones del desarrollo del proyecto}
 A lo largo de este capitulo, se han logrado explicar los estudios y las implementaciones necesarias para este proyecto. La primera decisión fue elegir el paquete para \texttt{Unity} \texttt {Kinect v2 Examples with MS-SDK}, siendo este, un pilar importante para la compresión y entendiemiento del funcionamiento de \texttt{Kinect}. 
 
