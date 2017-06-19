@@ -220,7 +220,7 @@ Estos sistemas utilizan la combinación del seguimiento de los ojos con el de la 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth, height=0.25\textheight]{Imagenes/Capitulos/2/ETG-2w}
+	\includegraphics[width=0.6\linewidth, height=0.2\textheight]{Imagenes/Capitulos/2/ETG-2w}
 	\caption{Gafa ETG-2w usada para la captura de movimiento ocular}
 	\label{fig:etg-2w}
 \end{figure}
@@ -241,25 +241,16 @@ En el año 2006, Nintendo lanzó Wii \citep{NintendoWii}, perteneciente a la sépti
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.4\linewidth, height=0.18\textheight]{Imagenes/Capitulos/2/wii_remote}
-	\caption{Mando inalámbrico Wii Remote}
-	\label{fig:wiiremote}
+	\subfloat[Wii Remote]{\includegraphics[width=0.3\textwidth,height=0.2\textheight]{Imagenes/Capitulos/2/wii_remote}\label{fig:wiiremote}}
+	\hspace{0.5cm}
+	\subfloat[Barra sensor ]{\includegraphics[width=0.45\textwidth,height=0.17\textheight]{Imagenes/Capitulos/2/barra_sensor}\label{fig:barrasensor}}
+	\caption{Dispositivos de Nintendo Wii}\label{fig:dispositivosdenintendo}
 \end{figure}
-
 
 
 La característica más distintiva de la consola, es el mando inalámbrico Wii Remote. Se trata de un dispositivo inalambrico, capaz de detectar la aceleración en un plano tridimensional mediante la utilización de un acelerometro ofrece la posibilidad de apuntar y señalar, determinando los movimientos en un plano tridimensional mediante la utilización de un acelerometro. Además cuenta con un sensor óptico, lo que permite determinar el lugar donde el mando Wii Remote está apuntando. 
 
 A diferencia de un mando a distancia tradicional, este sistema detecta la luz led que emite la barra de sensores de la consola (véase Figura \ref{fig:barrasensor}). Tiene un tamaño aproximado de 20 cm de longitud y cuanta con diez leds infrarrojos, cinco en cada extremo de la barra. Para un correcto funcionamiento, no es necesario señalar directamente a la barra sensor, pero en caso contrario, perturbaría la capacidad de detección debido al limitado ángulo de visión. La barra sensor emite desde cada uno de los extremos, unos puntos de luz que permite al Wii Remote ser localizado. A partir de estas dos distancias, el procesador de la videoconsola Wii determina la distancia entre el Wiimote y la barra de sensores utilizando la triangulación. 
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.45\linewidth, height=0.2\textheight]{Imagenes/Capitulos/2/barra_sensor}
-	\caption{Barra sensor de la videoconsola Wii}
-	\label{fig:barrasensor}
-\end{figure}
-
-
 
 Los movimientos realizados con Wii Remote, permiten al jugador imitar las acciones reales de juego, como mover una espada, lanzar una bola de fuego, disparar una pistola, etc; en lugar de pulsar solo los botones.
 
@@ -270,20 +261,16 @@ Como consecuencia de los buenos resultados obtenidos por Nintendo, Sony sacó al 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.4\linewidth, height=0.18\textheight]{Imagenes/Capitulos/2/playstation-move}
-	\caption{Dispositivo PlayStation Move}
-	\label{fig:playstation-move}
+	\subfloat[PlayStation Move]{\includegraphics[width=0.3\textwidth,height=0.2\textheight]{Imagenes/Capitulos/2/playstation-move}\label{fig:playstation-move}}
+	\hspace{0.5cm}
+	\subfloat[PlayStation Eye]{\includegraphics[width=0.45\textwidth,height=0.17\textheight]{Imagenes/Capitulos/2/playstation-eye}\label{fig:playstation-eye}}
+	\caption{Dispositivos de Sony PlayStation}\label{fig:dispositivosdesony}
 \end{figure}
 
 Estas videoconsolas utilizan una camara denominada PlayStation Eye \citep{PlayStationEye} que detecta el color que toma la esfera del dispositivo PlayStation Move, determinando de este modo su posición.
 Esta camara dispone de dos lente, una de ellas realiza la función de camara web y la otra activa la captura de movimientos. (véase Figura \ref{fig:playstation-eye}) 
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.5\linewidth, height=0.2\textheight]{Imagenes/Capitulos/2/playstation-eye}
-	\caption{Dispositivo PlayStation Eye}
-	\label{fig:playstation-eye}
-\end{figure}
+
 
 El principal inconveniente de este sistema, es la luz y los colores de fondo. Ya que, se vuelve inútil teniendo una luz de fondo del mismo color que el dispositivo PlayStation Move, perdiendo por completo la posición de los marcadores. En la actualidad, es el sistema con menor estabilidad en la captura de movimientos en los videojuegos.
 
@@ -320,7 +307,7 @@ En 2013, Microsoft anunció su próxima consola Xbox One y el nuevo sensor de \tex
 		
 		\item Como desventaja, destacar la carencia de motor de inclinación en esta nueva versión de \textit{Kinect}.
 	\end{itemize}
-	\vspace{1cm}
+%	\vspace{1cm}
 		\item  \textbf{Mayor resolución con mas detalle}
 		
 		\begin{itemize}
@@ -361,13 +348,9 @@ En 2013, Microsoft anunció su próxima consola Xbox One y el nuevo sensor de \tex
 
 
 
-\vspace{0.7cm}
+
 Como base para el estudio de la captura de movimientos y las tecnologías disponibles en este ámbito, se han realizado diferentes consultas a los siguientes proyectos: \citep{aleman2014solucion} \citep{menendez2015protocolo} \citep{mejias2014rotoscopia}
 
-
-%Y también ponemos el acrónimo \ac{CVS} para que no cruja.
-
-%Ten en cuenta que si no quieres acrónimos (o no quieres que te falle la compilación en ``release'' mientras no tengas ninguno) basta con que no definas la constante \verb+\acronimosEnRelease+ (en \texttt{config.tex}).
 
 
 
@@ -378,7 +361,7 @@ Para la realización de este proyecto se han revisado trabajos anteriores en el á
 Uno de los campos en donde la captura de movimiento aparece es en la danza, y un claro ejemplo es \citep{Kyan:2015:ABD:2753829.2735951}. En este artículo se describe una forma de evaluar y visualizar en tiempo real, los movimientos de la danza de ballet. Para desempeñar esa tarea utilizan como recurso la tecnología de captura de movimiento \texttt{kinect}, y gracias a ella, registran los movimientos de bailarines profesionales, de modo que , sean una base para las comparaciones de movimientos. Estos, a su vez , son representados como un \textit{espacio de posturas} en forma de trayectorias de gestos. La evaluación de la coreografía empezará cuando detecte al bailarín aficionado y con el fin de proporcionar una puntuación para cada coreografía,
 se compara la posición alineada y velocidad del bailarín aficionado con las correspondientes del bailarín profesional.
 
-
+\vspace{0.7cm}
 \subsection{Captura de movimiento en artes marciales}
 Otros de los campos donde es útil la captura de movimiento ,ya que es necesario la repetición para lograr entender y dominar las técnicas, son en las artes marciales. En este proyecto de máster \citep{Keerthy:Thesis:2012}  se diseña un maestro virtual de Kung fu con el dispositivo de \texttt{Kinect}. Previamente se graban las técnicas del maestro en el arte marcial , para realizar futuras comparaciones con usuarios aficionados que quieran adentrarse y aprender en el mundo del Kung fu. Aunque existen muchos algoritmos de comparación, en este trabajo se ha elegido, el algoritmo
 \textit{Dynamic Time Warping} , que utiliza la fórmula  distancia euclidea. Una de las principales ventajas del algoritmo \textit{Dynamic Time Warping} es, superar los problemas de análisis de movimiento en velocidad y tiempo. La distancia euclidiana se define como la distancia entre dos puntos de un espacio euclídeo, la cual se deduce a partir del teorema de Pitágoras.\\
